@@ -318,4 +318,4 @@ output = "Your income tax is: " + calculate_tax(salary)
 output
 ```
 
-According to this calculation, your federal income tax would be $7,160 based on a salary of $50,000.
+According to this calculation, your federal income tax would be \$7,160 based on a salary of \$50,000.
