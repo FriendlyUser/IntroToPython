@@ -1,0 +1,46 @@
+name: Build HTML and Deploy to GH-PAGES
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  push:
+    branches:
+      - master
+      - feature/*
+
+env:
+  BOOK_NAME: introtopython
+jobs:
+  build-html-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' 
+
+      - name: Install jupyter_book
+        shell: bash -l {0}
+        run: pip install git+https://github.com/ExecutableBookProject/jupyter-book.git@master
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+
+      - name: Build IBook
+        shell: bash -l {0}
+        run: jb build ${{ BOOK_NAME }}/
+
+      - name: Add adsense
+        shell: bash -l {0}
+        run: chmod +x scripts/insert_adsense.sh && scripts/insert_adsense.sh
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: ${{ BOOK_NAME }}/_build/html
