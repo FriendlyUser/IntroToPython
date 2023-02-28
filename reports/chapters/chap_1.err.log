@@ -17,13 +17,31 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-Hello, world!
+salary = 50000
+rates = [0.1, 0.12, 0.22, 0.24, 0.32, 0.35, 0.37]
+brackets = [9875, 40125, 85525, 163300, 207350, 518400]
+def calculate_tax(salary):
+ tax = 0
+ for i in range(len(brackets)):
+   if salary > brackets[i]:
+     tax += (brackets[i] - (brackets[i-1] if i>0 else 0)) * rates[i]
+   else:
+     tax += (salary - (brackets[i-1] if i>0 else 0)) * rates[i]
+   break
+ return tax
+output = "Your income tax is: " + calculate_tax(salary)
+
+output
 ------------------
 
-[0;36m  Cell [0;32mIn[3], line 1[0;36m[0m
-[0;31m    Hello, world![0m
-[0m                ^[0m
-[0;31mSyntaxError[0m[0;31m:[0m invalid syntax
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mTypeError[0m                                 Traceback (most recent call last)
+Cell [0;32mIn[5], line 13[0m
+[1;32m     11[0m    [38;5;28;01mbreak[39;00m
+[1;32m     12[0m  [38;5;28;01mreturn[39;00m tax
+[0;32m---> 13[0m output [38;5;241m=[39m [38;5;124;43m"[39;49m[38;5;124;43mYour income tax is: [39;49m[38;5;124;43m"[39;49m[43m [49m[38;5;241;43m+[39;49m[43m [49m[43mcalculate_tax[49m[43m([49m[43msalary[49m[43m)[49m
+[1;32m     15[0m output
 
-SyntaxError: invalid syntax (684022435.py, line 1)
+[0;31mTypeError[0m: can only concatenate str (not "float") to str
+TypeError: can only concatenate str (not "float") to str
 

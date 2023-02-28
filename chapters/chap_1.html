@@ -739,20 +739,8 @@ Finally, Python has an active and supportive community of developers who contrib
 <ol class="arabic simple" start="5">
 <li><p>Press Enter to execute the code. You should see the following output:</p></li>
 </ol>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>Hello, world!
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Hello, world!
 </pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  Cell In[3], line 1
-    Hello, world!
-                ^
-SyntaxError: invalid syntax
-</pre></div>
-</div>
-</div>
 </div>
 <ol class="arabic simple" start="6">
 <li><p>You can also use the interactive shell as a calculator. For example, you can enter the following code to perform basic arithmetic operations:</p></li>
@@ -761,6 +749,11 @@ SyntaxError: invalid syntax
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
 <span class="mi">10</span> <span class="o">/</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.0
 </pre></div>
 </div>
 </div>
@@ -786,6 +779,11 @@ SyntaxError: invalid syntax
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
 <span class="mi">10</span> <span class="o">/</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.0
 </pre></div>
 </div>
 </div>
@@ -845,6 +843,19 @@ SyntaxError: invalid syntax
 <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;Your income tax is: &quot;</span> <span class="o">+</span> <span class="n">calculate_tax</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span>
 
 <span class="n">output</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">13</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span>    <span class="k">break</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span>  <span class="k">return</span> <span class="n">tax</span>
+<span class="ne">---&gt; </span><span class="mi">13</span> <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;Your income tax is: &quot;</span> <span class="o">+</span> <span class="n">calculate_tax</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="n">output</span>
+
+<span class="ne">TypeError</span>: can only concatenate str (not &quot;float&quot;) to str
 </pre></div>
 </div>
 </div>
