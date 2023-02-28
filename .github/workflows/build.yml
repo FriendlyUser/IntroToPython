@@ -44,4 +44,4 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: $BOOK_NAME/_build/html
+          FOLDER: introtopython/_build/html
