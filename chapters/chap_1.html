@@ -1,0 +1,1010 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+<script data-ad-client="ca-pub-2479144310234386" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>History of Python &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=4ec06e9971c5264fbd345897d5258098f11cc577" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=8bf782fb4ee92b3d3646425e50f299c4e1fd152d"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/chap_1';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Markdown Files" href="../markdown.html" />
+    <link rel="prev" title="Welcome to your Jupyter Book" href="../intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../intro.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        History of Python
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../markdown.html">
+                        Markdown Files
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../notebooks.html">
+                        Content with notebooks
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../markdown-notebooks.html">
+                        Notebooks with MyST Markdown
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        History of Python
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../markdown.html">
+                        Markdown Files
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../notebooks.html">
+                        Content with notebooks
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../markdown-notebooks.html">
+                        Notebooks with MyST Markdown
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+  
+
+
+<a class="navbar-brand logo" href="../intro.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    </div>
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">History of Python</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+</ul>
+
+    </div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        <label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" data-toggle="tooltip" data-placement="right" title="Toggle primary sidebar">
+            <span class="fa-solid fa-bars"></span>
+        </label>
+    </div>
+    <div class="header-article__right">
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+  </ul>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<div class="dropdown dropdown-repository-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">repository</span>
+</a>
+</a>
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchapters/chap_1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">open issue</span>
+</a>
+</a>
+      
+  </ul>
+</div>
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      <li><a href="../_sources/chapters/chap_1.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</a>
+      
+      <li><a href="../_sources/chapters/chap_1.md" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</a>
+      
+      <li>
+<button onclick="printPdf(this)"
+  class="btn btn-sm dropdown-item"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</a>
+      
+  </ul>
+</div>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary" data-toggle="tooltip" data-placement="left" title="Toggle secondary sidebar">
+            <span class="fa-solid fa-list"></span>
+        </label>
+    </div>
+</div>
+            </div>
+            
+            
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>History of Python</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   History of Python
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction-to-python-installing-python-and-setting-up-the-development-environment">
+   Introduction to Python: Installing Python and Setting up the Development Environment
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#introduction-to-python-running-python-scripts-and-using-the-interactive-shell">
+     Introduction to Python: Running Python Scripts and Using the Interactive Shell
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-ipython-as-a-calculator-and-to-calculate-tax-rates">
+   Using IPython as a Calculator and to Calculate Tax Rates
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-ipython-as-a-calculator">
+     Using IPython as a Calculator
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#using-ipython-to-calculate-tax-rates">
+       Using IPython to Calculate Tax Rates
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+            <article class="bd-article" role="main">
+              
+  <section id="history-of-python">
+<h1>History of Python<a class="headerlink" href="#history-of-python" title="Permalink to this heading">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Python is a high-level, interpreted programming language that has become increasingly popular in recent years. Its design philosophy emphasizes code readability, which means that it is easy for humans to read and write. It is also known for its flexibility and versatility, with a wide range of applications that include web development, data analysis, artificial intelligence, and more.</p>
+</div>
+<p>One of the biggest advantages of using Python is its simplicity. Python code is often much shorter and easier to read than other languages, which makes it easier to learn and understand. Additionally, Python has a large community of developers who contribute to the language and its ecosystem. This means that there are many libraries and frameworks available for Python, making it easier to write complex programs quickly.</p>
+<p>Python also has a reputation for being beginner-friendly. Many universities and coding bootcamps use Python as their first programming language, and there are many online resources available for people who want to learn Python. This makes it an ideal language for people who are new to programming or who want to transition from another field into software development.</p>
+<p>Another advantage of using Python is its versatility. Because it is a general-purpose language, Python can be used for a wide range of applications, including web development, data analysis, scientific computing, and more. This means that Python developers have a wide range of career paths available to them, and can work in many different industries.</p>
+<p>Python is also known for its performance. Although it is an interpreted language, which means that it is not compiled directly to machine code, Python has many tools available that can improve its performance. For example, the PyPy interpreter can improve the performance of Python code by up to 10x, and the Numba library can accelerate scientific computing code by compiling it to machine code.</p>
+<p>In summary, Python is a versatile and powerful programming language that has many advantages over other languages. Its simplicity, flexibility, and performance make it an ideal language for a wide range of applications, and its popularity and large community mean that there are many resources available for people who want to learn it. If you are interested in software development, data analysis, or artificial intelligence, learning Python is a great place to start.</p>
+<p>Python is a high-level, interpreted, general-purpose programming language that has gained popularity among developers in recent years. It was created by Guido van Rossum and was first released in 1991. Since then, it has undergone many updates and improvements, and has become one of the most widely used programming languages in the world.</p>
+<p>One of the defining features of Python is its high-level nature. This means that Python code is closer to human language than to machine code. Python is often called a “readable” language, because its syntax is designed to be easy to understand and follow. For example, in Python, the code to print “Hello, World!” to the console is simply:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello, World!
+</pre></div>
+</div>
+</div>
+</div>
+<p>Python’s high-level nature means that it is often faster and easier to write code in Python than in other programming languages. This is especially true for tasks that involve data analysis or machine learning, where Python’s ease of use and large number of available libraries can be a significant advantage.</p>
+<p>Another defining feature of Python is its interpreted nature. This means that Python code is executed by an interpreter, rather than being compiled directly to machine code. This allows for faster development times, as developers can test their code immediately without having to wait for the entire program to be compiled. However, interpreted languages are often slower than compiled languages, because the interpreter has to translate the code into machine code at runtime.</p>
+<p>Python is also a general-purpose programming language. This means that it can be used for a wide range of applications, from web development to scientific computing to machine learning. Python’s versatility is due in large part to its large and active community of developers, who have created many libraries and frameworks for the language. These libraries and frameworks can be used to accomplish a wide range of tasks, from building websites to analyzing large datasets to creating neural networks.</p>
+<p>One of the most important libraries in Python’s ecosystem is the Python Standard Library. This library contains many built-in functions and modules that can be used to accomplish common programming tasks. For example, the <code class="docutils literal notranslate"><span class="pre">os</span></code> module can be used to interact with the operating system, while the <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module can be used to work with dates and times.</p>
+<p>In conclusion, Python is a high-level, interpreted, general-purpose programming language that is widely used by developers around the world. Its readability, ease of use, and versatility make it an ideal language for many different applications, and its large and active community of developers ensures that there are many resources available for people who want to learn it. If you are interested in learning to code, or in expanding your programming skills, Python is an excellent language to consider.</p>
+<p>Python is a versatile and powerful programming language with many features that make it a popular choice among developers. In this article, we’ll explore some of the key benefits and features of Python, including its readability, simplicity, portability, support for multiple programming paradigms, rich libraries, and active community.</p>
+<p>Readability:
+One of the most significant benefits of Python is its readability. Python’s syntax is designed to be intuitive and easy to read, which makes it a great choice for beginners and experts alike. Python code is often much shorter and more readable than other programming languages, which makes it easier to understand and maintain. Additionally, Python’s clear and concise syntax reduces the likelihood of errors and bugs, which can save developers time and headaches.</p>
+<p>Simplicity:
+Python is also known for its simplicity. The language is designed to be easy to learn and use, with a focus on removing unnecessary complexity. Python’s simplicity makes it an excellent choice for beginners, but it is also a favorite of experienced developers who value the language’s elegant and straightforward design.</p>
+<p>Portability:
+Another benefit of Python is its portability. Python code can run on many different platforms and operating systems, which makes it a great choice for cross-platform development. This portability means that developers can write code once and run it on many different devices and systems, which can save time and effort.</p>
+<p>Multiple Programming Paradigms:
+Python also supports multiple programming paradigms, which means that developers can choose the programming style that works best for their needs. For example, Python supports object-oriented programming, functional programming, and procedural programming. This flexibility makes it possible to write code in a style that is comfortable and effective for the developer.</p>
+<p>Rich Libraries:
+Python is known for its rich libraries, which are collections of code that can be used to accomplish specific tasks. Python’s libraries make it easier to write complex programs quickly and efficiently, by providing pre-written code that can be reused and adapted. Some of the most popular Python libraries include NumPy for numerical computing, pandas for data analysis, and TensorFlow for machine learning.</p>
+<p>Active Community:
+Finally, Python has an active and supportive community of developers who contribute to the language and its ecosystem. This community provides a wealth of resources and support for developers who are learning Python or working on Python projects. Python’s community includes many open-source projects, online forums, and coding communities.</p>
+<p>Python is also highly portable, meaning that code written in Python can run on many different platforms and operating systems. This portability makes it an excellent choice for cross-platform development, as developers can write code once and run it on many different devices and systems. Python’s portability also means that developers can use it for a wide range of applications, from desktop and web applications to scientific and data analysis tools.</p>
+<p>Python’s support for multiple programming paradigms is another benefit of the language.</p>
+<p>Python’s support for multiple programming paradigms is another key benefit of the language. Python supports both object-oriented programming and functional programming, which are two of the most popular programming paradigms.</p>
+<p>Object-oriented programming (OOP) is a programming paradigm that focuses on creating reusable code by organizing data and behavior into objects. In OOP, objects are instances of classes, which are defined by their properties and methods. Python is an excellent language for object-oriented programming, as it provides robust support for classes and objects, as well as inheritance, polymorphism, and encapsulation.</p>
+<p>Functional programming (FP) is another popular programming paradigm that emphasizes the use of functions to solve problems. In FP, functions are treated as first-class citizens, which means they can be passed as arguments to other functions, returned as values from functions, and stored in variables. Python provides support for functional programming, including lambda functions.</p>
+</section>
+<section id="introduction-to-python-installing-python-and-setting-up-the-development-environment">
+<h1>Introduction to Python: Installing Python and Setting up the Development Environment<a class="headerlink" href="#introduction-to-python-installing-python-and-setting-up-the-development-environment" title="Permalink to this heading">#</a></h1>
+<p>Python is a high-level programming language that is widely used in various fields, such as data science, web development, artificial intelligence, and more. Installing Python and setting up the development environment is essential for working with Python effectively. In this post, we will cover how to install Python and set up the development environment on Windows, Linux, and MacOS.</p>
+<p>Installing Python on Windows</p>
+<p>There are various ways to install Python on Windows. However, we recommend using Chocolatey, a package manager for Windows, to install Python. Here’s how to install Python on Windows using Chocolatey:</p>
+<ol class="arabic simple">
+<li><p>Open PowerShell as an administrator. You can do this by pressing the Windows key, typing PowerShell, and then right-clicking on the PowerShell icon and selecting “Run as administrator.”</p></li>
+<li><p>Install Chocolatey by entering the following command:</p></li>
+</ol>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nb">Set-ExecutionPolicy</span> <span class="n">Bypass</span> <span class="n">-Scope</span> <span class="k">Process</span> <span class="n">-Force</span><span class="p">;</span> <span class="no">[System.Net.WebRequest]</span><span class="p">::</span><span class="n">DefaultWebProxy</span><span class="p">.</span><span class="n">Credentials</span> <span class="p">=</span> <span class="no">[System.Net.CredentialCache]</span><span class="p">::</span><span class="n">DefaultNetworkCredentials</span><span class="p">;</span> <span class="nb">iex </span><span class="p">((</span><span class="nb">New-Object</span> <span class="n">System</span><span class="p">.</span><span class="n">Net</span><span class="p">.</span><span class="n">WebClient</span><span class="p">).</span><span class="n">DownloadString</span><span class="p">(</span><span class="s1">&#39;https://chocolatey.org/install.ps1&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Install Python by entering the following command:</p></li>
+</ol>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">choco</span> <span class="n">install</span> <span class="n">python</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Verify that Python is installed correctly by opening a command prompt and entering the following command:</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">python</span> <span class="o">--</span><span class="n">version</span>
+
+<span class="ne">NameError</span>: name &#39;python&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>Installing Python on Linux</p>
+<p>Most Linux distributions come with Python pre-installed. However, if you need to install Python manually, you can do so using the package manager of your distribution. Here’s how to install Python on Ubuntu, a popular Linux distribution:</p>
+<ol class="arabic simple">
+<li><p>Open a terminal and update the package index by entering the following command:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Install Python by entering the following command:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>python3
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Verify that Python is installed correctly by entering the following command:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>--version
+</pre></div>
+</div>
+<p>Installing Python on MacOS</p>
+<p>MacOS comes with Python pre-installed. However, it’s recommended to install Python using Homebrew, a package manager for MacOS. Here’s how to install Python on MacOS using Homebrew:</p>
+<ol class="arabic simple">
+<li><p>Open a terminal and install Homebrew by entering the following command:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Install Python by entering the following command:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">python</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Verify that Python is installed correctly by entering the following command:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+<p>Setting up the Development Environment</p>
+<p>After installing Python, you need to set up the development environment to start coding. Here are the steps to set up the development environment:</p>
+<ol class="arabic simple">
+<li><p>Choose an integrated development environment (IDE) or a code editor to write your Python code. Some popular choices include PyCharm, Visual Studio Code, and Sublime Text.</p></li>
+<li><p>Install any necessary packages or libraries that your project requires using pip, the package installer for Python. For example, if you’re working on a data science project, you might need to install NumPy, Pandas, and Matplotlib using the following command:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span> <span class="n">pandas</span> <span class="n">matplotlib</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Start writing your Python code in the IDE or code editor of your choice.</p></li>
+</ol>
+<p>Conclusion</p>
+<p>Installing Python and setting up the development environment is easy and straightforward. By following the steps outlined in this post, you can quickly get started with Python and start coding. Remember to keep your packages and libraries up to date to ensure that your code runs smoothly. Happy coding!</p>
+<section id="introduction-to-python-running-python-scripts-and-using-the-interactive-shell">
+<h2>Introduction to Python: Running Python Scripts and Using the Interactive Shell<a class="headerlink" href="#introduction-to-python-running-python-scripts-and-using-the-interactive-shell" title="Permalink to this heading">#</a></h2>
+<p>Python is a versatile programming language that can be used for a wide range of applications, from web development to data analysis. Once you have installed Python and set up your development environment, you can start running Python scripts and using the interactive shell to write and execute code. In this post, we will cover how to run Python scripts and use the interactive shell.</p>
+<p>Running Python Scripts</p>
+<p>Python scripts are plain text files that contain Python code. To run a Python script, you need to save the file with a .py extension and then execute it using the Python interpreter. Here’s how to run a Python script:</p>
+<ol class="arabic simple">
+<li><p>Open a command prompt or terminal.</p></li>
+<li><p>Navigate to the directory where your Python script is saved using the cd command. For example, if your script is saved in a folder called “my_project” on your desktop, you can navigate to it using the following command:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">Desktop</span><span class="o">/</span><span class="n">my_project</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Execute the script using the following command:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">script_name</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Replace “script_name.py” with the name of your Python script.</p>
+<p>Using the Interactive Shell</p>
+<p>The Python interactive shell is a powerful tool that allows you to test and experiment with Python code interactively. You can use the interactive shell to write and execute Python code one line at a time. Here’s how to use the interactive shell:</p>
+<ol class="arabic simple">
+<li><p>Open a command prompt or terminal.</p></li>
+<li><p>Enter the following command to launch the Python interpreter:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>You should see a prompt that looks like this:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+<p>This is the Python prompt, which indicates that you can start entering Python code.</p>
+<ol class="arabic simple" start="4">
+<li><p>Enter some Python code, such as:</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Press Enter to execute the code. You should see the following output:</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>Hello, world!
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>You can also use the interactive shell as a calculator. For example, you can enter the following code to perform basic arithmetic operations:</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">10</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>To exit the interactive shell, enter the following command:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">exit</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Conclusion</p>
+<p>Running Python scripts and using the interactive shell are essential skills for anyone who wants to learn Python. By following the steps outlined in this post, you can easily run Python scripts and experiment with Python code using the interactive shell. Remember to save your Python scripts with a .py extension and use the Python interpreter to execute them. Happy coding!</p>
+</section>
+</section>
+<section id="using-ipython-as-a-calculator-and-to-calculate-tax-rates">
+<h1>Using IPython as a Calculator and to Calculate Tax Rates<a class="headerlink" href="#using-ipython-as-a-calculator-and-to-calculate-tax-rates" title="Permalink to this heading">#</a></h1>
+<p>IPython is an interactive shell for Python that provides enhanced functionality compared to the standard Python interpreter. One of the features that makes IPython so useful is its ability to be used as a calculator. In this post, we’ll cover how to use IPython as a calculator and also use it to calculate tax rates.</p>
+<section id="using-ipython-as-a-calculator">
+<h2>Using IPython as a Calculator<a class="headerlink" href="#using-ipython-as-a-calculator" title="Permalink to this heading">#</a></h2>
+<p>To use IPython as a calculator, simply type mathematical expressions into the IPython prompt and press enter. IPython supports all the basic mathematical operations, including addition, subtraction, multiplication, and division.</p>
+<p>Here’s an example of using IPython as a calculator:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">10</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>As you can see, IPython returns the results of the mathematical expressions you enter. You can use IPython to perform more complex calculations as well, such as exponentiation and trigonometric functions.</p>
+<section id="using-ipython-to-calculate-tax-rates">
+<h3>Using IPython to Calculate Tax Rates<a class="headerlink" href="#using-ipython-to-calculate-tax-rates" title="Permalink to this heading">#</a></h3>
+<p>Now let’s see how to use IPython to calculate tax rates. Suppose you have a salary of $50,000 and you want to calculate your federal income tax. The federal income tax rate is based on your income and is calculated using a series of brackets.</p>
+<p>Here’s how you can use IPython to calculate your federal income tax:</p>
+<ol class="arabic simple">
+<li><p>Open IPython by typing <code class="docutils literal notranslate"><span class="pre">ipython</span></code> into your terminal.</p></li>
+<li><p>Enter your salary as a variable:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">salary</span> <span class="o">=</span> <span class="mi">50000</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Define the tax brackets and rates using lists:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">brackets</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9875</span><span class="p">,</span> <span class="mi">40125</span><span class="p">,</span> <span class="mi">85525</span><span class="p">,</span> <span class="mi">163300</span><span class="p">,</span> <span class="mi">207350</span><span class="p">,</span> <span class="mi">518400</span><span class="p">]</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">rates</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.12</span><span class="p">,</span> <span class="mf">0.22</span><span class="p">,</span> <span class="mf">0.24</span><span class="p">,</span> <span class="mf">0.32</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="mf">0.37</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">brackets</span></code> list contains the upper limit of each tax bracket, and the <code class="docutils literal notranslate"><span class="pre">rates</span></code> list contains the tax rate for each bracket.</p>
+<ol class="arabic simple" start="4">
+<li><p>Write a function to calculate the tax based on the salary and tax brackets:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calculate_tax</span><span class="p">(</span><span class="n">salary</span><span class="p">):</span>
+<span class="n">tax</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">brackets</span><span class="p">)):</span>
+  <span class="k">if</span> <span class="n">salary</span> <span class="o">&gt;</span> <span class="n">brackets</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+    <span class="n">tax</span> <span class="o">+=</span> <span class="p">(</span><span class="n">brackets</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="p">(</span><span class="n">brackets</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">i</span><span class="o">&gt;</span><span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span><span class="p">))</span> <span class="o">*</span> <span class="n">rates</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="n">tax</span> <span class="o">+=</span> <span class="p">(</span><span class="n">salary</span> <span class="o">-</span> <span class="p">(</span><span class="n">brackets</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">i</span><span class="o">&gt;</span><span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span><span class="p">))</span> <span class="o">*</span> <span class="n">rates</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+  <span class="k">break</span>
+<span class="k">return</span> <span class="n">tax</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">calculate_tax()</span></code> function uses a loop to calculate the tax based on the salary and tax brackets. It first checks if the salary is greater than the upper limit of each tax bracket. If it is, it calculates the tax for that bracket by multiplying the difference between the upper limit and the previous upper limit (or zero for the first bracket) by the tax rate. If the salary is less than the upper limit of a bracket, it calculates the tax by multiplying the difference between the salary and the previous upper limit (or zero for the first bracket) by the tax rate.</p>
+<ol class="arabic simple" start="5">
+<li><p>Call the <code class="docutils literal notranslate"><span class="pre">calculate_tax()</span></code> function with your salary as an argument:</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">salary</span> <span class="o">=</span> <span class="mi">50000</span>
+<span class="n">rates</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.12</span><span class="p">,</span> <span class="mf">0.22</span><span class="p">,</span> <span class="mf">0.24</span><span class="p">,</span> <span class="mf">0.32</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="mf">0.37</span><span class="p">]</span>
+<span class="n">brackets</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9875</span><span class="p">,</span> <span class="mi">40125</span><span class="p">,</span> <span class="mi">85525</span><span class="p">,</span> <span class="mi">163300</span><span class="p">,</span> <span class="mi">207350</span><span class="p">,</span> <span class="mi">518400</span><span class="p">]</span>
+<span class="k">def</span> <span class="nf">calculate_tax</span><span class="p">(</span><span class="n">salary</span><span class="p">):</span>
+ <span class="n">tax</span> <span class="o">=</span> <span class="mi">0</span>
+ <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">brackets</span><span class="p">)):</span>
+   <span class="k">if</span> <span class="n">salary</span> <span class="o">&gt;</span> <span class="n">brackets</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+     <span class="n">tax</span> <span class="o">+=</span> <span class="p">(</span><span class="n">brackets</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="p">(</span><span class="n">brackets</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">i</span><span class="o">&gt;</span><span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span><span class="p">))</span> <span class="o">*</span> <span class="n">rates</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+   <span class="k">else</span><span class="p">:</span>
+     <span class="n">tax</span> <span class="o">+=</span> <span class="p">(</span><span class="n">salary</span> <span class="o">-</span> <span class="p">(</span><span class="n">brackets</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">i</span><span class="o">&gt;</span><span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span><span class="p">))</span> <span class="o">*</span> <span class="n">rates</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+   <span class="k">break</span>
+ <span class="k">return</span> <span class="n">tax</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your income tax is: &quot;</span> <span class="o">+</span> <span class="n">calculate_tax</span><span class="p">(</span><span class="n">salary</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>According to this calculation, your federal income tax would be <span class="math notranslate nohighlight">\(7,160 based on a salary of \)</span>50,000.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+            </article>
+            
+
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">Welcome to your Jupyter Book</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="../markdown.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title">Markdown Files</p>
+  </div>
+  <i class="fa-solid fa-angle-right"></i>
+  </a>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   History of Python
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction-to-python-installing-python-and-setting-up-the-development-environment">
+   Introduction to Python: Installing Python and Setting up the Development Environment
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#introduction-to-python-running-python-scripts-and-using-the-interactive-shell">
+     Introduction to Python: Running Python Scripts and Using the Interactive Shell
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-ipython-as-a-calculator-and-to-calculate-tax-rates">
+   Using IPython as a Calculator and to Calculate Tax Rates
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-ipython-as-a-calculator">
+     Using IPython as a Calculator
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#using-ipython-to-calculate-tax-rates">
+       Using IPython to Calculate Tax Rates
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2022.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+Last updated on None.<br>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </div>
+        </footer>
+        
+
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  </body>
+</html>
