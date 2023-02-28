@@ -105,7 +105,7 @@ choco install python
 4. Verify that Python is installed correctly by opening a command prompt and entering the following command:
 
 
-```{code-cell} ipython3
+```bash
 python --version
 ```
 Installing Python on Linux
@@ -228,8 +228,8 @@ Hello, world!
 
 
 ```{code-cell} ipython3
-print(2 + 2)
-print(10 / 2)
+2 + 2
+10 / 2
 ```
 7. To exit the interactive shell, enter the following command:
 
@@ -254,8 +254,8 @@ Running Python scripts and using the interactive shell are essential skills for 
 
 
 ```{code-cell} ipython3
-print(2 + 2)
-print(10 / 2)
+2 + 2
+10 / 2
 ```
   As you can see, IPython returns the results of the mathematical expressions you enter. You can use IPython to perform more complex calculations as well, such as exponentiation and trigonometric functions.
 
@@ -313,7 +313,9 @@ def calculate_tax(salary):
       tax += (salary - (brackets[i-1] if i>0 else 0)) * rates[i]
     break
   return tax
-print("Your income tax is: " + calculate_tax(salary))
+output = "Your income tax is: " + calculate_tax(salary)
+
+output
 ```
 
 According to this calculation, your federal income tax would be $7,160 based on a salary of $50,000.
