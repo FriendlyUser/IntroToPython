@@ -1,25 +1,33 @@
 # IntroToPython
 Introduction To Python Source Code
 
+TO install
+
+```python
+pip install git+https://github.com/ExecutableBookProject/jupyter-book.git@master
+```
 
 ## Outline
 
 Chapter 1: What is Python and why use it?
-Introduction to Python as a high-level, interpreted, general-purpose programming language
-The benefits and features of Python such as readability, simplicity, portability, multiple paradigms, rich libraries and community
-How to install Python and set up the development environment
-How to run Python scripts and use the interactive shell
+- Introduction to Python as a high-level, interpreted, general-purpose programming language
+- The benefits and features of Python such as readability, simplicity, portability, multiple paradigms, rich libraries and community
+- How to install Python and set up the development environment
+- How to run Python scripts and use the interactive shell
+
 Chapter 2: Basic syntax and data types
-The structure and rules of Python syntax such as indentation, comments, statements, expressions and operators
-The built-in data types in Python such as numbers, strings, booleans, lists, tuples, dictionaries and sets
-How to create, manipulate and access data using variables, literals, constants and operators
-How to use basic input and output functions such as print() and input()
+- The structure and rules of Python syntax such as indentation, comments, statements, expressions and operators
+- The built-in data types in Python such as numbers, strings, booleans, lists, tuples, dictionaries and sets
+- How to create, manipulate and access data using variables, literals, constants and operators
+- How to use basic input and output functions such as print() and input()
+
 Chapter 3: Control flow and functions
-How to use conditional statements such as if-elif-else to make decisions based on conditions
-How to use looping statements such as for and while to repeat actions based on conditions or sequences
-How to use break, continue and pass statements to control the flow of loops
-How to define and call functions using def keyword and parameters
-How to use return statement to send values back from functions
+* How to use conditional statements such as if-elif-else to make decisions based on conditions
+* How to use looping statements such as for and while to repeat actions based on conditions or sequences
+* How to use break, continue and pass statements to control the flow of loops
+* How to define and call functions using def keyword and parameters
+* How to use return statement to send values back from functions
+
 Chapter 4: Modules and packages
 What are modules and packages in Python and how they help organize code into reusable units
 How to import modules and packages using import statement or from-import statement
