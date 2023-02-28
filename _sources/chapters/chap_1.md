@@ -313,7 +313,7 @@ def calculate_tax(salary):
       tax += (salary - (brackets[i-1] if i>0 else 0)) * rates[i]
     break
   return tax
-output = "Your income tax is: " + calculate_tax(salary)
+output = f"Your income tax is: {calculate_tax(salary)}"
 
 output
 ```
