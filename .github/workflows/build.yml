@@ -35,6 +35,10 @@ jobs:
         shell: bash -l {0}
         run: jb build $BOOK_NAME/
 
+      - name: Insert .nojeykell
+        run:
+          echo "" >> introtopython/_build/html/.nojekyll
+
       - name: Add adsense
         shell: bash -l {0}
         run: chmod +x scripts/insert_adsense.sh && scripts/insert_adsense.sh
