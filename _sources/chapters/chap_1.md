@@ -255,8 +255,12 @@ Running Python scripts and using the interactive shell are essential skills for 
 
 ```{code-cell}
 2 + 2
+```
+
+```{code-cell}
 10 / 2
 ```
+
   As you can see, IPython returns the results of the mathematical expressions you enter. You can use IPython to perform more complex calculations as well, such as exponentiation and trigonometric functions.
 
 #### Using IPython to Calculate Tax Rates
