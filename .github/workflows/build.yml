@@ -33,7 +33,7 @@ jobs:
 
       - name: Build IBook
         shell: bash -l {0}
-        run: jb build ${{secrets.BOOK_NAME}}/
+        run: jb build $BOOK_NAME/
 
       - name: Add adsense
         shell: bash -l {0}
@@ -44,4 +44,4 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: ${{ secrets.BOOK_NAME }}/_build/html
+          FOLDER: $BOOK_NAME/_build/html
