@@ -1,6 +1,4 @@
 ---
-title: Chapter 1 Introduction to Python.
-description: Describing how to use python to program.
 jupytext:
   formats: md:myst
   text_representation: 
@@ -14,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-# Introduction To Python
+# Chapter 1: Introduction To Python
 
 ## History of Python
 ```{note}
