@@ -221,7 +221,7 @@ print("Hello, world!")
 5. Press Enter to execute the code. You should see the following output:
 
 
-```{code-cell} ipython3
+```
 Hello, world!
 ```
 6. You can also use the interactive shell as a calculator. For example, you can enter the following code to perform basic arithmetic operations:
@@ -253,7 +253,7 @@ Running Python scripts and using the interactive shell are essential skills for 
   Here's an example of using IPython as a calculator:
 
 
-```{code-cell} ipython3
+```{code-cell}
 2 + 2
 10 / 2
 ```
