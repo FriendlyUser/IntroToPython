@@ -214,6 +214,10 @@ const thebe_selector_output = ".output, .cell_output"
   
 
   
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
 
 </div>
   </nav>
@@ -503,7 +507,9 @@ title="Print to PDF"
       
   </ul>
 </div>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary" data-toggle="tooltip" data-placement="left" title="Toggle secondary sidebar">
+            <span class="fa-solid fa-list"></span>
+        </label>
     </div>
 </div>
             </div>
@@ -516,6 +522,36 @@ title="Print to PDF"
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-syntax-and-data-types">
+   Basic syntax and data types
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Basic syntax and data types
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variables-and-operators">
+     Variables and Operators
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#input-and-output-functions">
+     Input and Output Functions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -524,6 +560,204 @@ title="Print to PDF"
               
   <section class="tex2jax_ignore mathjax_ignore" id="chapter-2-basic-syntax-and-data-types">
 <h1>Chapter 2 Basic syntax and data types<a class="headerlink" href="#chapter-2-basic-syntax-and-data-types" title="Permalink to this heading">#</a></h1>
+<section id="basic-syntax-and-data-types">
+<h2>Basic syntax and data types<a class="headerlink" href="#basic-syntax-and-data-types" title="Permalink to this heading">#</a></h2>
+<p>Python is a high-level, interpreted programming language that is popular for its simple syntax, readability and ease of use. Understanding the basic syntax of Python is fundamental to writing effective code. In this chapter, we’ll discuss Python syntax and data types, including indentation, comments, statements, expressions and operators.</p>
+<p>Indentation
+Python uses indentation to group statements together. This makes the code more readable and helps to prevent syntax errors. Indentation is typically four spaces, but can be any consistent number of spaces or tabs. It is important to note that mixing tabs and spaces for indentation is not allowed in Python.</p>
+<p>Comments
+Comments are used to explain the code and are ignored by the Python interpreter. In Python, a single-line comment starts with a hash symbol (#). Multi-line comments can be enclosed in triple quotes (‘’’). It is good practice to include comments in your code to make it more readable and understandable to others.</p>
+<p>Statements
+A statement is a unit of code that the interpreter can execute. A statement can be an assignment, a function call, a loop or a conditional statement. In Python, statements are typically separated by a newline character.</p>
+<p>Expressions
+An expression is a combination of values, variables, operators and function calls that evaluates to a value. Examples of expressions include arithmetic expressions and Boolean expressions. Expressions can be used in statements or as part of other expressions.</p>
+<p>Operators
+Python has a wide range of operators, including arithmetic operators (+, -, *, /), comparison operators (==, !=, &lt;, &gt;), logical operators (and, or, not), and bitwise operators (&amp;, |, ~). Operators can be used in expressions to manipulate values and produce new values.</p>
+<p>Data Types
+Python has several built-in data types, including numbers, strings, lists, tuples and dictionaries. Numbers can be integers or floating-point numbers. Strings are sequences of characters enclosed in single or double quotes. Lists are ordered collections of items that can be of different types. Tuples are similar to lists, but are immutable. Dictionaries are unordered collections of key-value pairs.</p>
+<p>Python is a dynamically-typed language, which means that the type of a variable is determined at runtime and can change during the execution of a program. However, Python does provide some tools for type checking:</p>
+<p>isinstance() function: This function is used to determine if an object is an instance of a particular class or a subclass thereof. It takes two arguments: the object and the class (or tuple of classes) to check against.
+Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyClass</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="n">obj</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">MyClass</span><span class="p">))</span>  <span class="c1"># Output: True</span>
+</pre></div>
+</div>
+<p>type() function: This function returns the type of an object.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>  <span class="c1"># Output: &lt;class &#39;int&#39;&gt;</span>
+</pre></div>
+</div>
+<p>Annotations: Python 3 introduced the ability to add type annotations to function parameters and return values. These annotations are not enforced by the Python interpreter, but they can be used by third-party tools to perform static type checking.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span>
+
+<span class="n">greet</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>  <span class="c1"># This will raise a TypeError at runtime</span>
+</pre></div>
+</div>
+<p>Type hints are a feature in Python that allow you to annotate function and variable definitions with information about the expected types of values. Type hints were introduced in Python 3.5 as an optional feature, but they have become increasingly popular in recent years as a way to help catch errors and make code more maintainable.</p>
+<p>Type hints use a syntax similar to variable annotations. For example, to annotate a function that takes two integers and returns their sum, you would use the following syntax:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_numbers</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</pre></div>
+</div>
+<p>Type hints are a feature in Python that allow you to annotate function and variable definitions with information about the expected types of values. Type hints were introduced in Python 3.5 as an optional feature, but they have become increasingly popular in recent years as a way to help catch errors and make code more maintainable.</p>
+<p>Type hints use a syntax similar to variable annotations. For example, to annotate a function that takes two integers and returns their sum, you would use the following syntax:</p>
+<p>python
+Copy code
+def add_numbers(a: int, b: int) -&gt; int:
+return a + b
+In this example, the a and b parameters are annotated with the int type, indicating that the function expects integer values. The return type of the function is also annotated with int, indicating that the function will return an integer value.</p>
+<p>Type hints are not enforced by the Python interpreter, and they do not affect the behavior of your code. However, they can be used by third-party tools and IDEs to provide code completion and catch type-related errors at compile time. The mypy tool is a popular static type checker for Python that can be used to check your code for type errors.</p>
+<p>Here are some benefits of using type hints in Python:</p>
+<p>Improved code readability: Type hints can make your code easier to understand by making it clear what types of values are expected and returned by functions.
+Catch errors earlier: By specifying the types of variables and function parameters, you can catch errors earlier in the development process and reduce the likelihood of runtime errors.
+Improve code quality: Type hints can help you write better code by making it easier to reason about and making it more maintainable.
+Enhance tooling support: IDEs and other tools can use type hints to provide more accurate code completion and refactoring suggestions.
+Overall, type hints are a useful tool for improving the quality and maintainability of your Python code. However, they are not a substitute for good coding practices and thorough testing.</p>
+<p>Conclusion
+Python syntax is easy to understand and learn. Indentation, comments, statements, expressions and operators are the fundamental components of Python syntax. Understanding these concepts is important for writing effective Python code. In the next chapter, we’ll explore variables and data structures in more detail.</p>
+<section id="id1">
+<h3>Basic syntax and data types<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>Python is a high-level, interpreted programming language that provides several built-in data types. These data types are the fundamental building blocks of any Python program. In this chapter, we’ll discuss the most commonly used data types in Python, including numbers, strings, booleans, lists, tuples, dictionaries, and sets.</p>
+<p>Numbers
+In Python, numbers can be represented as integers, floating-point numbers, or complex numbers. Integers are whole numbers, while floating-point numbers have decimal points. Complex numbers have a real and imaginary component.</p>
+<p>Strings
+Strings are sequences of characters that are enclosed in single or double quotes. They are immutable, which means they cannot be changed after they are created. String manipulation is an essential part of text processing in Python.</p>
+<p>Booleans
+Boolean values are either True or False. They are used in conditional statements and comparisons to control the flow of a program.</p>
+<p>Lists
+Lists are ordered collections of items that can be of different types. They are created using square brackets and can be modified by adding, removing, or changing elements.</p>
+<p>Tuples
+Tuples are similar to lists, but they are immutable, which means they cannot be changed after they are created. They are created using parentheses and can contain elements of different types.</p>
+<p>Dictionaries
+Dictionaries are unordered collections of key-value pairs. They are created using curly braces and can be used to store and retrieve data based on keys.</p>
+<p>Sets
+Sets are unordered collections of unique elements. They are created using curly braces and can be used for set operations such as union, intersection, and difference.</p>
+<p>In Python, there are a number of reserved words that have special meanings and cannot be used as variable or function names. These reserved words are used by the Python interpreter for specific purposes and are an integral part of the language syntax. Here is a list of all the reserved words in Python:</p>
+<ul class="simple">
+<li><p>False</p></li>
+<li><p>None</p></li>
+<li><p>True</p></li>
+<li><p>and</p></li>
+<li><p>as</p></li>
+<li><p>assert</p></li>
+<li><p>async</p></li>
+<li><p>await</p></li>
+<li><p>break</p></li>
+<li><p>class</p></li>
+<li><p>continue</p></li>
+<li><p>def</p></li>
+<li><p>del</p></li>
+<li><p>elif</p></li>
+<li><p>else</p></li>
+<li><p>except</p></li>
+<li><p>finally</p></li>
+<li><p>for</p></li>
+<li><p>from</p></li>
+<li><p>global</p></li>
+<li><p>if</p></li>
+<li><p>import</p></li>
+<li><p>in</p></li>
+<li><p>is</p></li>
+<li><p>lambda</p></li>
+<li><p>nonlocal</p></li>
+<li><p>not</p></li>
+<li><p>or</p></li>
+<li><p>pass</p></li>
+<li><p>raise</p></li>
+<li><p>return</p></li>
+<li><p>try</p></li>
+<li><p>while</p></li>
+<li><p>with</p></li>
+<li><p>yield</p></li>
+</ul>
+<p>These reserved words cannot be used as variable names, function names, or any other identifier in Python code. If you try to use a reserved word as a variable or function name, you will get a syntax error.</p>
+<p>It’s important to note that some of these reserved words, such as async and await, were only introduced in recent versions of Python and may not be available in older versions. If you are writing code that needs to be compatible with multiple versions of Python, you should be aware of which reserved words are available in each version.</p>
+<p>Conclusion
+Python provides several built-in data types that can be used to represent different types of data. Numbers, strings, booleans, lists, tuples, dictionaries, and sets are the most commonly used data types in Python. Understanding these data types is essential for writing effective Python code. In the next chapter, we’ll explore variables and operators in more detail.</p>
+<p>I hope this article has helped you understand the built-in data types in Python. If you have any questions or comments, please feel free to leave them below. Thank you for reading!</p>
+<p>Keywords: Python, data types, numbers, strings, booleans, lists, tuples, dictionaries, sets, text processing, conditional statements, comparisons, square brackets, parentheses, curly braces, mutable, immutable, elements, key-value pairs, unique elements, set operations, union, intersection, difference.</p>
+</section>
+<section id="variables-and-operators">
+<h3>Variables and Operators<a class="headerlink" href="#variables-and-operators" title="Permalink to this heading">#</a></h3>
+<p>In Python, variables are used to store data that can be accessed and manipulated throughout a program. In this chapter, we’ll discuss how to create, manipulate and access data using variables, literals, constants and operators.</p>
+<p>Variables
+Variables are used to store data in memory for later use. In Python, a variable is created by assigning a value to a name using the equals sign (=). For example, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">5</span></code> creates a variable named <code class="docutils literal notranslate"><span class="pre">x</span></code> and assigns it the value 5. Variables can be used to store numbers, strings, booleans, and other data types.</p>
+<p>Literals
+Literals are fixed values that are used in Python code. Examples of literals include numbers, strings, and Boolean values. For example, <code class="docutils literal notranslate"><span class="pre">5</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;Hello,</span> <span class="pre">world!&quot;</span></code> are literals.</p>
+<p>Constants
+Constants are variables whose values do not change throughout a program. In Python, constants are typically defined using uppercase letters. For example, <code class="docutils literal notranslate"><span class="pre">PI</span> <span class="pre">=</span> <span class="pre">3.14159</span></code> defines a constant named <code class="docutils literal notranslate"><span class="pre">PI</span></code>.</p>
+<p>Operators
+Python provides a wide range of operators that can be used to manipulate data. Some of the most commonly used operators include:</p>
+<ul class="simple">
+<li><p>Arithmetic operators: <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>, <code class="docutils literal notranslate"><span class="pre">%</span></code>, <code class="docutils literal notranslate"><span class="pre">**</span></code></p></li>
+<li><p>Comparison operators: <code class="docutils literal notranslate"><span class="pre">==</span></code>, <code class="docutils literal notranslate"><span class="pre">!=</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code></p></li>
+<li><p>Logical operators: <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code></p></li>
+<li><p>Assignment operators: <code class="docutils literal notranslate"><span class="pre">=</span></code>, <code class="docutils literal notranslate"><span class="pre">+=</span></code>, <code class="docutils literal notranslate"><span class="pre">-=</span></code>, <code class="docutils literal notranslate"><span class="pre">*=</span></code>, <code class="docutils literal notranslate"><span class="pre">/=</span></code>, <code class="docutils literal notranslate"><span class="pre">%=</span></code></p></li>
+<li><p>Bitwise operators: <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>, <code class="docutils literal notranslate"><span class="pre">|</span></code>, <code class="docutils literal notranslate"><span class="pre">^</span></code>, <code class="docutils literal notranslate"><span class="pre">~</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;&gt;</span></code></p></li>
+</ul>
+<p>Expressions
+Expressions are combinations of literals, variables, and operators that evaluate to a value. For example, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">5</span> <span class="pre">+</span> <span class="pre">3</span></code> is an expression that adds 5 and 3 and assigns the result (8) to the variable <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<p>Accessing Data
+Data stored in variables can be accessed and manipulated using expressions and operators. For example, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">1</span></code> increments the value of the variable <code class="docutils literal notranslate"><span class="pre">x</span></code> by 1.</p>
+<p>Conclusion
+Variables, literals, constants and operators are essential components of Python programming. They allow you to create, manipulate, and access data within your program. Understanding how to use these elements effectively is critical for writing effective Python code. In the next chapter, we’ll explore control structures such as loops and conditional statements.</p>
+<p>I hope this article has helped you understand how to create, manipulate and access data using variables, literals, constants, and operators in Python. If you have any questions or comments, please feel free to leave them below. Thank you for reading!</p>
+<p>Keywords: Python, variables, literals, constants, operators, arithmetic operators, comparison operators, logical operators, assignment operators, bitwise operators, expressions, accessing data, control structures, loops, conditional statements, data manipulation, data access.</p>
+</section>
+<section id="input-and-output-functions">
+<h3>Input and Output Functions<a class="headerlink" href="#input-and-output-functions" title="Permalink to this heading">#</a></h3>
+<p>Input and output (I/O) functions are essential in any programming language. In Python, the two basic I/O functions are <code class="docutils literal notranslate"><span class="pre">print()</span></code> and <code class="docutils literal notranslate"><span class="pre">input()</span></code>. In this chapter, we’ll discuss how to use these functions to interact with users and display information to the screen.</p>
+<p>Printing to the Console
+The <code class="docutils literal notranslate"><span class="pre">print()</span></code> function is used to display output on the console. It can be used to print strings, numbers, and other types of data. For example, <code class="docutils literal notranslate"><span class="pre">print(&quot;Hello,</span> <span class="pre">world!&quot;)</span></code> displays the text “Hello, world!” on the console. Multiple values can be printed using commas, like this: <code class="docutils literal notranslate"><span class="pre">print(&quot;The</span> <span class="pre">answer</span> <span class="pre">is&quot;,</span> <span class="pre">42)</span></code>. This prints the string “The answer is” followed by the number 42.</p>
+<p>Formatting Output
+Python provides a range of formatting options for output. The most common method is to use string interpolation with the <code class="docutils literal notranslate"><span class="pre">%</span></code> operator. For example, <code class="docutils literal notranslate"><span class="pre">print(&quot;The</span> <span class="pre">answer</span> <span class="pre">is</span> <span class="pre">%d&quot;</span> <span class="pre">%</span> <span class="pre">42)</span></code> prints “The answer is 42”. The <code class="docutils literal notranslate"><span class="pre">%d</span></code> is a placeholder for an integer value. Other placeholders include <code class="docutils literal notranslate"><span class="pre">%s</span></code> for strings and <code class="docutils literal notranslate"><span class="pre">%f</span></code> for floating-point numbers.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">format()</span></code> method is another option for formatting output. For example, <code class="docutils literal notranslate"><span class="pre">print(&quot;The</span> <span class="pre">answer</span> <span class="pre">is</span> <span class="pre">{}&quot;.format(42))</span></code> prints “The answer is 42”. The <code class="docutils literal notranslate"><span class="pre">{}</span></code> is a placeholder that is replaced with the value provided in the <code class="docutils literal notranslate"><span class="pre">format()</span></code> method.</p>
+<p>Reading Input from the User
+The <code class="docutils literal notranslate"><span class="pre">input()</span></code> function is used to read input from the user. It displays a message on the console and waits for the user to enter a value. For example, <code class="docutils literal notranslate"><span class="pre">name</span> <span class="pre">=</span> <span class="pre">input(&quot;What</span> <span class="pre">is</span> <span class="pre">your</span> <span class="pre">name?</span> <span class="pre">&quot;)</span></code> prompts the user to enter their name and stores the value in the variable <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
+<p>Converting Input
+The <code class="docutils literal notranslate"><span class="pre">input()</span></code> function always returns a string value. If you need to convert the value to a different data type, you can use functions like <code class="docutils literal notranslate"><span class="pre">int()</span></code>, <code class="docutils literal notranslate"><span class="pre">float()</span></code>, and <code class="docutils literal notranslate"><span class="pre">bool()</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">age</span> <span class="pre">=</span> <span class="pre">int(input(&quot;How</span> <span class="pre">old</span> <span class="pre">are</span> <span class="pre">you?</span> <span class="pre">&quot;))</span></code> prompts the user to enter their age and converts the input to an integer value.</p>
+<p>Conclusion
+The <code class="docutils literal notranslate"><span class="pre">print()</span></code> and <code class="docutils literal notranslate"><span class="pre">input()</span></code> functions are the basic building blocks of input and output in Python. With these functions, you can display information to the user and read input from them. By using formatting options and conversion functions, you can manipulate data in a variety of ways.</p>
+<p>I hope this article has helped you understand how to use basic input and output functions such as <code class="docutils literal notranslate"><span class="pre">print()</span></code> and <code class="docutils literal notranslate"><span class="pre">input()</span></code> in Python. If you have any questions or comments, please feel free to leave them below. Thank you for reading!</p>
+<p>Here is an example of a basic to-do list implemented in Python using basic syntax and data types:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create an empty list to store tasks</span>
+<span class="n">tasks</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Prompt the user for a new task and add it to the list</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+ <span class="n">new_task</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a new task or type &#39;exit&#39; to quit: &quot;</span><span class="p">)</span>
+ <span class="k">if</span> <span class="n">new_task</span> <span class="o">==</span> <span class="s2">&quot;exit&quot;</span><span class="p">:</span>
+  <span class="k">break</span>
+ <span class="k">else</span><span class="p">:</span>
+  <span class="n">tasks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_task</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Task added.&quot;</span><span class="p">)</span>
+
+<span class="c1"># Print the list of tasks</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;To-Do List:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">task</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">tasks</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">task</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This program creates an empty list called <code class="docutils literal notranslate"><span class="pre">tasks</span></code> to store the user’s to-do items. It then prompts the user to enter a new task using the <code class="docutils literal notranslate"><span class="pre">input()</span></code> function. If the user types “exit”, the program breaks out of the loop and ends. Otherwise, the program adds the new task to the <code class="docutils literal notranslate"><span class="pre">tasks</span></code> list using the <code class="docutils literal notranslate"><span class="pre">append()</span></code> method and prints a message confirming that the task was added.</p>
+<p>After the user has entered all of their tasks, the program prints out the entire to-do list using a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop and the <code class="docutils literal notranslate"><span class="pre">enumerate()</span></code> function to number each task. The output looks something like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">a</span> <span class="n">new</span> <span class="n">task</span> <span class="ow">or</span> <span class="nb">type</span> <span class="s1">&#39;exit&#39;</span> <span class="n">to</span> <span class="n">quit</span><span class="p">:</span> <span class="n">Buy</span> <span class="n">groceries</span>
+<span class="n">Task</span> <span class="n">added</span><span class="o">.</span>
+<span class="n">Enter</span> <span class="n">a</span> <span class="n">new</span> <span class="n">task</span> <span class="ow">or</span> <span class="nb">type</span> <span class="s1">&#39;exit&#39;</span> <span class="n">to</span> <span class="n">quit</span><span class="p">:</span> <span class="n">Walk</span> <span class="n">the</span> <span class="n">dog</span>
+<span class="n">Task</span> <span class="n">added</span><span class="o">.</span>
+<span class="n">Enter</span> <span class="n">a</span> <span class="n">new</span> <span class="n">task</span> <span class="ow">or</span> <span class="nb">type</span> <span class="s1">&#39;exit&#39;</span> <span class="n">to</span> <span class="n">quit</span><span class="p">:</span> <span class="n">Do</span> <span class="n">laundry</span>
+<span class="n">Task</span> <span class="n">added</span><span class="o">.</span>
+<span class="n">Enter</span> <span class="n">a</span> <span class="n">new</span> <span class="n">task</span> <span class="ow">or</span> <span class="nb">type</span> <span class="s1">&#39;exit&#39;</span> <span class="n">to</span> <span class="n">quit</span><span class="p">:</span> <span class="n">exit</span>
+<span class="n">To</span><span class="o">-</span><span class="n">Do</span> <span class="n">List</span><span class="p">:</span>
+<span class="mf">1.</span> <span class="n">Buy</span> <span class="n">groceries</span>
+<span class="mf">2.</span> <span class="n">Walk</span> <span class="n">the</span> <span class="n">dog</span>
+<span class="mf">3.</span> <span class="n">Do</span> <span class="n">laundry</span>
+</pre></div>
+</div>
+<p>This is just a simple example, but with a few modifications, you could expand it into a more complex to-do list application with features like task prioritization, due dates, and reminders.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define a function to find the nth Fibonacci number</span>
@@ -554,6 +788,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -604,6 +840,44 @@ title="Print to PDF"
           </div>
           
           
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-syntax-and-data-types">
+   Basic syntax and data types
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Basic syntax and data types
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variables-and-operators">
+     Variables and Operators
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#input-and-output-functions">
+     Input and Output Functions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+</div>
+
+            </div>
           
           
         </div>
