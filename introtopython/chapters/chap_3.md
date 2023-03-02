@@ -52,7 +52,7 @@ The `elif` statement allows you to check multiple conditions in a chain. The cod
 Here is an example that shows how to use conditional statements in Python:
 
 
-```python
+```{code-cell} ipython3
 x = 10
 
 if x > 0:
@@ -79,7 +79,7 @@ The `variable` is a new variable that takes on the value of each item in the `se
 Here is an example that shows how to use a `for` loop to iterate over a list:
 
 
-```python
+```{code-cell} ipython3
 fruits = ["apple", "banana", "cherry"]
 
 for fruit in fruits:
@@ -99,7 +99,7 @@ The `condition` can be any expression that evaluates to a Boolean value (i.e., `
 Here is an example that shows how to use a `while` loop to repeat a block of code:
 
 
-```python
+```{code-cell} ipython3
 i = 1
 
 while i <= 10:
@@ -118,7 +118,7 @@ The `break` statement allows you to exit a loop prematurely. When the `break` st
 Here is an example that shows how to use the `break` statement to exit a loop:
 
 
-```python
+```{code-cell} ipython3
 fruits = ["apple", "banana", "cherry"]
 
 for fruit in fruits:
@@ -133,7 +133,7 @@ The `continue` statement allows you to skip the current iteration of a loop and 
 Here is an example that shows how to use the `continue` statement to skip an iteration of a loop:
 
 
-```python
+```{code-cell} ipython3
 fruits = ["apple", "banana", "cherry"]
 
 for fruit in fruits:
@@ -148,7 +148,7 @@ The `pass` statement is used as a placeholder when you need to include an empty 
 Here is an example that shows how to use the `pass` statement to include an empty block of code:
 
 
-```python
+```{code-cell} ipython3
 fruits = ["apple", "banana", "cherry"]
 
 for fruit in fruits:
@@ -167,7 +167,7 @@ In Python, you can define and call functions using the `def` keyword.
 Here is an example of how to define a function:
 
 
-```python
+```{code-cell} ipython3
 def greet(name):
  print(f"Hello, {name}!")
 ```
@@ -176,7 +176,7 @@ In this example, we define a function called `greet` that takes one parameter ca
 Here is an example of how to call the `greet` function:
 
 
-```python
+```{code-cell} ipython3
 greet("John")
 ```
 In this example, we call the `greet` function and pass in the value `"John"` as the `name` parameter. The function then prints the message "Hello, John!".
@@ -184,7 +184,7 @@ In this example, we call the `greet` function and pass in the value `"John"` as 
 You can also define functions that take multiple parameters:
 
 
-```python
+```{code-cell} ipython3
 def add_numbers(x, y):
  return x + y
 ```
@@ -193,7 +193,7 @@ In this example, we define a function called `add_numbers` that takes two parame
 Here is an example of how to call the `add_numbers` function:
 
 
-```python
+```{code-cell} ipython3
 result = add_numbers(3, 4)
 print(result)
 ```
@@ -201,31 +201,12 @@ In this example, we call the `add_numbers` function and pass in the values `3` a
 
 By defining and calling functions with parameters, you can create reusable blocks of code that can be called with different input values to produce different output values.
 
-
-In Python, you can use the `return` statement to send values back from functions.
-
-Here is an example of a function that uses the `return` statement:
-
-
-```python
-def add_numbers(x, y):
- return x + y
-```
-In this example, we define a function called `add_numbers` that takes two parameters called `x` and `y`. Inside the function, we use the `return` keyword to return the sum of `x` and `y`.
-
 Here is an example of how to call the `add_numbers` function and assign the return value to a variable:
-
-
-```python
-result = add_numbers(3, 4)
-print(result)
-```
-In this example, we call the `add_numbers` function and pass in the values `3` and `4` as the `x` and `y` parameters. The function then returns the sum of `3` and `4`, which is assigned to the `result` variable. Finally, we print the value of `result`, which is `7`.
 
 You can also use the `return` statement to return multiple values from a function. To do this, you can separate the values with commas:
 
 
-```python
+```{code-cell} ipython3
 def square_and_cube(x):
  square = x ** 2
  cube = x ** 3
@@ -236,7 +217,7 @@ In this example, we define a function called `square_and_cube` that takes one pa
 Here is an example of how to call the `square_and_cube` function and assign the return values to variables:
 
 
-```python
+```{code-cell} ipython3
 square, cube = square_and_cube(2)
 print(square)
 print(cube)
@@ -253,7 +234,7 @@ A generator is a type of iterator that can be used to generate a sequence of val
 
 Here is an example of a generator function that uses the yield function:
 
-```python
+```{code-cell} ipython3
 def countdown(n):
     while n > 0:
         yield n
@@ -264,7 +245,7 @@ In this example, we define a generator function called countdown that takes one 
 
 Here is an example of how to use the countdown generator:
 
-```python
+```{code-cell} ipython3
 for i in countdown(5):
     print(i)
 ```

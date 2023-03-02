@@ -101,7 +101,7 @@ print(result) # Output: a random integer between 1 and 10
 The `datetime` module provides functions for working with dates and times. Here's an example of how to use the `datetime` function to create a datetime object representing the current date and time:
 
 
-```python
+```{code-cell} ipython3
 import datetime
 
 now = datetime.datetime.now()
@@ -171,7 +171,7 @@ python -m pip install requests
 Once you have installed a package, you can import it into your Python code just like any other module. For example, if you have installed the `requests` package, you can use it like this:
 
 
-```python
+```{code-cell} ipython3
 import requests
 
 response = requests.get("https://www.google.com")
@@ -204,7 +204,7 @@ Or to install a package with specific dependencies, you can use the `requirement
 
 
 ```python
-makefile`numpy==1.18.5
+numpy==1.18.5
 pandas==1.0.0
 ```
 2. Install the package using `pip` with the `-r` flag:
@@ -221,7 +221,7 @@ Python's standard library provides several modules for parsing XML documents. On
 Here's an example of how to use `xml.etree.ElementTree` to parse an XML document:
 
 
-```python
+```{code-cell} ipython3
 import xml.etree.ElementTree as ET
 
 # parse the XML file
