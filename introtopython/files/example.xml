@@ -1,0 +1,9 @@
+<root>
+ <child1 foo="bar">
+ <grandchild1/>
+ <grandchild2/>
+ </child1>
+ <child2 baz="qux">
+ <grandchild3/>
+ </child2>
+</root>

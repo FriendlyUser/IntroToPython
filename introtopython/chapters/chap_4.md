@@ -1,22 +1,17 @@
 ---
-tags: ['python', 'introtopython']
-title: Chapter 4 Control flow and functions.
-description: Describing how to use python to program.
-pubDate: Fri, 14 September 2024
-layout: "@/templates/BasePost.astro"
-imgSrc: /imgs/2023/2851628136.png
 jupytext:
   formats: md:myst
-text_representation:
- extension: .md
- format_name: myst
- format_version: 0.13
- jupytext_version: 1.11.5
+  text_representation: 
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.11.5
 kernelspec:
   display_name: Python 3
   language: python
   name: python3
 ---
+
 In Python, modules and packages are used to organize code into reusable units. A module is simply a file containing Python definitions and statements, while a package is a collection of modules placed in a directory hierarchy.
 
 Modules allow you to organize code logically and reuse it in other programs. For example, you could write a module that contains functions for working with strings, and then use that module in multiple programs. To use a module in a program, you simply import it using the `import` statement.

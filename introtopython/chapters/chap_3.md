@@ -1,11 +1,11 @@
 ---
 jupytext:
   formats: md:myst
-text_representation:
- extension: .md
- format_name: myst
- format_version: 0.13
- jupytext_version: 1.11.5
+  text_representation: 
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.11.5
 kernelspec:
   display_name: Python 3
   language: python
@@ -222,6 +222,7 @@ square, cube = square_and_cube(2)
 print(square)
 print(cube)
 ```
+
 In this example, we call the `square_and_cube` function and pass in the value `2` as the `x` parameter. The function then returns the square and cube of `2`, which are assigned to the `square` and `cube` variables. Finally, we print the values of `square` and `cube`, which are `4` and `8` respectively.
 
 By using the `return` statement, you can send values back from functions, which allows you to use the output of a function in other parts of your program.
