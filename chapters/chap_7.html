@@ -7,7 +7,7 @@
 <script data-ad-client="ca-pub-2479144310234386" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>&lt;no title&gt; &#8212; Introduction To Python</title>
+    <title>Chapter 7: File handling and data processing &#8212; Introduction To Python</title>
   
   
   
@@ -185,7 +185,7 @@ const thebe_selector_output = ".output, .cell_output"
 
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="#">
-                        <no title>
+                        Chapter 7: File handling and data processing
                       </a>
                     </li>
                 
@@ -311,7 +311,7 @@ const thebe_selector_output = ".output, .cell_output"
 
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="#">
-                        <no title>
+                        Chapter 7: File handling and data processing
                       </a>
                     </li>
                 
@@ -386,13 +386,14 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="chap_1.html">Chapter 1: Introduction To Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chap_2.html">Chapter 2 Basic syntax and data types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chap_3.html">Chapter 3: Control flow and functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chap_4.html">Chapter 4: Modules and packages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chap_5.html">Chapter 5: Object-oriented programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chap_6.html">Chapter 6: Exceptions and errors</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 7: File handling and data processing</a></li>
 </ul>
 
     </div>
@@ -536,7 +537,7 @@ title="Print to PDF"
             
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Chapter 7: File handling and data processing</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -545,7 +546,17 @@ title="Print to PDF"
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#file-permissions">
+   File Permissions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parsing-large-data-sets">
+   Parsing large data sets
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -555,7 +566,9 @@ title="Print to PDF"
 
             <article class="bd-article" role="main">
               
-  <p>Here is an overview of how to work with files in Python using <code class="docutils literal notranslate"><span class="pre">open()</span></code>, <code class="docutils literal notranslate"><span class="pre">close()</span></code>, <code class="docutils literal notranslate"><span class="pre">read()</span></code>, <code class="docutils literal notranslate"><span class="pre">write()</span></code> and other methods:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="chapter-7-file-handling-and-data-processing">
+<h1>Chapter 7: File handling and data processing<a class="headerlink" href="#chapter-7-file-handling-and-data-processing" title="Permalink to this heading">#</a></h1>
+<p>Here is an overview of how to work with files in Python using <code class="docutils literal notranslate"><span class="pre">open()</span></code>, <code class="docutils literal notranslate"><span class="pre">close()</span></code>, <code class="docutils literal notranslate"><span class="pre">read()</span></code>, <code class="docutils literal notranslate"><span class="pre">write()</span></code> and other methods:</p>
 <ol class="arabic simple">
 <li><p>Opening a file:
 You can use the <code class="docutils literal notranslate"><span class="pre">open()</span></code> function to open a file in Python. The function takes two arguments: the name of the file you want to open and the mode in which you want to open the file. The mode can be “r” for reading, “w” for writing, “a” for appending, or “x” for creating a new file. For example, to open a file named “example.txt” for writing, you can use the following code:</p></li>
@@ -581,6 +594,8 @@ You can use a context manager with the <code class="docutils literal notranslate
 You can use the <code class="docutils literal notranslate"><span class="pre">readline()</span></code> method to read a single line from a file, and the <code class="docutils literal notranslate"><span class="pre">writelines()</span></code> method to write a list of strings to a file, with each string representing a line. For example, to read the first line of the “example.txt” file, you can use the following code:</p></li>
 </ol>
 <p>And to write a list of strings to the “example.txt” file, you can use the following code:</p>
+<section id="file-permissions">
+<h2>File Permissions<a class="headerlink" href="#file-permissions" title="Permalink to this heading">#</a></h2>
 <p>In Linux, write permissions determine whether a user, group or others can modify, create or delete files or directories. The write permission is represented by a number in the file permission system and can be set or changed using the chmod command.</p>
 <p>Here’s what each digit in a chmod code represents:</p>
 <ul class="simple">
@@ -675,6 +690,9 @@ You can use the <code class="docutils literal notranslate"><span class="pre">rea
 <li><p>XML: The <code class="docutils literal notranslate"><span class="pre">xml</span></code> module in Python provides functionality for parsing and generating XML data. Here’s an example of how to read an XML file and process its data:</p></li>
 </ol>
 <p>In this example, we parse an XML file named <code class="docutils literal notranslate"><span class="pre">example.xml</span></code> using the <code class="docutils literal notranslate"><span class="pre">ET.parse()</span></code> function from the <code class="docutils literal notranslate"><span class="pre">xml.etree.ElementTree</span></code> module. We then access the root element of the XML file using the <code class="docutils literal notranslate"><span class="pre">getroot()</span></code> method, and use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to iterate over the</p>
+</section>
+<section id="parsing-large-data-sets">
+<h2>Parsing large data sets<a class="headerlink" href="#parsing-large-data-sets" title="Permalink to this heading">#</a></h2>
 <p>Generators are a great way to process large data sets efficiently in Python. They allow you to lazily load data one chunk at a time, rather than loading everything into memory at once. This can be particularly useful when dealing with very large data sets that would otherwise exceed available memory.</p>
 <p>To use generators to process large data sets, you can create a function that yields data in manageable chunks. Here’s an example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">read_large_file</span><span class="p">(</span><span class="n">file_object</span><span class="p">):</span>
@@ -719,6 +737,8 @@ You can use the <code class="docutils literal notranslate"><span class="pre">rea
 <li><p>The output file path</p></li>
 </ul>
 <p>Note that the <code class="docutils literal notranslate"><span class="pre">subprocess.run()</span></code> function will block until the ffmpeg command finishes running, so if you need to convert multiple files, you may want to use <code class="docutils literal notranslate"><span class="pre">subprocess.Popen()</span></code> instead and run the commands in parallel. Also note that if you want to convert other types of video files to MP3, you may need to modify the ffmpeg command accordingly.</p>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -770,7 +790,17 @@ You can use the <code class="docutils literal notranslate"><span class="pre">rea
     <i class="fa-solid fa-list"></i> On this page
 </div>
 <nav id="bd-toc-nav" class="page-toc">
-    <ul class="simple visible nav section-nav flex-column">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#file-permissions">
+   File Permissions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parsing-large-data-sets">
+   Parsing large data sets
+  </a>
+ </li>
 </ul>
 
 </nav>
