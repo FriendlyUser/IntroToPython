@@ -162,7 +162,7 @@ By using built-in exceptions in Python, you can handle errors and exceptions in 
 In Python, you can create your own custom exceptions by defining a new exception class that inherits from the built-in Exception class. Here's an example of how to create a custom exception class:
 
 
-```python
+```{code-cell} ipython3
 class MyCustomException(Exception):
  pass
 ```

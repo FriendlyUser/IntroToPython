@@ -723,9 +723,13 @@ title="Print to PDF"
 <p>In this example, the try-except block is used to catch a KeyError that might be raised if we try to access a key that does not exist in the dictionary. If a KeyError occurs, the except block will print the message “Key not found”.</p>
 <p>By using built-in exceptions in Python, you can handle errors and exceptions in a more controlled and structured way, making your code more robust and reliable.</p>
 <p>In Python, you can create your own custom exceptions by defining a new exception class that inherits from the built-in Exception class. Here’s an example of how to create a custom exception class:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyCustomException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyCustomException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
  <span class="k">pass</span>
 </pre></div>
+</div>
+</div>
 </div>
 <p>In this example, we define a new exception class called MyCustomException that inherits from the built-in Exception class. The pass keyword is used to indicate that we don’t need to add any additional functionality to our exception class at this point.</p>
 <p>Once you have defined your custom exception class, you can use it in your code by raising an instance of the class. Here’s an example of how to raise an instance of our custom exception class:</p>
@@ -745,30 +749,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">8</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">----&gt; </span><span class="mi">8</span>  <span class="n">result</span> <span class="o">=</span> <span class="n">my_function</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="k">except</span> <span class="n">MyCustomException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-
-<span class="nn">Cell In[3], line 3,</span> in <span class="ni">my_function</span><span class="nt">(x)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-<span class="ne">----&gt; </span><span class="mi">3</span>  <span class="k">raise</span> <span class="n">MyCustomException</span><span class="p">(</span><span class="s2">&quot;Input must be non-negative&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="k">else</span><span class="p">:</span>
-
-<span class="ne">NameError</span>: name &#39;MyCustomException&#39; is not defined
-
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
-
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">9</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>  <span class="n">result</span> <span class="o">=</span> <span class="n">my_function</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">9</span> <span class="k">except</span> <span class="n">MyCustomException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span>  <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;MyCustomException&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Input must be non-negative
 </pre></div>
 </div>
 </div>
