@@ -1,0 +1,903 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+<script data-ad-client="ca-pub-2479144310234386" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>&lt;no title&gt; &#8212; Introduction To Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=4ec06e9971c5264fbd345897d5258098f11cc577" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=8bf782fb4ee92b3d3646425e50f299c4e1fd152d"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/chap_5';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../intro.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_1.html">
+                        Chapter 1: Introduction To Python
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_2.html">
+                        Chapter 2 Basic syntax and data types
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_3.html">
+                        Chapter 3: Control flow and functions
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_4.html">
+                        The math module
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../markdown.html">
+                        Markdown Files
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../notebooks.html">
+                        Content with notebooks
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../markdown-notebooks.html">
+                        Notebooks with MyST Markdown
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_1.html">
+                        Chapter 1: Introduction To Python
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_2.html">
+                        Chapter 2 Basic syntax and data types
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_3.html">
+                        Chapter 3: Control flow and functions
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_4.html">
+                        The math module
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../markdown.html">
+                        Markdown Files
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../notebooks.html">
+                        Content with notebooks
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../markdown-notebooks.html">
+                        Notebooks with MyST Markdown
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+  
+
+
+<a class="navbar-brand logo" href="../intro.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    </div>
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="chap_1.html">Chapter 1: Introduction To Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap_2.html">Chapter 2 Basic syntax and data types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap_3.html">Chapter 3: Control flow and functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap_4.html">The math module</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+</ul>
+
+    </div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        <label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" data-toggle="tooltip" data-placement="right" title="Toggle primary sidebar">
+            <span class="fa-solid fa-bars"></span>
+        </label>
+    </div>
+    <div class="header-article__right">
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+  </ul>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<div class="dropdown dropdown-repository-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      <li><a href="https://github.com/FriendlyUser/IntroToPython" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">repository</span>
+</a>
+</a>
+      
+      <li><a href="https://github.com/FriendlyUser/IntroToPython/issues/new?title=Issue%20on%20page%20%2Fchapters/chap_5.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">open issue</span>
+</a>
+</a>
+      
+  </ul>
+</div>
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      <li><a href="../_sources/chapters/chap_5.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</a>
+      
+      <li><a href="../_sources/chapters/chap_5.md" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</a>
+      
+      <li>
+<button onclick="printPdf(this)"
+  class="btn btn-sm dropdown-item"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</a>
+      
+  </ul>
+</div>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary" data-toggle="tooltip" data-placement="left" title="Toggle secondary sidebar">
+            <span class="fa-solid fa-list"></span>
+        </label>
+    </div>
+</div>
+            </div>
+            
+            
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+            <article class="bd-article" role="main">
+              
+  <p>Object-oriented programming (OOP) is a programming paradigm that is based on the concept of “objects”, which can contain data (referred to as “attributes” or “properties”) and methods (referred to as “behaviors” or “functions”) that operate on that data.</p>
+<p>The main idea behind OOP is to model real-world entities as objects in the program. For example, in a car racing game, we might create an object for each car that contains attributes such as its speed, position, and direction, as well as methods for accelerating, braking, and turning. We might also create objects for the race track, the obstacles on the track, and the other drivers in the race.</p>
+<p>By modeling real-world entities as objects in the program, we can create a more intuitive and natural representation of the problem domain. We can also encapsulate data and behavior within objects, which helps to reduce complexity and make the code more modular and reusable.</p>
+<p>In OOP, objects are usually defined using classes, which are templates or blueprints for creating objects of a certain type. For example, we might define a <code class="docutils literal notranslate"><span class="pre">Car</span></code> class that contains the attributes and methods for a car object. We can then create multiple car objects from this class, each with its own set of attribute values.</p>
+<p>Here’s an example of what a <code class="docutils literal notranslate"><span class="pre">Car</span></code> class might look like in Python:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
+ <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">speed</span><span class="p">,</span> <span class="n">position</span><span class="p">):</span>
+  <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="n">speed</span>
+  <span class="bp">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="n">position</span>
+ 
+ <span class="k">def</span> <span class="nf">accelerate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+  <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">+=</span> <span class="n">amount</span>
+ 
+ <span class="k">def</span> <span class="nf">brake</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+  <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">-=</span> <span class="n">amount</span>
+ 
+  <span class="k">def</span> <span class="nf">turn</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">direction</span><span class="p">):</span>
+    <span class="c1"># logic for turning the car</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In this example, the <code class="docutils literal notranslate"><span class="pre">Car</span></code> class defines a constructor method (<code class="docutils literal notranslate"><span class="pre">__init__</span></code>) that initializes the <code class="docutils literal notranslate"><span class="pre">speed</span></code> and <code class="docutils literal notranslate"><span class="pre">position</span></code> attributes of a car object. It also defines three methods for accelerating, braking, and turning the car.</p>
+<p>To create a car object from this class, we would use code like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_car</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="n">speed</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This creates a new car object with an initial speed of 0 and an initial position of 0. We can then call the methods of the car object to make it accelerate, brake, and turn.</p>
+<p>Overall, object-oriented programming provides a powerful and flexible way to model complex systems and solve problems in a more intuitive and natural way. By representing real-world entities as objects in the program, we can create more modular, reusable, and maintainable code.</p>
+<p>In Python, an object is an instance of a class, which is a template or blueprint that defines the data (attributes) and behavior (methods) of a certain type of object. An object can be thought of as a self-contained entity that contains both data and the operations that can be performed on that data.</p>
+<p>Objects in Python are used to represent real-world entities by mapping their attributes and behaviors to the attributes and methods of a class. For example, a car object might have attributes such as its make, model, and color, as well as methods for accelerating, braking, and turning. Similarly, a user object in a social media application might have attributes such as their name, age, and email address, as well as methods for posting messages, commenting on posts, and following other users.</p>
+<p>Here’s an example of how we might create a <code class="docutils literal notranslate"><span class="pre">Car</span></code> object in Python:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
+ <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">make</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
+  <span class="bp">self</span><span class="o">.</span><span class="n">make</span> <span class="o">=</span> <span class="n">make</span>
+  <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span>
+  <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
+  <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">0</span>
+ 
+ <span class="k">def</span> <span class="nf">accelerate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+  <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">+=</span> <span class="n">amount</span>
+ 
+ <span class="k">def</span> <span class="nf">brake</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+  <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">-=</span> <span class="n">amount</span>
+ 
+ <span class="k">def</span> <span class="nf">turn</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">direction</span><span class="p">):</span>
+ <span class="c1"># logic for turning the car</span>
+  <span class="k">pass</span>
+
+<span class="n">my_car</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="n">make</span><span class="o">=</span><span class="s2">&quot;Toyota&quot;</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s2">&quot;Corolla&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In this example, the <code class="docutils literal notranslate"><span class="pre">Car</span></code> class defines a constructor method (<code class="docutils literal notranslate"><span class="pre">__init__</span></code>) that initializes the <code class="docutils literal notranslate"><span class="pre">make</span></code>, <code class="docutils literal notranslate"><span class="pre">model</span></code>, and <code class="docutils literal notranslate"><span class="pre">color</span></code> attributes of a car object. It also defines methods for accelerating, braking, and turning the car. We then create a <code class="docutils literal notranslate"><span class="pre">Car</span></code> object called <code class="docutils literal notranslate"><span class="pre">my_car</span></code> with the <code class="docutils literal notranslate"><span class="pre">make</span></code> “Toyota”, <code class="docutils literal notranslate"><span class="pre">model</span></code> “Corolla”, and <code class="docutils literal notranslate"><span class="pre">color</span></code> “red”.</p>
+<p>Once we have created a <code class="docutils literal notranslate"><span class="pre">Car</span></code> object, we can access its attributes and call its methods using dot notation. For example, we can print the <code class="docutils literal notranslate"><span class="pre">make</span></code> of <code class="docutils literal notranslate"><span class="pre">my_car</span></code> by writing <code class="docutils literal notranslate"><span class="pre">print(my_car.make)</span></code>.</p>
+<p>Overall, objects in Python provide a powerful way to represent real-world entities with their attributes and behaviors. By encapsulating data and methods within an object, we can create more modular, reusable, and maintainable code.</p>
+<p>In Python, a class is a blueprint or template for creating objects. A class defines a set of attributes (data) and methods (behavior) that all objects created from that class will have.</p>
+<p>To define a class in Python, we use the <code class="docutils literal notranslate"><span class="pre">class</span></code> keyword followed by the name of the class. Here’s an example of a simple class definition:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+ <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+  <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+  <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+
+ <span class="k">def</span> <span class="nf">say_hello</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, my name is&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In this example, we define a <code class="docutils literal notranslate"><span class="pre">Person</span></code> class with two attributes (<code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">age</span></code>) and one method (<code class="docutils literal notranslate"><span class="pre">say_hello</span></code>). The <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method is a special method that gets called when an object is created from the class. It initializes the <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">age</span></code> attributes of the object.</p>
+<p>To create an object from a class, we call the class like a function, passing in any required arguments. This creates a new instance of the class, which we can then manipulate and interact with using its attributes and methods. Here’s an example of creating an object from the <code class="docutils literal notranslate"><span class="pre">Person</span></code> class and calling its <code class="docutils literal notranslate"><span class="pre">say_hello</span></code> method:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">person</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+<span class="n">person</span><span class="o">.</span><span class="n">say_hello</span><span class="p">()</span> <span class="c1"># prints &quot;Hello, my name is Alice&quot;</span>
+</pre></div>
+</div>
+<p>In this example, we create a new <code class="docutils literal notranslate"><span class="pre">Person</span></code> object called <code class="docutils literal notranslate"><span class="pre">person</span></code> with the <code class="docutils literal notranslate"><span class="pre">name</span></code> “Alice” and <code class="docutils literal notranslate"><span class="pre">age</span></code> 25. We then call its <code class="docutils literal notranslate"><span class="pre">say_hello</span></code> method, which prints out a message containing the object’s <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute.</p>
+<p>Overall, classes in Python provide a powerful way to define the blueprint for creating objects with shared attributes and behavior. By encapsulating data and methods within a class, we can create more modular, reusable, and maintainable code.</p>
+<p>To create a class in Python, we use the <code class="docutils literal notranslate"><span class="pre">class</span></code> keyword followed by the name of the class. Here’s an example of a simple class definition:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+ <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+ <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+ <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+
+ <span class="k">def</span> <span class="nf">say_hello</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+ <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, my name is&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In this example, we define a <code class="docutils literal notranslate"><span class="pre">Person</span></code> class with two attributes (<code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">age</span></code>) and one method (<code class="docutils literal notranslate"><span class="pre">say_hello</span></code>). The <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method is a special method that gets called when an object is created from the class. It initializes the <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">age</span></code> attributes of the object.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">self</span></code> parameter in the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> and other method definitions refers to the object itself, and allows us to access and modify the object’s attributes and call its methods.</p>
+<p>To create an object from a class, we call the class like a function, passing in any required arguments. This creates a new instance of the class, which we can then manipulate and interact with using its attributes and methods. Here’s an example of creating an object from the <code class="docutils literal notranslate"><span class="pre">Person</span></code> class and calling its <code class="docutils literal notranslate"><span class="pre">say_hello</span></code> method:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">person</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+<span class="n">person</span><span class="o">.</span><span class="n">say_hello</span><span class="p">()</span> <span class="c1"># prints &quot;Hello, my name is Alice&quot;</span>
+</pre></div>
+</div>
+<p>In this example, we create a new <code class="docutils literal notranslate"><span class="pre">Person</span></code> object called <code class="docutils literal notranslate"><span class="pre">person</span></code> with the <code class="docutils literal notranslate"><span class="pre">name</span></code> “Alice” and <code class="docutils literal notranslate"><span class="pre">age</span></code> 25. We then call its <code class="docutils literal notranslate"><span class="pre">say_hello</span></code> method, which prints out a message containing the object’s <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute.</p>
+<p>Overall, classes in Python provide a powerful way to define the blueprint for creating objects with shared attributes and behavior. By encapsulating data and methods within a class, we can create more modular, reusable, and maintainable code.</p>
+<p>In Python, the <code class="docutils literal notranslate"><span class="pre">self</span></code> keyword is used to refer to the current object within a class method. When a method is called on an object, the object itself is automatically passed as the first argument to the method, which is typically named <code class="docutils literal notranslate"><span class="pre">self</span></code> by convention.</p>
+<p>Here’s an example of a class method that uses <code class="docutils literal notranslate"><span class="pre">self</span></code> to access and modify the object’s attributes:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+ <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+ <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+ <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+
+ <span class="k">def</span> <span class="nf">say_hello</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+ <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, my name is&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+ <span class="k">def</span> <span class="nf">celebrate_birthday</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+ <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">+=</span> <span class="mi">1</span>
+ <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Happy birthday! You are now&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">,</span> <span class="s2">&quot;years old.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In this example, we define a <code class="docutils literal notranslate"><span class="pre">Person</span></code> class with an <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method that initializes the object’s <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">age</span></code> attributes, a <code class="docutils literal notranslate"><span class="pre">say_hello</span></code> method that prints a message containing the object’s <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute, and a <code class="docutils literal notranslate"><span class="pre">celebrate_birthday</span></code> method that increments the object’s <code class="docutils literal notranslate"><span class="pre">age</span></code> attribute and prints a birthday message.</p>
+<p>To call a method on a <code class="docutils literal notranslate"><span class="pre">Person</span></code> object and access its attributes, we create an object of the <code class="docutils literal notranslate"><span class="pre">Person</span></code> class and call its methods using the <code class="docutils literal notranslate"><span class="pre">.</span></code> operator, passing <code class="docutils literal notranslate"><span class="pre">self</span></code> implicitly:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">person</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+<span class="n">person</span><span class="o">.</span><span class="n">say_hello</span><span class="p">()</span> <span class="c1"># prints &quot;Hello, my name is Alice&quot;</span>
+<span class="n">person</span><span class="o">.</span><span class="n">celebrate_birthday</span><span class="p">()</span> <span class="c1"># prints &quot;Happy birthday! You are now 26 years old.&quot;</span>
+</pre></div>
+</div>
+<p>In this example, we create a <code class="docutils literal notranslate"><span class="pre">Person</span></code> object called <code class="docutils literal notranslate"><span class="pre">person</span></code> with the <code class="docutils literal notranslate"><span class="pre">name</span></code> “Alice” and <code class="docutils literal notranslate"><span class="pre">age</span></code> 25. We then call its <code class="docutils literal notranslate"><span class="pre">say_hello</span></code> method and <code class="docutils literal notranslate"><span class="pre">celebrate_birthday</span></code> method, which access and modify the object’s <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">age</span></code> attributes using the <code class="docutils literal notranslate"><span class="pre">self</span></code> keyword.</p>
+<p>In Python, the <code class="docutils literal notranslate"><span class="pre">__str__</span></code> method is a special method that allows us to define a string representation of an object. When an object is printed or converted to a string using the <code class="docutils literal notranslate"><span class="pre">str</span></code> function, Python calls the object’s <code class="docutils literal notranslate"><span class="pre">__str__</span></code> method to obtain a string representation of the object.</p>
+<p>Here’s an example of a class with a <code class="docutils literal notranslate"><span class="pre">__str__</span></code> method:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+ <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+ <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+ <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+
+ <span class="k">def</span> <span class="nf">say_hello</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+ <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, my name is&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+ <span class="k">def</span> <span class="nf">celebrate_birthday</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+ <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">+=</span> <span class="mi">1</span>
+ <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Happy birthday! You are now&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">,</span> <span class="s2">&quot;years old.&quot;</span><span class="p">)</span>
+
+ <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+ <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="si">}</span><span class="s2">)&quot;</span>
+</pre></div>
+</div>
+<p>In this example, we define a <code class="docutils literal notranslate"><span class="pre">Person</span></code> class with an <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method, a <code class="docutils literal notranslate"><span class="pre">say_hello</span></code> method, a <code class="docutils literal notranslate"><span class="pre">celebrate_birthday</span></code> method, and a <code class="docutils literal notranslate"><span class="pre">__str__</span></code> method. The <code class="docutils literal notranslate"><span class="pre">__str__</span></code> method returns a string representation of the <code class="docutils literal notranslate"><span class="pre">Person</span></code> object in the format “name (age)”.</p>
+<p>To print a <code class="docutils literal notranslate"><span class="pre">Person</span></code> object using its <code class="docutils literal notranslate"><span class="pre">__str__</span></code> method, we can simply use the <code class="docutils literal notranslate"><span class="pre">print</span></code> function or convert the object to a string using the <code class="docutils literal notranslate"><span class="pre">str</span></code> function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">person</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="p">)</span> <span class="c1"># prints &quot;Alice (25)&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">person</span><span class="p">))</span> <span class="c1"># converts the object to a string and prints &quot;Alice (25)&quot;</span>
+</pre></div>
+</div>
+<p>In this example, we create a <code class="docutils literal notranslate"><span class="pre">Person</span></code> object called <code class="docutils literal notranslate"><span class="pre">person</span></code> with the <code class="docutils literal notranslate"><span class="pre">name</span></code> “Alice” and <code class="docutils literal notranslate"><span class="pre">age</span></code> 25. We then print the <code class="docutils literal notranslate"><span class="pre">person</span></code> object using the <code class="docutils literal notranslate"><span class="pre">print</span></code> function and the <code class="docutils literal notranslate"><span class="pre">str</span></code> function, which call the <code class="docutils literal notranslate"><span class="pre">person</span></code> object’s <code class="docutils literal notranslate"><span class="pre">__str__</span></code> method to obtain a string representation of the object.</p>
+<p>In Python, we create objects from classes by instantiating them. When we instantiate an object, we create a new instance of the class with its own set of attributes and methods.</p>
+<p>To instantiate an object from a class in Python, we call the class’s constructor method, which is called <code class="docutils literal notranslate"><span class="pre">__init__</span></code>. The <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method is a special method that is called when a new instance of the class is created, and it is used to set the initial state of the object by assigning values to its attributes.</p>
+<p>Here’s an example of a class with an <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+ <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+ <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+ <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+
+ <span class="k">def</span> <span class="nf">say_hello</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+ <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, my name is&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+ <span class="k">def</span> <span class="nf">celebrate_birthday</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+ <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">+=</span> <span class="mi">1</span>
+ <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Happy birthday! You are now&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">,</span> <span class="s2">&quot;years old.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In this example, we define a <code class="docutils literal notranslate"><span class="pre">Person</span></code> class with an <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method, a <code class="docutils literal notranslate"><span class="pre">say_hello</span></code> method, and a <code class="docutils literal notranslate"><span class="pre">celebrate_birthday</span></code> method. The <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method takes two arguments, <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">age</span></code>, and assigns them to the object’s <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">age</span></code> attributes, respectively.</p>
+<p>To instantiate a <code class="docutils literal notranslate"><span class="pre">Person</span></code> object, we simply call the <code class="docutils literal notranslate"><span class="pre">Person</span></code> constructor with the desired values for <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">age</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">person</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In this example, we create a new <code class="docutils literal notranslate"><span class="pre">Person</span></code> object called <code class="docutils literal notranslate"><span class="pre">person</span></code> with the <code class="docutils literal notranslate"><span class="pre">name</span></code> “Alice” and <code class="docutils literal notranslate"><span class="pre">age</span></code> 25. The <code class="docutils literal notranslate"><span class="pre">Person</span></code> constructor assigns these values to the <code class="docutils literal notranslate"><span class="pre">person</span></code> object’s <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">age</span></code> attributes. We can now call the <code class="docutils literal notranslate"><span class="pre">say_hello</span></code> and <code class="docutils literal notranslate"><span class="pre">celebrate_birthday</span></code> methods on the <code class="docutils literal notranslate"><span class="pre">person</span></code> object:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">person</span><span class="o">.</span><span class="n">say_hello</span><span class="p">()</span> <span class="c1"># prints &quot;Hello, my name is Alice&quot;</span>
+<span class="n">person</span><span class="o">.</span><span class="n">celebrate_birthday</span><span class="p">()</span> <span class="c1"># prints &quot;Happy birthday! You are now 26 years old.&quot;</span>
+</pre></div>
+</div>
+<p>In this example, we call the <code class="docutils literal notranslate"><span class="pre">say_hello</span></code> method on the <code class="docutils literal notranslate"><span class="pre">person</span></code> object, which prints “Hello, my name is Alice”. We then call the <code class="docutils literal notranslate"><span class="pre">celebrate_birthday</span></code> method on the <code class="docutils literal notranslate"><span class="pre">person</span></code> object, which increments the <code class="docutils literal notranslate"><span class="pre">person</span></code> object’s <code class="docutils literal notranslate"><span class="pre">age</span></code> attribute by 1 and prints “Happy birthday! You are now 26 years old.”</p>
+<p>In Python, we access the attributes and methods of an object using dot notation and parentheses, respectively.</p>
+<p>To access an object’s attribute using dot notation, we simply write the object’s name followed by a dot (<code class="docutils literal notranslate"><span class="pre">.</span></code>) and the name of the attribute. For example, if we have a <code class="docutils literal notranslate"><span class="pre">Person</span></code> object with a <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute, we can access the <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute using dot notation as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">person</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="c1"># prints &quot;Alice&quot;</span>
+</pre></div>
+</div>
+<p>In this example, we create a <code class="docutils literal notranslate"><span class="pre">Person</span></code> object called <code class="docutils literal notranslate"><span class="pre">person</span></code> with a <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute set to “Alice”. We then use dot notation to access the <code class="docutils literal notranslate"><span class="pre">person</span></code> object’s <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute and print its value, which is “Alice”.</p>
+<p>To call an object’s method using parentheses, we write the object’s name followed by a dot (<code class="docutils literal notranslate"><span class="pre">.</span></code>) and the name of the method, followed by an open parenthesis (<code class="docutils literal notranslate"><span class="pre">(</span></code>) and any arguments to the method (if applicable), followed by a close parenthesis (<code class="docutils literal notranslate"><span class="pre">)</span></code>). For example, if we have a <code class="docutils literal notranslate"><span class="pre">Person</span></code> object with a <code class="docutils literal notranslate"><span class="pre">say_hello</span></code> method, we can call the <code class="docutils literal notranslate"><span class="pre">say_hello</span></code> method using parentheses as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">person</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+<span class="n">person</span><span class="o">.</span><span class="n">say_hello</span><span class="p">()</span> <span class="c1"># prints &quot;Hello, my name is Alice&quot;</span>
+</pre></div>
+</div>
+<p>In this example, we create a <code class="docutils literal notranslate"><span class="pre">Person</span></code> object called <code class="docutils literal notranslate"><span class="pre">person</span></code> with a <code class="docutils literal notranslate"><span class="pre">say_hello</span></code> method. We then call the <code class="docutils literal notranslate"><span class="pre">person</span></code> object’s <code class="docutils literal notranslate"><span class="pre">say_hello</span></code> method using parentheses, which prints “Hello, my name is Alice”.</p>
+<p>Here’s an example of a <code class="docutils literal notranslate"><span class="pre">Person</span></code> class that models a real-world entity:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+ <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+  <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+  <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+
+ <span class="k">def</span> <span class="nf">say_hello</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello, my name is </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> and I am </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="si">}</span><span class="s2"> years old.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In this example, we define a <code class="docutils literal notranslate"><span class="pre">Person</span></code> class with a constructor method (<code class="docutils literal notranslate"><span class="pre">__init__</span></code>) that takes <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">age</span></code> parameters and initializes corresponding instance variables (<code class="docutils literal notranslate"><span class="pre">self.name</span></code> and <code class="docutils literal notranslate"><span class="pre">self.age</span></code>). The <code class="docutils literal notranslate"><span class="pre">say_hello</span></code> method prints a greeting that includes the person’s name and age.</p>
+<p>To create an instance of the <code class="docutils literal notranslate"><span class="pre">Person</span></code> class and call its <code class="docutils literal notranslate"><span class="pre">say_hello</span></code> method, we could do the following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">person</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+<span class="n">person</span><span class="o">.</span><span class="n">say_hello</span><span class="p">()</span> <span class="c1"># prints &quot;Hello, my name is Alice and I am 25 years old.&quot;</span>
+</pre></div>
+</div>
+<p>In this example, we create a <code class="docutils literal notranslate"><span class="pre">Person</span></code> object called <code class="docutils literal notranslate"><span class="pre">person</span></code> with a <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute set to “Alice” and an <code class="docutils literal notranslate"><span class="pre">age</span></code> attribute set to 25. We then call the <code class="docutils literal notranslate"><span class="pre">person</span></code> object’s <code class="docutils literal notranslate"><span class="pre">say_hello</span></code> method, which prints “Hello, my name is Alice and I am 25 years old.”</p>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+            </article>
+            
+
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+</nav>
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By FriendlyUser
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2022.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+Last updated on None.<br>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </div>
+        </footer>
+        
+
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  </body>
+</html>
