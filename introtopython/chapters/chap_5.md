@@ -11,6 +11,9 @@ kernelspec:
   language: python
   name: python3
 ---
+
+# Chapter 5: Object-oriented programming
+
 Object-oriented programming (OOP) is a programming paradigm that is based on the concept of "objects", which can contain data (referred to as "attributes" or "properties") and methods (referred to as "behaviors" or "functions") that operate on that data.
 
 The main idea behind OOP is to model real-world entities as objects in the program. For example, in a car racing game, we might create an object for each car that contains attributes such as its speed, position, and direction, as well as methods for accelerating, braking, and turning. We might also create objects for the race track, the obstacles on the track, and the other drivers in the race.
@@ -285,3 +288,42 @@ person = Person(name="Alice", age=25)
 person.say_hello() # prints "Hello, my name is Alice and I am 25 years old."
 ```
 In this example, we create a `Person` object called `person` with a `name` attribute set to "Alice" and an `age` attribute set to 25. We then call the `person` object's `say_hello` method, which prints "Hello, my name is Alice and I am 25 years old."
+
+## Class Inheritance
+
+In Python, you can create a new class that inherits attributes and methods from an existing class. This process is known as class inheritance and it is a powerful way to reuse code and build more complex applications. Here's an example of how to define a new class that inherits from an existing class:
+
+```{code-cell} ipython3
+class Animal:
+    def __init__(self, name, species):
+        self.name = name
+        self.species = species
+
+    def make_sound(self):
+        pass
+
+class Dog(Animal):
+    def make_sound(self):
+        return "Woof!"
+
+class Cat(Animal):
+    def make_sound(self):
+        return "Meow!"
+```
+
+In this example, we define a base class called Animal that has an initializer method (init) and a method called make_sound that is not implemented (uses the pass statement). We then define two derived classes, Dog and Cat, which inherit from the Animal class. The Dog and Cat classes have their own implementation of the make_sound method that overrides the implementation in the Animal class.
+
+To inherit from a class, you simply include the name of the base class in parentheses after the name of the derived class. In this case, we define the Dog and Cat classes by including the Animal class name in parentheses after the class name.
+
+When you create an instance of a derived class, you can access all of the attributes and methods of the base class, as well as any additional attributes and methods defined in the derived class. For example:
+
+```{code-cell} ipython3
+dog = Dog("Fido", "dog")
+print(dog.name)  # prints "Fido"
+print(dog.species)  # prints "dog"
+print(dog.make_sound())  # prints "Woof!"
+```
+
+In this example, we create an instance of the Dog class and use it to access the name, species, and make_sound attributes and methods. Since the Dog class inherits from the Animal class, we can access the name and species attributes from the Animal class using the dog instance. We can also access the make_sound method from the Dog class, which overrides the implementation in the Animal class.
+
+By using class inheritance in Python, you can create more complex and reusable code that is easier to maintain and extend over time.
