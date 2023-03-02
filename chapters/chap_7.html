@@ -1,0 +1,832 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+<script data-ad-client="ca-pub-2479144310234386" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>&lt;no title&gt; &#8212; Introduction To Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=4ec06e9971c5264fbd345897d5258098f11cc577" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=8bf782fb4ee92b3d3646425e50f299c4e1fd152d"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/chap_7';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Chapter 6: Exceptions and errors" href="chap_6.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../intro.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_1.html">
+                        Chapter 1: Introduction To Python
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_2.html">
+                        Chapter 2 Basic syntax and data types
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_3.html">
+                        Chapter 3: Control flow and functions
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_4.html">
+                        Chapter 4: Modules and packages
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_5.html">
+                        Chapter 5: Object-oriented programming
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_6.html">
+                        Chapter 6: Exceptions and errors
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        <no title>
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_1.html">
+                        Chapter 1: Introduction To Python
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_2.html">
+                        Chapter 2 Basic syntax and data types
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_3.html">
+                        Chapter 3: Control flow and functions
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_4.html">
+                        Chapter 4: Modules and packages
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_5.html">
+                        Chapter 5: Object-oriented programming
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_6.html">
+                        Chapter 6: Exceptions and errors
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        <no title>
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+  
+
+
+<a class="navbar-brand logo" href="../intro.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    </div>
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="chap_1.html">Chapter 1: Introduction To Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap_2.html">Chapter 2 Basic syntax and data types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap_3.html">Chapter 3: Control flow and functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap_4.html">Chapter 4: Modules and packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap_5.html">Chapter 5: Object-oriented programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap_6.html">Chapter 6: Exceptions and errors</a></li>
+</ul>
+
+    </div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        <label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" data-toggle="tooltip" data-placement="right" title="Toggle primary sidebar">
+            <span class="fa-solid fa-bars"></span>
+        </label>
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<div class="dropdown dropdown-repository-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      <li><a href="https://github.com/FriendlyUser/IntroToPython" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">repository</span>
+</a>
+</a>
+      
+      <li><a href="https://github.com/FriendlyUser/IntroToPython/issues/new?title=Issue%20on%20page%20%2Fchapters/chap_7.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">open issue</span>
+</a>
+</a>
+      
+  </ul>
+</div>
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      <li><a href="../_sources/chapters/chap_7.md" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</a>
+      
+      <li>
+<button onclick="printPdf(this)"
+  class="btn btn-sm dropdown-item"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</a>
+      
+  </ul>
+</div>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary" data-toggle="tooltip" data-placement="left" title="Toggle secondary sidebar">
+            <span class="fa-solid fa-list"></span>
+        </label>
+    </div>
+</div>
+            </div>
+            
+            
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+            <article class="bd-article" role="main">
+              
+  <p>Here is an overview of how to work with files in Python using <code class="docutils literal notranslate"><span class="pre">open()</span></code>, <code class="docutils literal notranslate"><span class="pre">close()</span></code>, <code class="docutils literal notranslate"><span class="pre">read()</span></code>, <code class="docutils literal notranslate"><span class="pre">write()</span></code> and other methods:</p>
+<ol class="arabic simple">
+<li><p>Opening a file:
+You can use the <code class="docutils literal notranslate"><span class="pre">open()</span></code> function to open a file in Python. The function takes two arguments: the name of the file you want to open and the mode in which you want to open the file. The mode can be “r” for reading, “w” for writing, “a” for appending, or “x” for creating a new file. For example, to open a file named “example.txt” for writing, you can use the following code:</p></li>
+</ol>
+<ol class="arabic simple" start="2">
+<li><p>Reading from a file:
+You can use the <code class="docutils literal notranslate"><span class="pre">read()</span></code> method to read the contents of a file. The method reads the entire contents of the file and returns it as a string. For example, to read the contents of the “example.txt” file, you can use the following code:</p></li>
+</ol>
+<ol class="arabic simple" start="3">
+<li><p>Writing to a file:
+You can use the <code class="docutils literal notranslate"><span class="pre">write()</span></code> method to write to a file. The method takes a string as its argument and writes it to the file. For example, to write the string “Hello, World!” to the “example.txt” file, you can use the following code:</p></li>
+</ol>
+<ol class="arabic simple" start="4">
+<li><p>Closing a file:
+You should always close a file after you have finished working with it. You can use the <code class="docutils literal notranslate"><span class="pre">close()</span></code> method to close a file. For example, to close the “example.txt” file, you can use the following code:</p></li>
+</ol>
+<ol class="arabic simple" start="5">
+<li><p>Using context managers:
+You can use a context manager with the <code class="docutils literal notranslate"><span class="pre">with</span></code> statement to open and close files automatically. This is a more convenient and safer way to work with files as it automatically closes the file for you after you’re done working with it. For example, to write the string “Hello, World!” to the “example.txt” file using a context manager, you can use the following code:</p></li>
+</ol>
+<ol class="arabic simple" start="6">
+<li><p>Reading and writing lines:
+You can use the <code class="docutils literal notranslate"><span class="pre">readline()</span></code> method to read a single line from a file, and the <code class="docutils literal notranslate"><span class="pre">writelines()</span></code> method to write a list of strings to a file, with each string representing a line. For example, to read the first line of the “example.txt” file, you can use the following code:</p></li>
+</ol>
+<p>And to write a list of strings to the “example.txt” file, you can use the following code:</p>
+<p>In Linux, write permissions determine whether a user, group or others can modify, create or delete files or directories. The write permission is represented by a number in the file permission system and can be set or changed using the chmod command.</p>
+<p>Here’s what each digit in a chmod code represents:</p>
+<ul class="simple">
+<li><p>The first digit (leftmost) represents the permissions for the owner of the file/directory.</p></li>
+<li><p>The second digit represents the permissions for the group owner of the file/directory.</p></li>
+<li><p>The third digit represents the permissions for other users who are not the owner or group owner.</p></li>
+</ul>
+<p>Each digit in the chmod code can be one of the following values:</p>
+<ul class="simple">
+<li><p>0: no permissions</p></li>
+<li><p>1: execute permission only</p></li>
+<li><p>2: write permission only</p></li>
+<li><p>3: write and execute permissions</p></li>
+<li><p>4: read permission only</p></li>
+<li><p>5: read and execute permissions</p></li>
+<li><p>6: read and write permissions</p></li>
+<li><p>7: read, write, and execute permissions</p></li>
+</ul>
+<p>Here are some examples of how to use chmod to set write permissions:</p>
+<ul class="simple">
+<li><p>chmod 700 file.txt - this command sets read, write, and execute permissions for the owner of the file, and no permissions for the group owner or others.</p></li>
+<li><p>chmod 755 directory - this command sets read, write, and execute permissions for the owner of the directory, and read and execute permissions for the group owner and others. The group owner and others cannot write to the directory.</p></li>
+<li><p>chmod 777 file.txt - this command sets read, write, and execute permissions for everyone, including the owner, group owner, and others.</p></li>
+</ul>
+<p>In the above examples, the chmod code is composed of three digits. Each digit represents the permissions for a different set of users: the first digit represents the owner’s permissions, the second digit represents the group’s permissions, and the third digit represents everyone else’s permissions.</p>
+<p>Here’s an explanation of the different modes you can use to open files in Python:</p>
+<ul class="simple">
+<li><p>‘r’: This is the default mode when you open a file in Python. It opens the file for reading, which means you can only read data from the file but you can’t write to it or modify it. If the file doesn’t exist, you will get a <code class="docutils literal notranslate"><span class="pre">FileNotFoundError</span></code>.</p></li>
+</ul>
+<p>Example:</p>
+<ul class="simple">
+<li><p>‘w’: This mode opens the file for writing, which means you can write data to the file and overwrite its existing contents. If the file doesn’t exist, it will be created. If it exists, its previous contents will be deleted.</p></li>
+</ul>
+<p>Example:</p>
+<ul class="simple">
+<li><p>‘a’: This mode opens the file for appending, which means you can write data to the end of the file without overwriting its existing contents. If the file doesn’t exist, it will be created.</p></li>
+</ul>
+<p>Example:</p>
+<ul class="simple">
+<li><p>‘x’: This mode opens the file for exclusive creation, which means it creates a new file and opens it for writing. If the file already exists, the <code class="docutils literal notranslate"><span class="pre">FileExistsError</span></code> exception will be raised.</p></li>
+</ul>
+<p>Example:</p>
+<ul class="simple">
+<li><p>‘b’: This mode opens the file in binary mode, which is used for working with non-text files such as images, audio, or video files. When you use this mode, you must specify the file as a binary file using the ‘b’ character.</p></li>
+</ul>
+<p>Example:</p>
+<p>In addition to the modes described above, you can also combine them with the <code class="docutils literal notranslate"><span class="pre">+</span></code> character to create hybrid modes that allow you to read and write to a file at the same time:</p>
+<ul class="simple">
+<li><p>‘r+’: This mode opens the file for reading and writing.</p></li>
+</ul>
+<p>Example:</p>
+<ul class="simple">
+<li><p>‘w+’: This mode opens the file for reading and writing, overwriting its existing contents.</p></li>
+</ul>
+<p>Example:</p>
+<ul class="simple">
+<li><p>‘a+’: This mode opens the file for reading and appending.</p></li>
+</ul>
+<p>Example:</p>
+<p>Remember to always close the file after you’re done with it using the <code class="docutils literal notranslate"><span class="pre">close()</span></code> method or use the <code class="docutils literal notranslate"><span class="pre">with</span></code> statement to automatically close it:</p>
+<p>I hope this helps! Let me know if you have any further questions.</p>
+<p>Sure, here’s an example of how to use a context manager with the <code class="docutils literal notranslate"><span class="pre">with</span></code> statement to automatically close a file after you’re done with it:</p>
+<p>In the example above, we open the file <code class="docutils literal notranslate"><span class="pre">example.txt</span></code> in read mode using the <code class="docutils literal notranslate"><span class="pre">open()</span></code> function, and assign the file object to the variable <code class="docutils literal notranslate"><span class="pre">file</span></code>. Then we do something with the file, such as reading its contents and printing them. When we’re done with the file, we exit the code block and the file is automatically closed thanks to the <code class="docutils literal notranslate"><span class="pre">with</span></code> statement.</p>
+<p>Using a context manager with the <code class="docutils literal notranslate"><span class="pre">with</span></code> statement is a safer and more concise way to open and close files, as it ensures that the file is always closed even if an exception occurs while the code is executing. It also avoids the need to explicitly call the <code class="docutils literal notranslate"><span class="pre">close()</span></code> method, which can be easy to forget and can lead to resource leaks if not properly handled.</p>
+<ol class="arabic simple">
+<li><p>Loops: You can use loops to iterate over the lines in a file and process each line as a separate string. For example, if you have a file named <code class="docutils literal notranslate"><span class="pre">example.txt</span></code> with several lines of text, you can read and process each line like this:</p></li>
+</ol>
+<p>In this example, we open the file in read mode using a context manager and a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to iterate over each line in the file. We then process each line by stripping its leading and trailing whitespace characters using the <code class="docutils literal notranslate"><span class="pre">strip()</span></code> method, and print the resulting string to the console.</p>
+<ol class="arabic simple" start="2">
+<li><p>String methods: You can use string methods to manipulate the data in each line of a file. For example, if you have a file named <code class="docutils literal notranslate"><span class="pre">example.txt</span></code> with comma-separated values on each line, you can read and process each line like this:</p></li>
+</ol>
+<p>In this example, we use the <code class="docutils literal notranslate"><span class="pre">strip()</span></code> method to remove leading and trailing whitespace characters from each line, and the <code class="docutils literal notranslate"><span class="pre">split()</span></code> method to split each line into a list of values using the comma separator. We then process the resulting list of values by printing the first value to the console.</p>
+<ol class="arabic simple" start="3">
+<li><p>Regular expressions: You can use regular expressions to search for patterns in the data in each line of a file. For example, if you have a file named <code class="docutils literal notranslate"><span class="pre">example.txt</span></code> with email addresses on each line, you can read and process each line like this:</p></li>
+</ol>
+<p>In this example, we use the <code class="docutils literal notranslate"><span class="pre">re.search()</span></code> function to search for email addresses in each line of the file using a regular expression pattern. If a match is found, we print the email address using the <code class="docutils literal notranslate"><span class="pre">group()</span></code> method of the match object.</p>
+<p>I hope these examples help you understand how to process data from files using loops, string methods, and regular expressions in Python. Let me know if you have any further questions!</p>
+<p>Sure, here’s a brief overview of how to use some of the built-in modules in Python to read and write data in different formats:</p>
+<ol class="arabic simple">
+<li><p>CSV: The <code class="docutils literal notranslate"><span class="pre">csv</span></code> module in Python provides functionality for reading and writing comma-separated values (CSV) files. Here’s an example of how to read a CSV file and process its data:</p></li>
+</ol>
+<p>In this example, we open a CSV file named <code class="docutils literal notranslate"><span class="pre">example.csv</span></code> using a context manager and the <code class="docutils literal notranslate"><span class="pre">csv.reader()</span></code> function. We then use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to iterate over each row in the CSV file and process the row data as a list of strings. In this case, we simply print each row to the console.</p>
+<p>To write data to a CSV file using the <code class="docutils literal notranslate"><span class="pre">csv</span></code> module, you can use the <code class="docutils literal notranslate"><span class="pre">csv.writer()</span></code> function to create a writer object and the <code class="docutils literal notranslate"><span class="pre">writerow()</span></code> method to write rows of data to the file. Here’s an example:</p>
+<p>In this example, we create a new CSV file named <code class="docutils literal notranslate"><span class="pre">example.csv</span></code> using a context manager and the <code class="docutils literal notranslate"><span class="pre">csv.writer()</span></code> function. We then use the <code class="docutils literal notranslate"><span class="pre">writerow()</span></code> method to write the column headers and two rows of data to the file.</p>
+<ol class="arabic simple" start="2">
+<li><p>JSON: The <code class="docutils literal notranslate"><span class="pre">json</span></code> module in Python provides functionality for encoding and decoding JSON data. Here’s an example of how to read a JSON file and process its data:</p></li>
+</ol>
+<p>In this example, we open a JSON file named <code class="docutils literal notranslate"><span class="pre">example.json</span></code> using a context manager and the <code class="docutils literal notranslate"><span class="pre">json.load()</span></code> function. We then load the JSON data into a Python object and process the data as necessary. In this case, we simply print the JSON data to the console.</p>
+<p>To write data to a JSON file using the <code class="docutils literal notranslate"><span class="pre">json</span></code> module, you can use the <code class="docutils literal notranslate"><span class="pre">json.dump()</span></code> function to write a Python object to the file as JSON data. Here’s an example:</p>
+<p>In this example, we create a Python dictionary object containing some data, and then open a new JSON file named <code class="docutils literal notranslate"><span class="pre">example.json</span></code> using a context manager and the <code class="docutils literal notranslate"><span class="pre">json.dump()</span></code> function. We then write the Python object to the file as JSON data.</p>
+<ol class="arabic simple" start="3">
+<li><p>XML: The <code class="docutils literal notranslate"><span class="pre">xml</span></code> module in Python provides functionality for parsing and generating XML data. Here’s an example of how to read an XML file and process its data:</p></li>
+</ol>
+<p>In this example, we parse an XML file named <code class="docutils literal notranslate"><span class="pre">example.xml</span></code> using the <code class="docutils literal notranslate"><span class="pre">ET.parse()</span></code> function from the <code class="docutils literal notranslate"><span class="pre">xml.etree.ElementTree</span></code> module. We then access the root element of the XML file using the <code class="docutils literal notranslate"><span class="pre">getroot()</span></code> method, and use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to iterate over the</p>
+<p>Generators are a great way to process large data sets efficiently in Python. They allow you to lazily load data one chunk at a time, rather than loading everything into memory at once. This can be particularly useful when dealing with very large data sets that would otherwise exceed available memory.</p>
+<p>To use generators to process large data sets, you can create a function that yields data in manageable chunks. Here’s an example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">read_large_file</span><span class="p">(</span><span class="n">file_object</span><span class="p">):</span>
+<span class="w"> </span><span class="sd">&quot;&quot;&quot;A generator function that yields a line from a file object&quot;&quot;&quot;</span>
+ <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+ 	<span class="n">data</span> <span class="o">=</span> <span class="n">file_object</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+	<span class="k">if</span> <span class="ow">not</span> <span class="n">data</span><span class="p">:</span>
+		<span class="k">break</span>
+ 	<span class="k">yield</span> <span class="n">data</span>
+</pre></div>
+</div>
+<p>In this example, we define a generator function called <code class="docutils literal notranslate"><span class="pre">read_large_file()</span></code> that takes a file object as input. The function uses a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop to read data from the file object one line at a time, and yields each line of data as it is read. When the end of the file is reached, the loop exits and the generator function stops yielding data.</p>
+<p>To use the <code class="docutils literal notranslate"><span class="pre">read_large_file()</span></code> generator function to process a large data set, you can open the file and pass the file object to the generator function, then use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to iterate over the generated data one chunk at a time. Here’s an example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;large_data_set.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+ <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">read_large_file</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+	<span class="c1"># Process the line of data</span>
+	<span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>In this example, we open a large data set file named <code class="docutils literal notranslate"><span class="pre">large_data_set.txt</span></code> using a context manager and the <code class="docutils literal notranslate"><span class="pre">open()</span></code> function. We then pass the file object to the <code class="docutils literal notranslate"><span class="pre">read_large_file()</span></code> generator function, which yields each line of data one at a time. Finally, we use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to iterate over the generated data and process each line of data as necessary.</p>
+<p>Note that you can modify the <code class="docutils literal notranslate"><span class="pre">read_large_file()</span></code> generator function to read data in larger or smaller chunks, depending on your specific needs. Additionally, you can use other generator functions or built-in functions like <code class="docutils literal notranslate"><span class="pre">map()</span></code> and <code class="docutils literal notranslate"><span class="pre">filter()</span></code> to further process the generated data as needed.</p>
+<p>You can use the <code class="docutils literal notranslate"><span class="pre">subprocess</span></code> module in Python to run command-line programs like ffmpeg and pass them arguments. Here’s an example of how you can use <code class="docutils literal notranslate"><span class="pre">subprocess</span></code> to convert video files from mp4 to mp3 using ffmpeg:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">subprocess</span>
+
+<span class="c1"># Input video file path</span>
+<span class="n">input_file</span> <span class="o">=</span> <span class="s1">&#39;path/to/video.mp4&#39;</span>
+
+<span class="c1"># Output audio file path</span>
+<span class="n">output_file</span> <span class="o">=</span> <span class="s1">&#39;path/to/audio.mp3&#39;</span>
+
+<span class="c1"># Run the ffmpeg command to convert the video to audio</span>
+<span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;ffmpeg&#39;</span><span class="p">,</span> <span class="s1">&#39;-i&#39;</span><span class="p">,</span> <span class="n">input_file</span><span class="p">,</span> <span class="s1">&#39;-vn&#39;</span><span class="p">,</span> <span class="s1">&#39;-acodec&#39;</span><span class="p">,</span> <span class="s1">&#39;libmp3lame&#39;</span><span class="p">,</span> <span class="s1">&#39;-y&#39;</span><span class="p">,</span> <span class="n">output_file</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>In this example, we import the <code class="docutils literal notranslate"><span class="pre">subprocess</span></code> module, then define the paths to the input and output files. We then use <code class="docutils literal notranslate"><span class="pre">subprocess.run()</span></code> to run the ffmpeg command with the following arguments:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-i</span></code>: specifies the input file path</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-vn</span></code>: tells ffmpeg to disable video recording</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-acodec</span></code>: specifies the audio codec to use</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">libmp3lame</span></code>: specifies the MP3 audio codec</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-y</span></code>: tells ffmpeg to overwrite the output file if it already exists</p></li>
+<li><p>The output file path</p></li>
+</ul>
+<p>Note that the <code class="docutils literal notranslate"><span class="pre">subprocess.run()</span></code> function will block until the ffmpeg command finishes running, so if you need to convert multiple files, you may want to use <code class="docutils literal notranslate"><span class="pre">subprocess.Popen()</span></code> instead and run the commands in parallel. Also note that if you want to convert other types of video files to MP3, you may need to modify the ffmpeg command accordingly.</p>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+            </article>
+            
+
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="chap_6.html" title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">Chapter 6: Exceptions and errors</p>
+      </div>
+  </a>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+</nav>
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By FriendlyUser
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2022.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+Last updated on None.<br>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </div>
+        </footer>
+        
+
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  </body>
+</html>
