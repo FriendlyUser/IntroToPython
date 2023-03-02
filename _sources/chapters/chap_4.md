@@ -12,6 +12,8 @@ kernelspec:
   name: python3
 ---
 
+# Chapter 4: Modules and packages
+
 In Python, modules and packages are used to organize code into reusable units. A module is simply a file containing Python definitions and statements, while a package is a collection of modules placed in a directory hierarchy.
 
 Modules allow you to organize code logically and reuse it in other programs. For example, you could write a module that contains functions for working with strings, and then use that module in multiple programs. To use a module in a program, you simply import it using the `import` statement.
@@ -22,11 +24,13 @@ For example, you could have a package called `math` that contains sub-packages f
 
 Overall, modules and packages help make Python code more organized, reusable, and maintainable.
 
+## How to use Modules
 
 To use a module or package in your Python code, you can use the `import` statement or the `from-import` statement.
 
 The `import` statement is used to import an entire module or package. For example, to import the `math` module, you would use the following statement:
 
+### The math module
 
 ```python
 import math
@@ -69,7 +73,6 @@ This can be useful if you want to use a shorter or more descriptive name for a m
 
 Python comes with a large standard library of modules that provide useful functionality for a wide range of tasks. Here are some examples of how to use a few of the standard library modules:
 
-### The math module
 
 The `math` module provides functions for mathematical operations. Here's an example of how to use the `sqrt` function to calculate the square root of a number:
 

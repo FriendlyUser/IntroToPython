@@ -7,7 +7,7 @@
 <script data-ad-client="ca-pub-2479144310234386" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>The math module &#8212; Introduction To Python</title>
+    <title>Chapter 4: Modules and packages &#8212; Introduction To Python</title>
   
   
   
@@ -62,7 +62,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/chap_4';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Markdown Files" href="../markdown.html" />
+    <link rel="next" title="Chapter 5: Object-oriented programming" href="chap_5.html" />
     <link rel="prev" title="Chapter 3: Control flow and functions" href="chap_3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="en">
@@ -160,7 +160,26 @@ const thebe_selector_output = ".output, .cell_output"
 
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="#">
-                        The math module
+                        Chapter 4: Modules and packages
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_5.html">
+                        Chapter 5: Object-oriented programming
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_6.html">
+                        Chapter 6: Exceptions and errors
                       </a>
                     </li>
                 
@@ -171,12 +190,7 @@ const thebe_selector_output = ".output, .cell_output"
                       </a>
                     </li>
                 
-            <div class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    More
-                </button>
-                <div class="dropdown-menu">
-                    
+
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../notebooks.html">
                         Content with notebooks
@@ -286,7 +300,26 @@ const thebe_selector_output = ".output, .cell_output"
 
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="#">
-                        The math module
+                        Chapter 4: Modules and packages
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_5.html">
+                        Chapter 5: Object-oriented programming
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_6.html">
+                        Chapter 6: Exceptions and errors
                       </a>
                     </li>
                 
@@ -297,12 +330,7 @@ const thebe_selector_output = ".output, .cell_output"
                       </a>
                     </li>
                 
-            <div class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    More
-                </button>
-                <div class="dropdown-menu">
-                    
+
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../notebooks.html">
                         Content with notebooks
@@ -391,10 +419,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="chap_1.html">Chapter 1: Introduction To Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chap_2.html">Chapter 2 Basic syntax and data types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chap_3.html">Chapter 3: Control flow and functions</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">The math module</a></li>
-
-
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 4: Modules and packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap_5.html">Chapter 5: Object-oriented programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap_6.html">Chapter 6: Exceptions and errors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../markdown.html">Markdown Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Content with notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
@@ -566,7 +593,7 @@ title="Print to PDF"
             
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>The math module</h1>
+    <h1>Chapter 4: Modules and packages</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -576,25 +603,32 @@ title="Print to PDF"
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   The math module
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-use-modules">
+   How to use Modules
   </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-random-module">
-   The random module
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-datetime-module">
-   The datetime module
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-os-module">
-   The os module
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-math-module">
+     The math module
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-random-module">
+     The random module
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-datetime-module">
+     The datetime module
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-os-module">
+     The os module
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -605,13 +639,19 @@ title="Print to PDF"
 
             <article class="bd-article" role="main">
               
-  <p>In Python, modules and packages are used to organize code into reusable units. A module is simply a file containing Python definitions and statements, while a package is a collection of modules placed in a directory hierarchy.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="chapter-4-modules-and-packages">
+<h1>Chapter 4: Modules and packages<a class="headerlink" href="#chapter-4-modules-and-packages" title="Permalink to this heading">#</a></h1>
+<p>In Python, modules and packages are used to organize code into reusable units. A module is simply a file containing Python definitions and statements, while a package is a collection of modules placed in a directory hierarchy.</p>
 <p>Modules allow you to organize code logically and reuse it in other programs. For example, you could write a module that contains functions for working with strings, and then use that module in multiple programs. To use a module in a program, you simply import it using the <code class="docutils literal notranslate"><span class="pre">import</span></code> statement.</p>
 <p>Packages, on the other hand, are collections of related modules that are organized in a directory hierarchy. A package can contain sub-packages, which are simply packages within packages. This allows you to organize your code into logical units that can be easily reused and shared.</p>
 <p>For example, you could have a package called <code class="docutils literal notranslate"><span class="pre">math</span></code> that contains sub-packages for working with different types of math functions, such as <code class="docutils literal notranslate"><span class="pre">geometry</span></code> and <code class="docutils literal notranslate"><span class="pre">algebra</span></code>. Each sub-package would contain its own modules, such as <code class="docutils literal notranslate"><span class="pre">circles</span></code> and <code class="docutils literal notranslate"><span class="pre">triangles</span></code> in the <code class="docutils literal notranslate"><span class="pre">geometry</span></code> package.</p>
 <p>Overall, modules and packages help make Python code more organized, reusable, and maintainable.</p>
+<section id="how-to-use-modules">
+<h2>How to use Modules<a class="headerlink" href="#how-to-use-modules" title="Permalink to this heading">#</a></h2>
 <p>To use a module or package in your Python code, you can use the <code class="docutils literal notranslate"><span class="pre">import</span></code> statement or the <code class="docutils literal notranslate"><span class="pre">from-import</span></code> statement.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">import</span></code> statement is used to import an entire module or package. For example, to import the <code class="docutils literal notranslate"><span class="pre">math</span></code> module, you would use the following statement:</p>
+<section id="the-math-module">
+<h3>The math module<a class="headerlink" href="#the-math-module" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 </pre></div>
 </div>
@@ -639,8 +679,6 @@ title="Print to PDF"
 </div>
 <p>This can be useful if you want to use a shorter or more descriptive name for a module or function.</p>
 <p>Python comes with a large standard library of modules that provide useful functionality for a wide range of tasks. Here are some examples of how to use a few of the standard library modules:</p>
-<section id="the-math-module">
-<h1>The math module<a class="headerlink" href="#the-math-module" title="Permalink to this heading">#</a></h1>
 <p>The <code class="docutils literal notranslate"><span class="pre">math</span></code> module provides functions for mathematical operations. Here’s an example of how to use the <code class="docutils literal notranslate"><span class="pre">sqrt</span></code> function to calculate the square root of a number:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 
@@ -650,7 +688,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="the-random-module">
-<h1>The random module<a class="headerlink" href="#the-random-module" title="Permalink to this heading">#</a></h1>
+<h3>The random module<a class="headerlink" href="#the-random-module" title="Permalink to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">random</span></code> module provides functions for generating random numbers. Here’s an example of how to use the <code class="docutils literal notranslate"><span class="pre">randint</span></code> function to generate a random integer between 1 and 10:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
 
@@ -660,7 +698,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="the-datetime-module">
-<h1>The datetime module<a class="headerlink" href="#the-datetime-module" title="Permalink to this heading">#</a></h1>
+<h3>The datetime module<a class="headerlink" href="#the-datetime-module" title="Permalink to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module provides functions for working with dates and times. Here’s an example of how to use the <code class="docutils literal notranslate"><span class="pre">datetime</span></code> function to create a datetime object representing the current date and time:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -672,14 +710,14 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-02 05:47:24.639746
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-02 14:58:58.684727
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="the-os-module">
-<h1>The os module<a class="headerlink" href="#the-os-module" title="Permalink to this heading">#</a></h1>
+<h3>The os module<a class="headerlink" href="#the-os-module" title="Permalink to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">os</span></code> module provides functions for interacting with the operating system. Here’s an example of how to use the <code class="docutils literal notranslate"><span class="pre">getcwd</span></code> function to get the current working directory:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 
@@ -816,6 +854,8 @@ child2 {&#39;baz&#39;: &#39;qux&#39;}
 </div>
 <p>This is just a simple example of how to parse an XML document using Python’s standard library. The <code class="docutils literal notranslate"><span class="pre">xml.etree.ElementTree</span></code> module provides many other features for parsing and manipulating XML documents, including support for namespaces, XPath expressions, and more. You can find more information about these features in the Python documentation.</p>
 </section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -852,10 +892,10 @@ child2 {&#39;baz&#39;: &#39;qux&#39;}
           <p class="prev-next-title">Chapter 3: Control flow and functions</p>
       </div>
   </a>
-  <a class='right-next' id="next-link" href="../markdown.html" title="next page">
+  <a class='right-next' id="next-link" href="chap_5.html" title="next page">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title">Markdown Files</p>
+      <p class="prev-next-title">Chapter 5: Object-oriented programming</p>
   </div>
   <i class="fa-solid fa-angle-right"></i>
   </a>
@@ -875,25 +915,32 @@ child2 {&#39;baz&#39;: &#39;qux&#39;}
 </div>
 <nav id="bd-toc-nav" class="page-toc">
     <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   The math module
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-use-modules">
+   How to use Modules
   </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-random-module">
-   The random module
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-datetime-module">
-   The datetime module
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-os-module">
-   The os module
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-math-module">
+     The math module
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-random-module">
+     The random module
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-datetime-module">
+     The datetime module
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-os-module">
+     The os module
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 

@@ -7,7 +7,7 @@
 <script data-ad-client="ca-pub-2479144310234386" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>&lt;no title&gt; &#8212; Introduction To Python</title>
+    <title>Chapter 5: Object-oriented programming &#8212; Introduction To Python</title>
   
   
   
@@ -62,6 +62,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/chap_5';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Chapter 6: Exceptions and errors" href="chap_6.html" />
+    <link rel="prev" title="Chapter 4: Modules and packages" href="chap_4.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="en">
   </head>
@@ -158,7 +160,26 @@ const thebe_selector_output = ".output, .cell_output"
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="chap_4.html">
-                        The math module
+                        Chapter 4: Modules and packages
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Chapter 5: Object-oriented programming
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_6.html">
+                        Chapter 6: Exceptions and errors
                       </a>
                     </li>
                 
@@ -169,12 +190,7 @@ const thebe_selector_output = ".output, .cell_output"
                       </a>
                     </li>
                 
-            <div class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    More
-                </button>
-                <div class="dropdown-menu">
-                    
+
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../notebooks.html">
                         Content with notebooks
@@ -284,7 +300,26 @@ const thebe_selector_output = ".output, .cell_output"
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="chap_4.html">
-                        The math module
+                        Chapter 4: Modules and packages
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Chapter 5: Object-oriented programming
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_6.html">
+                        Chapter 6: Exceptions and errors
                       </a>
                     </li>
                 
@@ -295,12 +330,7 @@ const thebe_selector_output = ".output, .cell_output"
                       </a>
                     </li>
                 
-            <div class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    More
-                </button>
-                <div class="dropdown-menu">
-                    
+
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../notebooks.html">
                         Content with notebooks
@@ -385,14 +415,13 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="chap_1.html">Chapter 1: Introduction To Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chap_2.html">Chapter 2 Basic syntax and data types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chap_3.html">Chapter 3: Control flow and functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chap_4.html">The math module</a></li>
-
-
-
+<li class="toctree-l1"><a class="reference internal" href="chap_4.html">Chapter 4: Modules and packages</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 5: Object-oriented programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap_6.html">Chapter 6: Exceptions and errors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../markdown.html">Markdown Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Content with notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
@@ -564,7 +593,7 @@ title="Print to PDF"
             
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Chapter 5: Object-oriented programming</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -573,7 +602,12 @@ title="Print to PDF"
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-inheritance">
+   Class Inheritance
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -583,7 +617,9 @@ title="Print to PDF"
 
             <article class="bd-article" role="main">
               
-  <p>Object-oriented programming (OOP) is a programming paradigm that is based on the concept of “objects”, which can contain data (referred to as “attributes” or “properties”) and methods (referred to as “behaviors” or “functions”) that operate on that data.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="chapter-5-object-oriented-programming">
+<h1>Chapter 5: Object-oriented programming<a class="headerlink" href="#chapter-5-object-oriented-programming" title="Permalink to this heading">#</a></h1>
+<p>Object-oriented programming (OOP) is a programming paradigm that is based on the concept of “objects”, which can contain data (referred to as “attributes” or “properties”) and methods (referred to as “behaviors” or “functions”) that operate on that data.</p>
 <p>The main idea behind OOP is to model real-world entities as objects in the program. For example, in a car racing game, we might create an object for each car that contains attributes such as its speed, position, and direction, as well as methods for accelerating, braking, and turning. We might also create objects for the race track, the obstacles on the track, and the other drivers in the race.</p>
 <p>By modeling real-world entities as objects in the program, we can create a more intuitive and natural representation of the problem domain. We can also encapsulate data and behavior within objects, which helps to reduce complexity and make the code more modular and reusable.</p>
 <p>In OOP, objects are usually defined using classes, which are templates or blueprints for creating objects of a certain type. For example, we might define a <code class="docutils literal notranslate"><span class="pre">Car</span></code> class that contains the attributes and methods for a car object. We can then create multiple car objects from this class, each with its own set of attribute values.</p>
@@ -797,6 +833,54 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>In this example, we create a <code class="docutils literal notranslate"><span class="pre">Person</span></code> object called <code class="docutils literal notranslate"><span class="pre">person</span></code> with a <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute set to “Alice” and an <code class="docutils literal notranslate"><span class="pre">age</span></code> attribute set to 25. We then call the <code class="docutils literal notranslate"><span class="pre">person</span></code> object’s <code class="docutils literal notranslate"><span class="pre">say_hello</span></code> method, which prints “Hello, my name is Alice and I am 25 years old.”</p>
+<section id="class-inheritance">
+<h2>Class Inheritance<a class="headerlink" href="#class-inheritance" title="Permalink to this heading">#</a></h2>
+<p>In Python, you can create a new class that inherits attributes and methods from an existing class. This process is known as class inheritance and it is a powerful way to reuse code and build more complex applications. Here’s an example of how to define a new class that inherits from an existing class:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Animal</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">species</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">species</span> <span class="o">=</span> <span class="n">species</span>
+
+    <span class="k">def</span> <span class="nf">make_sound</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+<span class="k">class</span> <span class="nc">Dog</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">make_sound</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Woof!&quot;</span>
+
+<span class="k">class</span> <span class="nc">Cat</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">make_sound</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Meow!&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In this example, we define a base class called Animal that has an initializer method (init) and a method called make_sound that is not implemented (uses the pass statement). We then define two derived classes, Dog and Cat, which inherit from the Animal class. The Dog and Cat classes have their own implementation of the make_sound method that overrides the implementation in the Animal class.</p>
+<p>To inherit from a class, you simply include the name of the base class in parentheses after the name of the derived class. In this case, we define the Dog and Cat classes by including the Animal class name in parentheses after the class name.</p>
+<p>When you create an instance of a derived class, you can access all of the attributes and methods of the base class, as well as any additional attributes and methods defined in the derived class. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dog</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s2">&quot;Fido&quot;</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dog</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>  <span class="c1"># prints &quot;Fido&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dog</span><span class="o">.</span><span class="n">species</span><span class="p">)</span>  <span class="c1"># prints &quot;dog&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dog</span><span class="o">.</span><span class="n">make_sound</span><span class="p">())</span>  <span class="c1"># prints &quot;Woof!&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fido
+dog
+Woof!
+</pre></div>
+</div>
+</div>
+</div>
+<p>In this example, we create an instance of the Dog class and use it to access the name, species, and make_sound attributes and methods. Since the Dog class inherits from the Animal class, we can access the name and species attributes from the Animal class using the dog instance. We can also access the make_sound method from the Dog class, which overrides the implementation in the Animal class.</p>
+<p>By using class inheritance in Python, you can create more complex and reusable code that is easier to maintain and extend over time.</p>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -826,6 +910,20 @@ title="Print to PDF"
             <footer class="bd-footer-article">
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="chap_4.html" title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">Chapter 4: Modules and packages</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="chap_6.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title">Chapter 6: Exceptions and errors</p>
+  </div>
+  <i class="fa-solid fa-angle-right"></i>
+  </a>
 </div>
             </footer>
             
@@ -841,7 +939,12 @@ title="Print to PDF"
     <i class="fa-solid fa-list"></i> On this page
 </div>
 <nav id="bd-toc-nav" class="page-toc">
-    <ul class="simple visible nav section-nav flex-column">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-inheritance">
+   Class Inheritance
+  </a>
+ </li>
 </ul>
 
 </nav>
