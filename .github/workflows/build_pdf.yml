@@ -1,0 +1,62 @@
+name: Build PDF
+on:
+  schedule:
+    - cron: '0 0 * * 6'
+  push:
+    branches:
+      - master
+      - feature/*
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+
+      - name: Install Fonts
+        run: |
+          sudo apt-get install -y fonts-liberation
+          sudo apt-get install -y fonts-cmu
+      - name: TexLive Cache
+        id: cache
+        uses: actions/cache@v1
+        with:
+          path: /tmp/texlive
+          key: cache-texlive
+      - name: Install & Update TexLive
+        shell: bash -l {0}
+        run: |
+          bash scripts/install_latex.sh
+          echo 'export PATH=/tmp/texlive/bin/x86_64-linux:$PATH' >> ~/.bash_profile
+          source ~/.bash_profile
+          xelatex --version
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' 
+
+      - name: Install jupyter_book
+        shell: bash -l {0}
+        run: pip install git+https://github.com/ExecutableBookProject/jupyter-book.git@master
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build Book
+        shell: bash -l {0}
+        run: |
+          echo 'export PATH=/tmp/texlive/bin/x86_64-linux:$PATH' >> ~/.bash_profile
+          source ~/.bash_profile
+          jb build introtopython/ --builder pdflatex
+          jb build introtopython/ --builder latex
+      - uses: actions/upload-artifact@v2
+        with:
+          name: pdf
+          path: ibook/_build/latex/book.pdf
+      
+      - uses: actions/upload-artifact@v2
+        with:
+          name: tex_file
+          path: introtopython/_build/latex/
