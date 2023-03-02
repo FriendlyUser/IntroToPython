@@ -18,6 +18,8 @@ kernelspec:
 	name: python3
 ---
 
+# Chapter 7: File handling and data processing
+
 Here is an overview of how to work with files in Python using `open()`, `close()`, `read()`, `write()` and other methods:
 
 1. Opening a file:
@@ -77,7 +79,7 @@ with open("example.txt", "w") as file:
  file.writelines(lines)
 ```
 
-
+## File Permissions
 In Linux, write permissions determine whether a user, group or others can modify, create or delete files or directories. The write permission is represented by a number in the file permission system and can be set or changed using the chmod command.
 
 Here's what each digit in a chmod code represents:
@@ -315,6 +317,7 @@ for child in root:
 ```
 In this example, we parse an XML file named `example.xml` using the `ET.parse()` function from the `xml.etree.ElementTree` module. We then access the root element of the XML file using the `getroot()` method, and use a `for` loop to iterate over the
 
+## Parsing large data sets
 Generators are a great way to process large data sets efficiently in Python. They allow you to lazily load data one chunk at a time, rather than loading everything into memory at once. This can be particularly useful when dealing with very large data sets that would otherwise exceed available memory.
 
 To use generators to process large data sets, you can create a function that yields data in manageable chunks. Here's an example:
