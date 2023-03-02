@@ -10,6 +10,7 @@ chapters:
 - file: chapters/chap_4
 - file: chapters/chap_5
 - file: chapters/chap_6
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+- file: chapters/chap_7
+# - file: markdown
+# - file: notebooks
+# - file: markdown-notebooks
