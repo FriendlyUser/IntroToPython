@@ -54,7 +54,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: pdf
-          path: ibook/_build/latex/book.pdf
+          path: introtopython/_build/latex/book.pdf
       
       - uses: actions/upload-artifact@v2
         with:
