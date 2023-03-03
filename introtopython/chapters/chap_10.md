@@ -11,6 +11,7 @@ kernelspec:
   language: python
   name: python3
 ---
+
 # Chapter 10 Introduction to Data Science
 
 Data Science has become a fundamental component of any business or organization. It is the process of extracting insights and knowledge from data. The main goal of Data Science is to use statistical and computational methods to extract valuable insights from data. The insights obtained from the data can be used to make informed decisions in different fields.
