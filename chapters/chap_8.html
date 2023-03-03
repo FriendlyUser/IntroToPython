@@ -464,6 +464,16 @@ const thebe_selector_output = ".output, .cell_output"
         </label>
     </div>
     <div class="header-article__right">
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+  </ul>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="btn btn-sm"
   data-toggle="tooltip"
@@ -525,6 +535,21 @@ title="Open an issue"
     <i class="fas fa-download"></i>
   </button>
   <ul class="dropdown-menu">
+      <li><a href="../_sources/chapters/chap_8.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</a>
+      
       <li><a href="../_sources/chapters/chap_8.md" target="_blank"
    class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
@@ -621,24 +646,117 @@ title="Print to PDF"
 <ol class="arabic simple">
 <li><p>map(): The <code class="docutils literal notranslate"><span class="pre">map()</span></code> function applies a given function to each item of an iterable and returns a new iterable with the transformed values. Here’s an example:</p></li>
 </ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+ <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">squared_numbers</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="n">numbers</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">squared_numbers</span><span class="p">))</span> <span class="c1"># Output: [1, 4, 9, 16, 25]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 4, 9, 16, 25]
+</pre></div>
+</div>
+</div>
+</div>
 <p>In this example, we defined a function <code class="docutils literal notranslate"><span class="pre">square()</span></code> that takes a number and returns its square. We then applied the <code class="docutils literal notranslate"><span class="pre">map()</span></code> function to the <code class="docutils literal notranslate"><span class="pre">numbers</span></code> list with the <code class="docutils literal notranslate"><span class="pre">square()</span></code> function as the first argument. The result is a new iterable containing the squared values of the original numbers.</p>
 <ol class="arabic simple" start="2">
 <li><p>filter(): The <code class="docutils literal notranslate"><span class="pre">filter()</span></code> function applies a given function to each item of an iterable and returns a new iterable with only the items for which the function returns <code class="docutils literal notranslate"><span class="pre">True</span></code>. Here’s an example:</p></li>
 </ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_even</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+ <span class="k">return</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">even_numbers</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="n">is_even</span><span class="p">,</span> <span class="n">numbers</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">even_numbers</span><span class="p">))</span> <span class="c1"># Output: [2, 4]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2, 4]
+</pre></div>
+</div>
+</div>
+</div>
 <p>In this example, we defined a function <code class="docutils literal notranslate"><span class="pre">is_even()</span></code> that takes a number and returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if it is even. We then applied the <code class="docutils literal notranslate"><span class="pre">filter()</span></code> function to the <code class="docutils literal notranslate"><span class="pre">numbers</span></code> list with the <code class="docutils literal notranslate"><span class="pre">is_even()</span></code> function as the first argument. The result is a new iterable containing only the even numbers from the original list.</p>
 <ol class="arabic simple" start="3">
 <li><p>reduce(): The <code class="docutils literal notranslate"><span class="pre">reduce()</span></code> function applies a given function to the items of an iterable in a cumulative way and returns a single value. Here’s an example:</p></li>
 </ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
+
+<span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+ <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">sum_of_numbers</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">(</span><span class="n">add</span><span class="p">,</span> <span class="n">numbers</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_of_numbers</span><span class="p">)</span> <span class="c1"># Output: 15</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15
+</pre></div>
+</div>
+</div>
+</div>
 <p>In this example, we defined a function <code class="docutils literal notranslate"><span class="pre">add()</span></code> that takes two numbers and returns their sum. We then applied the <code class="docutils literal notranslate"><span class="pre">reduce()</span></code> function to the <code class="docutils literal notranslate"><span class="pre">numbers</span></code> list with the <code class="docutils literal notranslate"><span class="pre">add()</span></code> function as the first argument. The result is the sum of all the numbers in the original list.</p>
 <ol class="arabic simple" start="4">
 <li><p>lambda: The <code class="docutils literal notranslate"><span class="pre">lambda</span></code> keyword is used to create anonymous functions in Python. These are functions that have no name and are defined on the fly. Here’s an example:</p></li>
 </ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">squared_numbers</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">numbers</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">squared_numbers</span><span class="p">))</span> <span class="c1"># Output: [1, 4, 9, 16, 25]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 4, 9, 16, 25]
+</pre></div>
+</div>
+</div>
+</div>
 <p>In this example, we used a lambda function to define the square function directly inside the <code class="docutils literal notranslate"><span class="pre">map()</span></code> function. The lambda function takes a number as its argument and returns its square. This is a shorter way to define small, one-time-use functions.</p>
 <p>List comprehensions, set comprehensions, and dictionary comprehensions are a concise and powerful way to create new collections from existing ones in Python. Here’s an overview of how to use them:</p>
 <ol class="arabic simple">
 <li><p>List comprehensions: A list comprehension is a way to create a new list by specifying a pattern that describes the contents of the list. It has the following syntax:</p></li>
 </ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">expression</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">iterable</span> <span class="k">if</span> <span class="n">condition</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">new_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">expression</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">iterable</span> <span class="k">if</span> <span class="n">condition</span><span class="p">]</span>
+
+<span class="ne">NameError</span>: name &#39;iterable&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
 <p>where <code class="docutils literal notranslate"><span class="pre">expression</span></code> is the operation that transforms the <code class="docutils literal notranslate"><span class="pre">item</span></code>, <code class="docutils literal notranslate"><span class="pre">iterable</span></code> is the iterable that you want to transform, and <code class="docutils literal notranslate"><span class="pre">condition</span></code> is an optional filtering condition. Here’s an example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">squared_numbers</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">numbers</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">squared_numbers</span><span class="p">)</span> <span class="c1"># Output: [4, 16]</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>In this example, we used a list comprehension to create a new list <code class="docutils literal notranslate"><span class="pre">squared_numbers</span></code> that contains the squares of the even numbers from the original list.</p>
 <ol class="arabic simple" start="2">
 <li><p>Set comprehensions: A set comprehension is similar to a list comprehension, but it creates a new set instead of a list. It has the following syntax:</p></li>
@@ -647,6 +765,15 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>where <code class="docutils literal notranslate"><span class="pre">expression</span></code>, <code class="docutils literal notranslate"><span class="pre">iterable</span></code>, and <code class="docutils literal notranslate"><span class="pre">condition</span></code> are the same as in a list comprehension. Here’s an example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">even_numbers</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">numbers</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">even_numbers</span><span class="p">)</span> <span class="c1"># Output: {2, 4}</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>In this example, we used a set comprehension to create a new set <code class="docutils literal notranslate"><span class="pre">even_numbers</span></code> that contains the even numbers from the original list.</p>
 <ol class="arabic simple" start="3">
 <li><p>Dictionary comprehensions: A dictionary comprehension is a way to create a new dictionary by specifying a pattern that describes the contents of the dictionary. It has the following syntax:</p></li>
@@ -655,13 +782,58 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>where <code class="docutils literal notranslate"><span class="pre">key_expression</span></code> and <code class="docutils literal notranslate"><span class="pre">value_expression</span></code> are the operations that transform the <code class="docutils literal notranslate"><span class="pre">item</span></code> into a key-value pair, <code class="docutils literal notranslate"><span class="pre">iterable</span></code> is the iterable that you want to transform, and <code class="docutils literal notranslate"><span class="pre">condition</span></code> is an optional filtering condition. Here’s an example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">squared_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">numbers</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">squared_dict</span><span class="p">)</span> <span class="c1"># Output: {2: 4, 4: 16}</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>In this example, we used a dictionary comprehension to create a new dictionary <code class="docutils literal notranslate"><span class="pre">squared_dict</span></code> that contains the squares of the even numbers from the original list, with the even numbers themselves as the keys.</p>
 <p>In Python, generators are a way to create lazy iterables that can be consumed on demand. Generators are functions that use the <code class="docutils literal notranslate"><span class="pre">yield</span></code> statement to return a value, but instead of returning all the values at once, they return a sequence of values as the generator is iterated over. This makes generators useful for generating large sequences of data that might be too large to store in memory all at once.</p>
 <p>Here’s an example of a generator function that generates the Fibonacci sequence:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fibonacci</span><span class="p">():</span>
+ <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+ <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+ 	<span class="k">yield</span> <span class="n">a</span>
+ 	<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>This function generates the Fibonacci sequence indefinitely. To use this generator, you can iterate over it like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">fibonacci</span><span class="p">():</span>
+ <span class="k">if</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">:</span>
+ 	<span class="k">break</span>
+ <span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>This will print the Fibonacci sequence up to the first number greater than 100.</p>
 <p>In addition to generator functions, Python also has generator expressions, which are similar to list comprehensions and set comprehensions, but they create lazy iterables instead of lists or sets. Here’s an example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">squares</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>This creates a generator expression that generates the squares of the numbers from 0 to 9. To consume the values generated by this generator expression, you can iterate over it like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">square</span> <span class="ow">in</span> <span class="n">squares</span><span class="p">:</span>
+ <span class="nb">print</span><span class="p">(</span><span class="n">square</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>This will print the squares of the numbers from 0 to 9. Note that the generator expression only generates the squares of the numbers as they are needed, so it doesn’t store all the squares in memory at once.</p>
 </section>
 </section>

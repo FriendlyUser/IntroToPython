@@ -464,6 +464,16 @@ const thebe_selector_output = ".output, .cell_output"
         </label>
     </div>
     <div class="header-article__right">
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+  </ul>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="btn btn-sm"
   data-toggle="tooltip"
@@ -525,6 +535,21 @@ title="Open an issue"
     <i class="fas fa-download"></i>
   </button>
   <ul class="dropdown-menu">
+      <li><a href="../_sources/chapters/chap_7.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</a>
+      
       <li><a href="../_sources/chapters/chap_7.md" target="_blank"
    class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
@@ -604,27 +629,99 @@ title="Print to PDF"
 <li><p>Opening a file:
 You can use the <code class="docutils literal notranslate"><span class="pre">open()</span></code> function to open a file in Python. The function takes two arguments: the name of the file you want to open and the mode in which you want to open the file. The mode can be “r” for reading, “w” for writing, “a” for appending, or “x” for creating a new file. For example, to open a file named “example.txt” for writing, you can use the following code:</p></li>
 </ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;example.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <ol class="arabic simple" start="2">
 <li><p>Reading from a file:
 You can use the <code class="docutils literal notranslate"><span class="pre">read()</span></code> method to read the contents of a file. The method reads the entire contents of the file and returns it as a string. For example, to read the contents of the “example.txt” file, you can use the following code:</p></li>
 </ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;example.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+<span class="n">contents</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
 <ol class="arabic simple" start="3">
 <li><p>Writing to a file:
 You can use the <code class="docutils literal notranslate"><span class="pre">write()</span></code> method to write to a file. The method takes a string as its argument and writes it to the file. For example, to write the string “Hello, World!” to the “example.txt” file, you can use the following code:</p></li>
 </ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;example.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13
+</pre></div>
+</div>
+</div>
+</div>
 <ol class="arabic simple" start="4">
 <li><p>Closing a file:
 You should always close a file after you have finished working with it. You can use the <code class="docutils literal notranslate"><span class="pre">close()</span></code> method to close a file. For example, to close the “example.txt” file, you can use the following code:</p></li>
 </ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
 <ol class="arabic simple" start="5">
 <li><p>Using context managers:
 You can use a context manager with the <code class="docutils literal notranslate"><span class="pre">with</span></code> statement to open and close files automatically. This is a more convenient and safer way to work with files as it automatically closes the file for you after you’re done working with it. For example, to write the string “Hello, World!” to the “example.txt” file using a context manager, you can use the following code:</p></li>
 </ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;example.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+ <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <ol class="arabic simple" start="6">
 <li><p>Reading and writing lines:
 You can use the <code class="docutils literal notranslate"><span class="pre">readline()</span></code> method to read a single line from a file, and the <code class="docutils literal notranslate"><span class="pre">writelines()</span></code> method to write a list of strings to a file, with each string representing a line. For example, to read the first line of the “example.txt” file, you can use the following code:</p></li>
 </ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;example.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+<span class="n">line</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello, World!
+</pre></div>
+</div>
+</div>
+</div>
 <p>And to write a list of strings to the “example.txt” file, you can use the following code:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="s2">&quot;World&quot;</span><span class="p">]</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;example.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+ <span class="n">file</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <section id="file-permissions">
 <h2>File Permissions<a class="headerlink" href="#file-permissions" title="Permalink to this heading">#</a></h2>
 <p>In Linux, write permissions determine whether a user, group or others can modify, create or delete files or directories. The write permission is represented by a number in the file permission system and can be set or changed using the chmod command.</p>
@@ -657,69 +754,267 @@ You can use the <code class="docutils literal notranslate"><span class="pre">rea
 <li><p>‘r’: This is the default mode when you open a file in Python. It opens the file for reading, which means you can only read data from the file but you can’t write to it or modify it. If the file doesn’t exist, you will get a <code class="docutils literal notranslate"><span class="pre">FileNotFoundError</span></code>.</p></li>
 </ul>
 <p>Example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;example.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <ul class="simple">
 <li><p>‘w’: This mode opens the file for writing, which means you can write data to the file and overwrite its existing contents. If the file doesn’t exist, it will be created. If it exists, its previous contents will be deleted.</p></li>
 </ul>
 <p>Example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;example.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <ul class="simple">
 <li><p>‘a’: This mode opens the file for appending, which means you can write data to the end of the file without overwriting its existing contents. If the file doesn’t exist, it will be created.</p></li>
 </ul>
 <p>Example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;example.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <ul class="simple">
 <li><p>‘x’: This mode opens the file for exclusive creation, which means it creates a new file and opens it for writing. If the file already exists, the <code class="docutils literal notranslate"><span class="pre">FileExistsError</span></code> exception will be raised.</p></li>
 </ul>
 <p>Example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;example.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileExistsError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;example.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/IPython/core/interactiveshell.py:282,</span> in <span class="ni">_modified_open</span><span class="nt">(file, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">275</span> <span class="k">if</span> <span class="n">file</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}:</span>
+<span class="g g-Whitespace">    </span><span class="mi">276</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">277</span>         <span class="sa">f</span><span class="s2">&quot;IPython won&#39;t let you open fd=</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2"> by default &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">278</span>         <span class="s2">&quot;as it is likely to crash IPython. If you know what you are doing, &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">279</span>         <span class="s2">&quot;you can use builtins&#39; open.&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">280</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">282</span> <span class="k">return</span> <span class="n">io_open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="ne">FileExistsError</span>: [Errno 17] File exists: &#39;example.txt&#39;
+</pre></div>
+</div>
+</div>
+</div>
 <ul class="simple">
 <li><p>‘b’: This mode opens the file in binary mode, which is used for working with non-text files such as images, audio, or video files. When you use this mode, you must specify the file as a binary file using the ‘b’ character.</p></li>
 </ul>
 <p>Example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;example.mp3&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>In addition to the modes described above, you can also combine them with the <code class="docutils literal notranslate"><span class="pre">+</span></code> character to create hybrid modes that allow you to read and write to a file at the same time:</p>
 <ul class="simple">
 <li><p>‘r+’: This mode opens the file for reading and writing.</p></li>
 </ul>
 <p>Example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;example.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r+&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <ul class="simple">
 <li><p>‘w+’: This mode opens the file for reading and writing, overwriting its existing contents.</p></li>
 </ul>
 <p>Example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;example.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w+&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <ul class="simple">
 <li><p>‘a+’: This mode opens the file for reading and appending.</p></li>
 </ul>
 <p>Example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;example.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;a+&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>Remember to always close the file after you’re done with it using the <code class="docutils literal notranslate"><span class="pre">close()</span></code> method or use the <code class="docutils literal notranslate"><span class="pre">with</span></code> statement to automatically close it:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;example.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+ <span class="c1"># Do something with the file</span>
+ <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>I hope this helps! Let me know if you have any further questions.</p>
 <p>Sure, here’s an example of how to use a context manager with the <code class="docutils literal notranslate"><span class="pre">with</span></code> statement to automatically close a file after you’re done with it:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;example.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+ <span class="c1"># Do something with the file</span>
+ <span class="n">contents</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+ <span class="nb">print</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span>
+<span class="c1"># The file will be automatically closed when the code block is exited</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>In the example above, we open the file <code class="docutils literal notranslate"><span class="pre">example.txt</span></code> in read mode using the <code class="docutils literal notranslate"><span class="pre">open()</span></code> function, and assign the file object to the variable <code class="docutils literal notranslate"><span class="pre">file</span></code>. Then we do something with the file, such as reading its contents and printing them. When we’re done with the file, we exit the code block and the file is automatically closed thanks to the <code class="docutils literal notranslate"><span class="pre">with</span></code> statement.</p>
 <p>Using a context manager with the <code class="docutils literal notranslate"><span class="pre">with</span></code> statement is a safer and more concise way to open and close files, as it ensures that the file is always closed even if an exception occurs while the code is executing. It also avoids the need to explicitly call the <code class="docutils literal notranslate"><span class="pre">close()</span></code> method, which can be easy to forget and can lead to resource leaks if not properly handled.</p>
 <ol class="arabic simple">
 <li><p>Loops: You can use loops to iterate over the lines in a file and process each line as a separate string. For example, if you have a file named <code class="docutils literal notranslate"><span class="pre">example.txt</span></code> with several lines of text, you can read and process each line like this:</p></li>
 </ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;example.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+ <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+ <span class="c1"># Do something with the line</span>
+ <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>In this example, we open the file in read mode using a context manager and a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to iterate over each line in the file. We then process each line by stripping its leading and trailing whitespace characters using the <code class="docutils literal notranslate"><span class="pre">strip()</span></code> method, and print the resulting string to the console.</p>
 <ol class="arabic simple" start="2">
 <li><p>String methods: You can use string methods to manipulate the data in each line of a file. For example, if you have a file named <code class="docutils literal notranslate"><span class="pre">example.txt</span></code> with comma-separated values on each line, you can read and process each line like this:</p></li>
 </ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;example.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+  <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+	<span class="c1"># Split the line into a list of values using the comma separator</span>
+	<span class="n">values</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+	<span class="c1"># Do something with the values</span>
+	<span class="nb">print</span><span class="p">(</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>In this example, we use the <code class="docutils literal notranslate"><span class="pre">strip()</span></code> method to remove leading and trailing whitespace characters from each line, and the <code class="docutils literal notranslate"><span class="pre">split()</span></code> method to split each line into a list of values using the comma separator. We then process the resulting list of values by printing the first value to the console.</p>
 <ol class="arabic simple" start="3">
 <li><p>Regular expressions: You can use regular expressions to search for patterns in the data in each line of a file. For example, if you have a file named <code class="docutils literal notranslate"><span class="pre">example.txt</span></code> with email addresses on each line, you can read and process each line like this:</p></li>
 </ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;email.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+ <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+	<span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+	<span class="c1"># Search for email addresses using a regular expression</span>
+	<span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b[A-Za-z0-9.\_%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+	<span class="c1"># If a match is found, print the email address</span>
+ 	<span class="k">if</span> <span class="n">match</span><span class="p">:</span>
+ 		<span class="nb">print</span><span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">())</span>
+	<span class="k">else</span><span class="p">:</span>
+		<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;no match&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>In this example, we use the <code class="docutils literal notranslate"><span class="pre">re.search()</span></code> function to search for email addresses in each line of the file using a regular expression pattern. If a match is found, we print the email address using the <code class="docutils literal notranslate"><span class="pre">group()</span></code> method of the match object.</p>
 <p>I hope these examples help you understand how to process data from files using loops, string methods, and regular expressions in Python. Let me know if you have any further questions!</p>
 <p>Sure, here’s a brief overview of how to use some of the built-in modules in Python to read and write data in different formats:</p>
 <ol class="arabic simple">
 <li><p>CSV: The <code class="docutils literal notranslate"><span class="pre">csv</span></code> module in Python provides functionality for reading and writing comma-separated values (CSV) files. Here’s an example of how to read a CSV file and process its data:</p></li>
 </ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;example.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+ <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+ <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+ <span class="c1"># Do something with the row data</span>
+ 	<span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>In this example, we open a CSV file named <code class="docutils literal notranslate"><span class="pre">example.csv</span></code> using a context manager and the <code class="docutils literal notranslate"><span class="pre">csv.reader()</span></code> function. We then use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to iterate over each row in the CSV file and process the row data as a list of strings. In this case, we simply print each row to the console.</p>
 <p>To write data to a CSV file using the <code class="docutils literal notranslate"><span class="pre">csv</span></code> module, you can use the <code class="docutils literal notranslate"><span class="pre">csv.writer()</span></code> function to create a writer object and the <code class="docutils literal notranslate"><span class="pre">writerow()</span></code> method to write rows of data to the file. Here’s an example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;example.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+ <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+ <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;City&#39;</span><span class="p">])</span>
+ <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;30&#39;</span><span class="p">,</span> <span class="s1">&#39;New York&#39;</span><span class="p">])</span>
+ <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="s1">&#39;Jane&#39;</span><span class="p">,</span> <span class="s1">&#39;25&#39;</span><span class="p">,</span> <span class="s1">&#39;San Francisco&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>In this example, we create a new CSV file named <code class="docutils literal notranslate"><span class="pre">example.csv</span></code> using a context manager and the <code class="docutils literal notranslate"><span class="pre">csv.writer()</span></code> function. We then use the <code class="docutils literal notranslate"><span class="pre">writerow()</span></code> method to write the column headers and two rows of data to the file.</p>
 <ol class="arabic simple" start="2">
 <li><p>JSON: The <code class="docutils literal notranslate"><span class="pre">json</span></code> module in Python provides functionality for encoding and decoding JSON data. Here’s an example of how to read a JSON file and process its data:</p></li>
 </ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;example.json&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+ <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+ <span class="c1"># Do something with the JSON data</span>
+ <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>In this example, we open a JSON file named <code class="docutils literal notranslate"><span class="pre">example.json</span></code> using a context manager and the <code class="docutils literal notranslate"><span class="pre">json.load()</span></code> function. We then load the JSON data into a Python object and process the data as necessary. In this case, we simply print the JSON data to the console.</p>
 <p>To write data to a JSON file using the <code class="docutils literal notranslate"><span class="pre">json</span></code> module, you can use the <code class="docutils literal notranslate"><span class="pre">json.dump()</span></code> function to write a Python object to the file as JSON data. Here’s an example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;city&#39;</span><span class="p">:</span> <span class="s1">&#39;New York&#39;</span><span class="p">}</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;example.json&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+ <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>In this example, we create a Python dictionary object containing some data, and then open a new JSON file named <code class="docutils literal notranslate"><span class="pre">example.json</span></code> using a context manager and the <code class="docutils literal notranslate"><span class="pre">json.dump()</span></code> function. We then write the Python object to the file as JSON data.</p>
 <ol class="arabic simple" start="3">
 <li><p>XML: The <code class="docutils literal notranslate"><span class="pre">xml</span></code> module in Python provides functionality for parsing and generating XML data. Here’s an example of how to read an XML file and process its data:</p></li>
 </ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xml.etree.ElementTree</span> <span class="k">as</span> <span class="nn">ET</span>
+
+<span class="n">tree</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;example.xml&#39;</span><span class="p">)</span>
+<span class="n">root</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">root</span><span class="p">:</span>
+ <span class="c1"># Do something with the child element</span>
+ <span class="nb">print</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">tag</span><span class="p">,</span> <span class="n">child</span><span class="o">.</span><span class="n">attrib</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>In this example, we parse an XML file named <code class="docutils literal notranslate"><span class="pre">example.xml</span></code> using the <code class="docutils literal notranslate"><span class="pre">ET.parse()</span></code> function from the <code class="docutils literal notranslate"><span class="pre">xml.etree.ElementTree</span></code> module. We then access the root element of the XML file using the <code class="docutils literal notranslate"><span class="pre">getroot()</span></code> method, and use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to iterate over the</p>
 </section>
 <section id="parsing-large-data-sets">
