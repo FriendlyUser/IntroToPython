@@ -201,8 +201,8 @@ Using a context manager with the `with` statement is a safer and more concise wa
 ```{code-cell} ipython3
 with open('example.txt', 'r') as file:
  for line in file:
- # Do something with the line
- print(line.strip())
+ 	# Do something with the line
+ 	print(line.strip())
 ```
 In this example, we open the file in read mode using a context manager and a `for` loop to iterate over each line in the file. We then process each line by stripping its leading and trailing whitespace characters using the `strip()` method, and print the resulting string to the console.
 
