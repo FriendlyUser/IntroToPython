@@ -204,6 +204,20 @@ const thebe_selector_output = ".output, .cell_output"
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_10.html">
+                        Chapter 10 Introduction to Data Science
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_11.html">
+                        Chapter 10 Python Projects
+                      </a>
+                    </li>
+                
                 </div>
             </div>
             
@@ -344,6 +358,20 @@ const thebe_selector_output = ".output, .cell_output"
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_10.html">
+                        Chapter 10 Introduction to Data Science
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_11.html">
+                        Chapter 10 Python Projects
+                      </a>
+                    </li>
+                
                 </div>
             </div>
             
@@ -425,6 +453,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="chap_7.html">Chapter 7: File handling and data processing</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 8 File handling and data processing.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chap_9.html">Chapter 9 Introduction to Web Development with Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap_10.html">Chapter 10 Introduction to Data Science</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap_11.html">Chapter 10 Python Projects</a></li>
 </ul>
 
     </div>
@@ -730,22 +760,8 @@ title="Print to PDF"
 <ol class="arabic simple">
 <li><p>List comprehensions: A list comprehension is a way to create a new list by specifying a pattern that describes the contents of the list. It has the following syntax:</p></li>
 </ol>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">expression</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">iterable</span> <span class="k">if</span> <span class="n">condition</span><span class="p">]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">new_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">expression</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">iterable</span> <span class="k">if</span> <span class="n">condition</span><span class="p">]</span>
 </pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">new_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">expression</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">iterable</span> <span class="k">if</span> <span class="n">condition</span><span class="p">]</span>
-
-<span class="ne">NameError</span>: name &#39;iterable&#39; is not defined
-</pre></div>
-</div>
-</div>
 </div>
 <p>where <code class="docutils literal notranslate"><span class="pre">expression</span></code> is the operation that transforms the <code class="docutils literal notranslate"><span class="pre">item</span></code>, <code class="docutils literal notranslate"><span class="pre">iterable</span></code> is the iterable that you want to transform, and <code class="docutils literal notranslate"><span class="pre">condition</span></code> is an optional filtering condition. Here’s an example:</p>
 <div class="cell docutils container">
@@ -753,6 +769,11 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 <span class="n">squared_numbers</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">numbers</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">squared_numbers</span><span class="p">)</span> <span class="c1"># Output: [4, 16]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4, 16]
 </pre></div>
 </div>
 </div>
@@ -773,6 +794,11 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{2, 4}
+</pre></div>
+</div>
+</div>
 </div>
 <p>In this example, we used a set comprehension to create a new set <code class="docutils literal notranslate"><span class="pre">even_numbers</span></code> that contains the even numbers from the original list.</p>
 <ol class="arabic simple" start="3">
@@ -787,6 +813,11 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 <span class="n">squared_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">numbers</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">}</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">squared_dict</span><span class="p">)</span> <span class="c1"># Output: {2: 4, 4: 16}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{2: 4, 4: 16}
 </pre></div>
 </div>
 </div>
@@ -815,6 +846,22 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+</pre></div>
+</div>
+</div>
 </div>
 <p>This will print the Fibonacci sequence up to the first number greater than 100.</p>
 <p>In addition to generator functions, Python also has generator expressions, which are similar to list comprehensions and set comprehensions, but they create lazy iterables instead of lists or sets. Here’s an example:</p>
@@ -830,6 +877,20 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">square</span> <span class="ow">in</span> <span class="n">squares</span><span class="p">:</span>
  <span class="nb">print</span><span class="p">(</span><span class="n">square</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+4
+9
+16
+25
+36
+49
+64
+81
 </pre></div>
 </div>
 </div>

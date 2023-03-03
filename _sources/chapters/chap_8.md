@@ -103,7 +103,7 @@ List comprehensions, set comprehensions, and dictionary comprehensions are a con
 1. List comprehensions: A list comprehension is a way to create a new list by specifying a pattern that describes the contents of the list. It has the following syntax:
 
 
-```{code-cell} ipython3
+```python
 new_list = [expression for item in iterable if condition]
 ```
 where `expression` is the operation that transforms the `item`, `iterable` is the iterable that you want to transform, and `condition` is an optional filtering condition. Here's an example:

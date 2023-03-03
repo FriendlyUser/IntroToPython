@@ -387,3 +387,38 @@ docker run -p 8000:8000 my-web-app
 This is a basic example, and the exact steps will vary depending on your web app and its dependencies. However, this should give you an idea of how to create a Docker image for a simple web app.
 
 
+## Making http requests
+
+The requests library is a powerful Python library that allows you to send HTTP/1.1 requests using Python. It is easy to use and it can be installed using pip. Here are the steps to use requests in Python:
+
+1. Install the requests library: Open the terminal or command prompt and type the following command:
+```bash
+pip install requests
+```
+
+2. Import the requests module: To use requests, you need to import it at the beginning of your Python script. Here is the code to import requests:
+```{code-cell} ipython3
+import requests
+```
+3. Sending HTTP requests: The requests library provides several methods to send HTTP requests such as GET, POST, PUT, DELETE, etc. The most commonly used methods are GET and POST.
+For example, to send a GET request, you can use the requests.get() method:
+
+```{code-cell} ipython3
+response = requests.get(url)
+```
+
+where url is the URL of the website you want to request.
+
+To send a POST request, you can use the requests.post() method:
+
+4. Handling the response: After sending the request, you will get a response from the server. The response object contains the response from the server. Here is an example of how to handle the response:
+
+```{code-cell} ipython3
+response = requests.get(url)
+print(response.status_code)
+print(response.content)
+```
+
+where status_code is the HTTP status code returned by the server, and content is the content of the response.
+
+That's it! These are the basic steps to use requests in Python. With requests, you can easily send HTTP requests, handle responses, and work with APIs.

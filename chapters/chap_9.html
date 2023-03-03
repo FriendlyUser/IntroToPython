@@ -62,6 +62,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/chap_9';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Chapter 10 Introduction to Data Science" href="chap_10.html" />
     <link rel="prev" title="Chapter 8 File handling and data processing." href="chap_8.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="en">
@@ -200,6 +201,20 @@ const thebe_selector_output = ".output, .cell_output"
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="#">
                         Chapter 9 Introduction to Web Development with Python
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_10.html">
+                        Chapter 10 Introduction to Data Science
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_11.html">
+                        Chapter 10 Python Projects
                       </a>
                     </li>
                 
@@ -343,6 +358,20 @@ const thebe_selector_output = ".output, .cell_output"
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_10.html">
+                        Chapter 10 Introduction to Data Science
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_11.html">
+                        Chapter 10 Python Projects
+                      </a>
+                    </li>
+                
                 </div>
             </div>
             
@@ -424,6 +453,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="chap_7.html">Chapter 7: File handling and data processing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chap_8.html">Chapter 8 File handling and data processing.</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 9 Introduction to Web Development with Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap_10.html">Chapter 10 Introduction to Data Science</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap_11.html">Chapter 10 Python Projects</a></li>
 </ul>
 
     </div>
@@ -610,6 +641,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#aws-deployment">
    Aws Deployment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#making-http-requests">
+   Making http requests
   </a>
  </li>
 </ul>
@@ -884,6 +920,63 @@ title="Print to PDF"
 </div>
 <p>This is a basic example, and the exact steps will vary depending on your web app and its dependencies. However, this should give you an idea of how to create a Docker image for a simple web app.</p>
 </section>
+<section id="making-http-requests">
+<h2>Making http requests<a class="headerlink" href="#making-http-requests" title="Permalink to this heading">#</a></h2>
+<p>The requests library is a powerful Python library that allows you to send HTTP/1.1 requests using Python. It is easy to use and it can be installed using pip. Here are the steps to use requests in Python:</p>
+<ol class="arabic simple">
+<li><p>Install the requests library: Open the terminal or command prompt and type the following command:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>requests
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Import the requests module: To use requests, you need to import it at the beginning of your Python script. Here is the code to import requests:</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Sending HTTP requests: The requests library provides several methods to send HTTP requests such as GET, POST, PUT, DELETE, etc. The most commonly used methods are GET and POST.
+For example, to send a GET request, you can use the requests.get() method:</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;url&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>where url is the URL of the website you want to request.</p>
+<p>To send a POST request, you can use the requests.post() method:</p>
+<ol class="arabic simple" start="4">
+<li><p>Handling the response: After sending the request, you will get a response from the server. The response object contains the response from the server. Here is an example of how to handle the response:</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>where status_code is the HTTP status code returned by the server, and content is the content of the response.</p>
+<p>That’s it! These are the basic steps to use requests in Python. With requests, you can easily send HTTP requests, handle responses, and work with APIs.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -921,6 +1014,13 @@ title="Print to PDF"
           <p class="prev-next-title">Chapter 8 File handling and data processing.</p>
       </div>
   </a>
+  <a class='right-next' id="next-link" href="chap_10.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title">Chapter 10 Introduction to Data Science</p>
+  </div>
+  <i class="fa-solid fa-angle-right"></i>
+  </a>
 </div>
             </footer>
             
@@ -945,6 +1045,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#aws-deployment">
    Aws Deployment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#making-http-requests">
+   Making http requests
   </a>
  </li>
 </ul>

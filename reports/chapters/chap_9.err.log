@@ -17,14 +17,14 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-new_list = [expression for item in iterable if condition]
+response = requests.get(url)
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mNameError[0m                                 Traceback (most recent call last)
-Cell [0;32mIn[5], line 1[0m
-[0;32m----> 1[0m new_list [38;5;241m=[39m [expression [38;5;28;01mfor[39;00m item [38;5;129;01min[39;00m [43miterable[49m [38;5;28;01mif[39;00m condition]
+Cell [0;32mIn[2], line 1[0m
+[0;32m----> 1[0m response [38;5;241m=[39m requests[38;5;241m.[39mget([43murl[49m)
 
-[0;31mNameError[0m: name 'iterable' is not defined
-NameError: name 'iterable' is not defined
+[0;31mNameError[0m: name 'url' is not defined
+NameError: name 'url' is not defined
 

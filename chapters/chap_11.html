@@ -1,0 +1,1264 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+<script data-ad-client="ca-pub-2479144310234386" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Chapter 10 Python Projects &#8212; Introduction To Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=4ec06e9971c5264fbd345897d5258098f11cc577" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=8bf782fb4ee92b3d3646425e50f299c4e1fd152d"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/chap_11';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Chapter 10 Introduction to Data Science" href="chap_10.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../intro.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_1.html">
+                        Chapter 1: Introduction To Python
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_2.html">
+                        Chapter 2 Basic syntax and data types
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_3.html">
+                        Chapter 3: Control flow and functions
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_4.html">
+                        Chapter 4: Modules and packages
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_5.html">
+                        Chapter 5: Object-oriented programming
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_6.html">
+                        Chapter 6: Exceptions and errors
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_7.html">
+                        Chapter 7: File handling and data processing
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_8.html">
+                        Chapter 8 File handling and data processing.
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_9.html">
+                        Chapter 9 Introduction to Web Development with Python
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_10.html">
+                        Chapter 10 Introduction to Data Science
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Chapter 10 Python Projects
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_1.html">
+                        Chapter 1: Introduction To Python
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_2.html">
+                        Chapter 2 Basic syntax and data types
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_3.html">
+                        Chapter 3: Control flow and functions
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_4.html">
+                        Chapter 4: Modules and packages
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_5.html">
+                        Chapter 5: Object-oriented programming
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_6.html">
+                        Chapter 6: Exceptions and errors
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_7.html">
+                        Chapter 7: File handling and data processing
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_8.html">
+                        Chapter 8 File handling and data processing.
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_9.html">
+                        Chapter 9 Introduction to Web Development with Python
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chap_10.html">
+                        Chapter 10 Introduction to Data Science
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Chapter 10 Python Projects
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+  
+
+
+<a class="navbar-brand logo" href="../intro.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    </div>
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="chap_1.html">Chapter 1: Introduction To Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap_2.html">Chapter 2 Basic syntax and data types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap_3.html">Chapter 3: Control flow and functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap_4.html">Chapter 4: Modules and packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap_5.html">Chapter 5: Object-oriented programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap_6.html">Chapter 6: Exceptions and errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap_7.html">Chapter 7: File handling and data processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap_8.html">Chapter 8 File handling and data processing.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap_9.html">Chapter 9 Introduction to Web Development with Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap_10.html">Chapter 10 Introduction to Data Science</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 10 Python Projects</a></li>
+</ul>
+
+    </div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        <label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" data-toggle="tooltip" data-placement="right" title="Toggle primary sidebar">
+            <span class="fa-solid fa-bars"></span>
+        </label>
+    </div>
+    <div class="header-article__right">
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+  </ul>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<div class="dropdown dropdown-repository-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      <li><a href="https://github.com/FriendlyUser/IntroToPython" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">repository</span>
+</a>
+</a>
+      
+      <li><a href="https://github.com/FriendlyUser/IntroToPython/issues/new?title=Issue%20on%20page%20%2Fchapters/chap_11.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">open issue</span>
+</a>
+</a>
+      
+  </ul>
+</div>
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      <li><a href="../_sources/chapters/chap_11.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</a>
+      
+      <li><a href="../_sources/chapters/chap_11.md" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</a>
+      
+      <li>
+<button onclick="printPdf(this)"
+  class="btn btn-sm dropdown-item"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</a>
+      
+  </ul>
+</div>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary" data-toggle="tooltip" data-placement="left" title="Toggle secondary sidebar">
+            <span class="fa-solid fa-list"></span>
+        </label>
+    </div>
+</div>
+            </div>
+            
+            
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Chapter 10 Python Projects</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#image-magick">
+   Image magick
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#references">
+     References
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chat-gpt-blog-generation">
+   Chat gpt blog generation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     References
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#investor-document-downloader">
+   Investor document downloader
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   References
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+            <article class="bd-article" role="main">
+              
+  <section class="tex2jax_ignore mathjax_ignore" id="chapter-10-python-projects">
+<h1>Chapter 10 Python Projects<a class="headerlink" href="#chapter-10-python-projects" title="Permalink to this heading">#</a></h1>
+<section id="image-magick">
+<h2>Image magick<a class="headerlink" href="#image-magick" title="Permalink to this heading">#</a></h2>
+<p>ImageMagick is a software suite to create, edit, and compose bitmap images. It can read, convert and write images in a variety of formats (over 100) including DPX, EXR, GIF, JPEG, JPEG-2000, PDF, PhotoCD, PNG, Postscript, SVG, and TIFF. ImageMagick is used to translate, flip, mirror, rotate, scale, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polyglines, ellipses and Bézier curves.</p>
+<p>It is used by graphic designers, photographers, scientists and also used for creating thumbnails for websites, creating GIF animations, converting PDF pages to images and so on. ImageMagick can be used from the command-line or can be used as a programming library for software development.</p>
+<p>You can call ImageMagick from Python using the <code class="docutils literal notranslate"><span class="pre">os</span></code> module, which provides a way to interface with the underlying operating system.</p>
+<p>Here’s an example of how to use ImageMagick to convert an image from one format to another:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">input_image</span> <span class="o">=</span> <span class="s1">&#39;input.jpg&#39;</span>
+<span class="n">output_image</span> <span class="o">=</span> <span class="s1">&#39;output.png&#39;</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;convert </span><span class="si">{</span><span class="n">input_image</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">output_image</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In this example, <code class="docutils literal notranslate"><span class="pre">convert</span></code> is the command-line utility provided by ImageMagick to convert images. The <code class="docutils literal notranslate"><span class="pre">input_image</span></code> variable specifies the path to the input image and <code class="docutils literal notranslate"><span class="pre">output_image</span></code> specifies the path to the output image. The <code class="docutils literal notranslate"><span class="pre">os.system</span></code> function is used to run the <code class="docutils literal notranslate"><span class="pre">convert</span></code> command, which converts the input image to the output image.</p>
+<p>The convert utility is only available in imagemagick 6.</p>
+<p>Note that this method is prone to security vulnerabilities, since it passes the parameters directly to the shell. To avoid these vulnerabilities, you can use the <code class="docutils literal notranslate"><span class="pre">subprocess</span></code> module, which provides a more secure way of calling shell commands. Here’s an example of how to use the <code class="docutils literal notranslate"><span class="pre">subprocess</span></code> module to call ImageMagick:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">subprocess</span>
+
+<span class="n">input_image</span> <span class="o">=</span> <span class="s1">&#39;input.jpg&#39;</span>
+<span class="n">output_image</span> <span class="o">=</span> <span class="s1">&#39;output.png&#39;</span>
+
+<span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;convert&#39;</span><span class="p">,</span> <span class="n">input_image</span><span class="p">,</span> <span class="n">output_image</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>In this example, the <code class="docutils literal notranslate"><span class="pre">subprocess.run</span></code> function is used to run the <code class="docutils literal notranslate"><span class="pre">convert</span></code> command, and the parameters are passed as a list, rather than as a string. This is a more secure way of calling shell commands, as it avoids shell injection attacks.</p>
+<p>You can call ImageMagick from Python using the <code class="docutils literal notranslate"><span class="pre">os</span></code> module, which provides a way to interface with the underlying operating system.</p>
+<p>Here’s an example of how to use ImageMagick to convert an image from one format to another:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>import os
+
+input_image = &#39;input.jpg&#39;
+output_image = &#39;output.png&#39;
+
+os.system(f&#39;convert {input_image} {output\_image}&#39;)`
+</pre></div>
+</div>
+<p>In this example, <code class="docutils literal notranslate"><span class="pre">convert</span></code> is the command-line utility provided by ImageMagick to convert images. The <code class="docutils literal notranslate"><span class="pre">input_image</span></code> variable specifies the path to the input image and <code class="docutils literal notranslate"><span class="pre">output_image</span></code> specifies the path to the output image. The <code class="docutils literal notranslate"><span class="pre">os.system</span></code> function is used to run the <code class="docutils literal notranslate"><span class="pre">convert</span></code> command, which converts the input image to the output image.</p>
+<p>Note that this method is prone to security vulnerabilities, since it passes the parameters directly to the shell. To avoid these vulnerabilities, you can use the <code class="docutils literal notranslate"><span class="pre">subprocess</span></code> module, which provides a more secure way of calling shell commands. Here’s an example of how to use the <code class="docutils literal notranslate"><span class="pre">subprocess</span></code> module to call ImageMagick:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>import subprocess
+
+input_image = &#39;input.jpg&#39;
+output_image = &#39;output.png&#39;
+
+subprocess.run([&#39;convert&#39;, input_image, output_image])`
+</pre></div>
+</div>
+<p>In this example, the <code class="docutils literal notranslate"><span class="pre">subprocess.run</span></code> function is used to run the <code class="docutils literal notranslate"><span class="pre">convert</span></code> command, and the parameters are passed as a list, rather than as a string. This is a more secure way of calling shell commands, as it avoids shell injection attacks.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">dir_list</span> <span class="o">=</span>  <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">full_file_name</span> <span class="ow">in</span> <span class="n">dir_list</span><span class="p">:</span>
+        <span class="n">base_name</span><span class="p">,</span> <span class="n">extension</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">full_file_name</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">extension</span> <span class="o">==</span> <span class="s1">&#39;.pdf&#39;</span><span class="p">:</span> <span class="c1"># then .pdf file --&gt; convert to image!</span>
+            <span class="n">cmd_str</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;convert&#39;</span><span class="p">,</span>
+                                <span class="s1">&#39;-density 400&#39;</span><span class="p">,</span>
+                                <span class="n">full_file_name</span><span class="p">,</span>
+                                <span class="s1">&#39;-flatten&#39;</span><span class="p">,</span>
+                                <span class="n">base_name</span> <span class="o">+</span> <span class="s1">&#39;.png&#39;</span><span class="p">])</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">cmd_str</span><span class="p">)</span>  <span class="c1"># echo command to terminal</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="n">cmd_str</span><span class="p">)</span>  <span class="c1"># execute command</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This is a Python script that uses the os module to convert all PDF files in the current directory to PNG images using ImageMagick. The main function lists all the files in the current directory using os.listdir, and then loops through each file name in dir_list. If the file extension is ‘.pdf’, the script splits the file name into its base name and extension using os.path.splitext, and then creates a command string using cmd_str that calls ImageMagick’s convert utility with the specified options.</p>
+<p>The options used in this script are:</p>
+<ul class="simple">
+<li><p>density 400: sets the density of the output image, which affects its resolution.</p></li>
+<li><p>flatten: combines all the layers of the PDF into a single image.</p></li>
+</ul>
+<p>The os.system function is then used to execute the command string, which converts the PDF file to a PNG image. The script prints the command string to the terminal to show what it’s doing, and the result is a set of PNG images, one for each PDF file in the directory.</p>
+<p>ImageMagick is a versatile and powerful software suite that has many uses, including:</p>
+<ol class="arabic simple">
+<li><p>Image Conversion: ImageMagick can be used to convert images from one format to another, making it easier to work with different image formats.</p></li>
+<li><p>Image Editing: ImageMagick can be used to perform basic image editing operations, such as cropping, resizing, rotating, and flipping images.</p></li>
+<li><p>Image Compression: ImageMagick can be used to compress images, reducing their file size while maintaining image quality.</p></li>
+<li><p>Image Manipulation: ImageMagick can be used to manipulate images in various ways, such as applying special effects, adding text and shapes, and blending multiple images together.</p></li>
+<li><p>Thumbnail Creation: ImageMagick can be used to create thumbnails for websites, making it easier to manage large numbers of images.</p></li>
+<li><p>Image Animation: ImageMagick can be used to create GIF animations from a sequence of images.</p></li>
+<li><p>PDF Conversion: ImageMagick can be used to convert PDF pages to images, making it easier to work with PDF documents.</p></li>
+<li><p>Image Processing: ImageMagick can be used for image processing tasks, such as adjusting image colors and removing noise from images.</p></li>
+<li><p>Scientific Visualization: ImageMagick can be used in scientific visualization, such as for rendering 3D models or visualizing data.</p></li>
+</ol>
+<p>These are just a few examples of the many uses of ImageMagick. It is a highly versatile software suite that can be used in many different ways to work with images.</p>
+<section id="references">
+<h3>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="github reference external" href="https://github.com/FriendlyUser/ELEC370/blob/master/Assignments/A1/html/pdfToPNGMagick.py">FriendlyUser/ELEC370</a></p></li>
+</ul>
+</section>
+</section>
+<section id="chat-gpt-blog-generation">
+<h2>Chat gpt blog generation<a class="headerlink" href="#chat-gpt-blog-generation" title="Permalink to this heading">#</a></h2>
+<p>ChatGPT is a large language model that has been trained using a technique called unsupervised learning, in which the model learns to generate text by being fed a large dataset of text. It is designed to generate human-like responses to prompts, and can be used for a variety of natural language processing tasks, such as language translation, text summarization, and question answering.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">from</span> <span class="nn">pyChatGPT</span> <span class="kn">import</span> <span class="n">ChatGPT</span>
+<span class="c1"># import yaml</span>
+<span class="kn">from</span> <span class="nn">yaml</span> <span class="kn">import</span> <span class="n">load</span><span class="p">,</span> <span class="n">dump</span><span class="p">,</span> <span class="n">Loader</span>
+<span class="kn">import</span> <span class="nn">io</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">from</span> <span class="nn">stability_sdk</span> <span class="kn">import</span> <span class="n">client</span>
+<span class="kn">import</span> <span class="nn">stability_sdk.interfaces.gooseai.generation.generation_pb2</span> <span class="k">as</span> <span class="nn">generation</span>
+<span class="c1"># Our Host URL should not be prepended with &quot;https&quot; nor should it have a trailing slash.</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;STABILITY_HOST&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;grpc.stability.ai:443&#39;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;STABILITY_KEY&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;STABILITY_KEY&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">generate_image</span><span class="p">(</span><span class="n">cfg</span><span class="p">:</span><span class="nb">dict</span><span class="p">)</span><span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">prompt</span> <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;imageArgs&#39;</span><span class="p">][</span><span class="s1">&#39;prompt&#39;</span><span class="p">]</span>
+    <span class="n">stability_api</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">StabilityInference</span><span class="p">(</span>
+        <span class="n">key</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;STABILITY_KEY&#39;</span><span class="p">],</span> <span class="c1"># API Key reference.</span>
+        <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="c1"># Print debug messages.</span>
+        <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;stable-diffusion-v1-5&quot;</span><span class="p">,</span> <span class="c1"># Set the engine to use for generation. </span>
+        <span class="c1"># Available engines: stable-diffusion-v1 stable-diffusion-v1-5 stable-diffusion-512-v2-0 stable-diffusion-768-v2-0 </span>
+        <span class="c1"># stable-diffusion-512-v2-1 stable-diffusion-768-v2-1 stable-inpainting-v1-0 stable-inpainting-512-v2-0</span>
+    <span class="p">)</span>
+    <span class="n">answers</span> <span class="o">=</span> <span class="n">stability_api</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span>
+        <span class="n">prompt</span><span class="o">=</span><span class="n">prompt</span>
+    <span class="p">)</span>
+    <span class="k">for</span> <span class="n">resp</span> <span class="ow">in</span> <span class="n">answers</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">artifact</span> <span class="ow">in</span> <span class="n">resp</span><span class="o">.</span><span class="n">artifacts</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">artifact</span><span class="o">.</span><span class="n">finish_reason</span> <span class="o">==</span> <span class="n">generation</span><span class="o">.</span><span class="n">FILTER</span><span class="p">:</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                    <span class="s2">&quot;Your request activated the API&#39;s safety filters and could not be processed.&quot;</span>
+                    <span class="s2">&quot;Please modify the prompt and try again.&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">artifact</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">generation</span><span class="o">.</span><span class="n">ARTIFACT_IMAGE</span><span class="p">:</span>
+                <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">artifact</span><span class="o">.</span><span class="n">binary</span><span class="p">))</span>
+                <span class="c1"># images</span>
+                <span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;images&quot;</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">artifact</span><span class="o">.</span><span class="n">seed</span><span class="p">)</span><span class="o">+</span> <span class="s2">&quot;.png&quot;</span><span class="p">)</span> <span class="c1"># Save our generated images with their seed number as the filename.</span>
+
+<span class="k">def</span> <span class="nf">generate_frontmatter</span><span class="p">(</span><span class="n">cfg</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span><span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="c1"># open output file</span>
+    <span class="n">output_file</span> <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;outputFile&#39;</span><span class="p">]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="c1"># write frontmatter</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;---</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="c1"># get frontmatter</span>
+        <span class="n">frontmatter</span> <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;frontMatter&#39;</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">frontmatter</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;---</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="c1"># write body</span>
+    <span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">use_programming_language</span><span class="p">(</span><span class="n">cfg</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">section_text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span><span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="c1"># get programming language</span>
+    <span class="n">programming_language</span> <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;programmingLanguage&#39;</span><span class="p">]</span>
+    <span class="c1"># use regex to find plain ``` and replace with ```programming_language</span>
+    <span class="n">type_start_line</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">type_end_line</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="c1"># replace with code blocks with programming language</span>
+    <span class="c1"># split lines by \n</span>
+    <span class="n">modified_lines</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">section_text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lines</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">line</span> <span class="o">==</span> <span class="s1">&#39;```&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">type_start_line</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">type_start_line</span> <span class="o">=</span> <span class="n">i</span>
+                <span class="c1"># append modified line</span>
+                <span class="n">modified_lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;```</span><span class="si">{</span><span class="n">programming_language</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># odd number of ``` so we are ending a code block</span>
+                <span class="n">type_start_line</span> <span class="o">=</span> <span class="kc">None</span>
+                <span class="c1"># append modified line</span>
+                <span class="n">modified_lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;```&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># adjust line if type_start_line is not None</span>
+            <span class="c1"># remove ` at the beginning of the line and the end of the line</span>
+            <span class="k">if</span> <span class="n">type_start_line</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="c1"># check for ` character at the beginning of the line</span>
+                <span class="k">if</span> <span class="n">line</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;`&#39;</span><span class="p">:</span>
+                    <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+                <span class="c1"># check for ` character at the end of the line</span>
+                <span class="k">if</span> <span class="n">line</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;`&#39;</span><span class="p">:</span>
+                    <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">modified_lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">modified_lines</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">generate_body</span><span class="p">(</span><span class="n">cfg</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span><span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="c1"># read CHATGPT_TOKEN from os</span>
+    <span class="n">CHATGPT_SESSION_TOKEN</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;CHATGPT_TOKEN&quot;</span><span class="p">)</span>
+    <span class="c1"># print(CHATGPT_SESSION_TOKEN)</span>
+    <span class="n">session_token</span> <span class="o">=</span> <span class="n">CHATGPT_SESSION_TOKEN</span>  <span class="c1"># `__Secure-next-auth.session-token` cookie from https://chat.openai.com/chat</span>
+    <span class="n">api</span> <span class="o">=</span> <span class="n">ChatGPT</span><span class="p">(</span><span class="n">session_token</span><span class="p">)</span>  <span class="c1"># auth with session token</span>
+    <span class="n">output_file</span> <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;outputFile&#39;</span><span class="p">]</span>
+    <span class="n">sections</span> <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;sections&#39;</span><span class="p">]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">section</span> <span class="ow">in</span> <span class="n">sections</span><span class="p">:</span>
+            <span class="c1"># check if str or dict</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">section</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+                <span class="n">resp</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">section</span><span class="p">)</span>
+                <span class="n">clean_message</span> <span class="o">=</span> <span class="n">use_programming_language</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">resp</span><span class="p">[</span><span class="s1">&#39;message&#39;</span><span class="p">])</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># assume dict</span>
+                <span class="c1"># type and src from dict</span>
+                <span class="n">input_type</span> <span class="o">=</span> <span class="n">section</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span>
+                <span class="n">src</span> <span class="o">=</span> <span class="n">section</span><span class="p">[</span><span class="s1">&#39;src&#39;</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">input_type</span> <span class="o">==</span> <span class="s1">&#39;file&#39;</span><span class="p">:</span>
+                    <span class="c1"># read src from file</span>
+                    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">src_file</span><span class="p">:</span>
+                        <span class="n">src_text</span> <span class="o">=</span> <span class="n">src_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+                    <span class="n">resp</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">src_text</span><span class="p">)</span>
+                    <span class="n">clean_message</span> <span class="o">=</span> <span class="n">resp</span><span class="p">[</span><span class="s1">&#39;message&#39;</span><span class="p">]</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="n">clean_message</span><span class="p">)</span>
+                    <span class="c1"># write original text</span>
+                    <span class="n">programming_language</span> <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;programmingLanguage&#39;</span><span class="p">]</span>
+                    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;```</span><span class="si">{</span><span class="n">programming_language</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2"> </span><span class="si">{</span><span class="n">src_text</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2"> ```</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+                    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">clean_message</span><span class="p">)</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--file&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s1">&#39;posts/chatgpt_blog_generation.yml&#39;</span><span class="p">)</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+    <span class="c1"># valid files exist</span>
+    <span class="c1"># argparse for file eventually</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">file</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">cfg</span> <span class="o">=</span> <span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">Loader</span><span class="o">=</span><span class="n">Loader</span><span class="p">)</span>
+    <span class="c1"># if file exists skip</span>
+    <span class="c1"># if not run these functions</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;outputFile&#39;</span><span class="p">]):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;file exists&#39;</span><span class="p">)</span>
+        <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="c1"># if genImage is true, then makeImage</span>
+    <span class="k">if</span> <span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;imageArgs&#39;</span><span class="p">]:</span>
+        <span class="n">generate_image</span><span class="p">(</span><span class="n">cfg</span><span class="p">)</span>
+        <span class="k">pass</span>
+
+    <span class="n">generate_frontmatter</span><span class="p">(</span><span class="n">cfg</span><span class="p">)</span>
+    <span class="n">generate_body</span><span class="p">(</span><span class="n">cfg</span><span class="p">)</span> 
+</pre></div>
+</div>
+<p>This is a Python script that uses the ChatGPT API, the pyChatGPT library, and the stability_sdk to generate text and images. The script takes in a configuration file in YAML format, which specifies the input text, the output file, and various settings such as the programming language to use for code blocks and the prompt for the image generation.
+It uses the ChatGPT API to generate text in response to prompts specified in the configuration file. The script also uses the stability_sdk to generate images based on the prompt specified in the configuration file. The script also uses the Python Imaging Library (PIL) to save the generated images to a directory. Additionally, it processes the generated text, using regular expressions to replace plain backticks with code blocks in the specified programming language.</p>
+<p>There are several ways to monetize a blog, including the following:</p>
+<ol class="arabic simple">
+<li><p>Advertising: You can place ads on your blog and earn money through pay-per-click or pay-per-impression programs such as Google AdSense.</p></li>
+<li><p>Affiliate marketing: You can earn money by promoting other people’s products or services and receiving a commission for every sale made through your unique affiliate link.</p></li>
+<li><p>Sponsored posts: You can write posts sponsored by a brand or company and receive payment for the promotion.</p></li>
+<li><p>Selling products or services: You can sell your own products or services, such as e-books, courses, or consulting services, directly to your readers.</p></li>
+<li><p>Crowdfunding: You can use platforms like Patreon or Kickstarter to raise money from your readers to support your blog or other projects.</p></li>
+<li><p>Subscription models: You can offer exclusive content, access to a community or other perks for a recurring fee.</p></li>
+</ol>
+<p>It’s important to note that monetizing your blog requires consistent, high-quality content, and a sizable audience. It may take some time and effort to grow your blog and monetize it successfully.</p>
+<p>Using AI to generate images can be beneficial in a variety of ways. Some reasons include:</p>
+<ol class="arabic simple">
+<li><p>Automation: AI-generated images can be produced quickly and at scale, reducing the time and resources required to create images manually.</p></li>
+<li><p>Variation: AI-generated images can be easily customized to produce a wide range of variations, allowing for greater flexibility in image design.</p></li>
+<li><p>Consistency: AI-generated images can be designed to maintain a consistent style or theme, making it easier to maintain a cohesive visual identity across a brand or product.</p></li>
+<li><p>Cost-effectiveness: AI-generated images can be less expensive than hiring a professional photographer or graphic designer, making them more accessible to businesses with limited budgets.</p></li>
+<li><p>Creative possibilities: AI-generated images can be used in creative ways, such as creating surreal or abstract imagery that would be difficult to achieve through traditional means.</p></li>
+<li><p>Personalization: AI-generated images can be used to personalize content for targeted audience, resulting in higher engagement and conversion rates.</p></li>
+<li><p>Efficiency: AI-generated images can be used to generate high-quality images for use in various applications, such as product advertising, web design, and mobile apps.</p></li>
+</ol>
+<p>Using AI to generate images can be beneficial in a variety of ways. Some reasons include:</p>
+<ol class="arabic simple">
+<li><p>Automation: AI-generated images can be produced quickly and at scale, reducing the time and resources required to create images manually.</p></li>
+<li><p>Variation: AI-generated images can be easily customized to produce a wide range of variations, allowing for greater flexibility in image design.</p></li>
+<li><p>Consistency: AI-generated images can be designed to maintain a consistent style or theme, making it easier to maintain a cohesive visual identity across a brand or product.</p></li>
+<li><p>Cost-effectiveness: AI-generated images can be less expensive than hiring a professional photographer or graphic designer, making them more accessible to businesses with limited budgets.</p></li>
+<li><p>Creative possibilities: AI-generated images can be used in creative ways, such as creating surreal or abstract imagery that would be difficult to achieve through traditional means.</p></li>
+<li><p>Personalization: AI-generated images can be used to personalize content for targeted audience, resulting in higher engagement and conversion rates.</p></li>
+<li><p>Efficiency: AI-generated images can be used to generate high-quality images for use in various applications, such as product advertising, web design, and mobile apps.</p></li>
+</ol>
+<p>AI has the potential to change blog writing in the future by making the process more efficient and personalized. For example, AI-powered writing assistants can help writers generate content faster by suggesting topics, outlining structure, and providing research and data to support their ideas. Additionally, AI-powered content generation can personalize blogs by analyzing audience data and tailoring the content to their interests and preferences. It can also generate images, infographics and videos to supplement the written content. However, it’s important to note that AI-generated content should be carefully evaluated for accuracy and bias, and should be used in conjunction with human editing and oversight to ensure high-quality and ethical results.</p>
+<section id="id1">
+<h3>References<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="github reference external" href="https://github.com/FriendlyUser/chatgpt-blog-generator">FriendlyUser/chatgpt-blog-generator</a></p></li>
+</ul>
+</section>
+</section>
+<section id="investor-document-downloader">
+<h2>Investor document downloader<a class="headerlink" href="#investor-document-downloader" title="Permalink to this heading">#</a></h2>
+<p>CSE exchange refers to the Canadian Securities Exchange, which is a stock exchange located in Canada. The CSE is a fully electronic exchange that provides a marketplace for the trading of securities listed on its platform. It offers a range of listing options, including equity, debt, and structured products, and operates with a focus on serving emerging and growth companies. The exchange aims to provide an efficient, transparent, and accessible marketplace for issuers and investors, and is regulated by the Ontario Securities Commission.</p>
+<p>Downloading reports from the CSE exchange can provide valuable information for investors, traders, and other market participants. The reports contain data on market activity, financial performance, and other key metrics for the companies listed on the exchange. By accessing these reports, you can gain insight into the financial health and performance of the companies, which can help inform your investment decisions.</p>
+<p>For example, the CSE provides annual and quarterly financial statements, press releases, and other disclosures for companies listed on the exchange. By downloading and reviewing these reports, you can get a better understanding of a company’s financial performance, including revenue, expenses, profits, and growth trends. This information can help you make more informed decisions about whether to buy, sell, or hold a company’s stock.</p>
+<p>Additionally, downloading CSE reports can provide you with insights into the overall health of the Canadian securities market, as well as emerging trends and opportunities. This information can be especially useful for traders and investors looking to make strategic decisions about their portfolios.</p>
+<p>In summary, downloading reports from the CSE exchange can provide valuable information for market participants and</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">cad_tickers.exchanges.cse</span> <span class="kn">import</span> <span class="n">get_recent_docs_from_url</span>
+<span class="kn">from</span> <span class="nn">extract_doc</span> <span class="kn">import</span> <span class="n">mk_dir</span><span class="p">,</span> <span class="n">handle_logic</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span><span class="p">,</span> <span class="n">StringIO</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">1. Get the list of documents from the CSE website</span>
+<span class="sd">2. For each document, get the document url</span>
+<span class="sd">3. If the document url is not in the csv file, add it to the csv file</span>
+<span class="sd">4. For each document url, download the document and add it to the docs folder</span>
+<span class="sd">5. For each document url, make a discord request with the document url</span>
+<span class="sd">6. For each document url, make a discord request with the document summary</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">fig_to_buffer</span><span class="p">(</span><span class="n">fig</span><span class="p">):</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot; returns a matplotlib figure as a buffer</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">buf</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">()</span>
+  <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;png&#39;</span><span class="p">)</span>
+  <span class="n">buf</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+  <span class="n">imgdata</span> <span class="o">=</span> <span class="n">buf</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+  <span class="k">return</span> <span class="n">imgdata</span>
+
+<span class="k">def</span> <span class="nf">make_discord_request</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="n">embeds</span> <span class="o">=</span> <span class="p">[],</span> <span class="n">filename</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">file</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;DISCORD_WEBHOOK&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">url</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;DISCORD_WEBHOOK Missing&#39;</span><span class="p">)</span>
+        <span class="k">pass</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">data</span><span class="p">[</span><span class="s2">&quot;content&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">content</span>
+    <span class="n">files</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;file&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="s1">&#39;application/pdf&#39;</span><span class="p">)}</span>
+    <span class="k">if</span> <span class="n">filename</span> <span class="o">!=</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">file</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+            <span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="n">files</span>
+        <span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">embeds</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">data</span><span class="p">[</span><span class="s2">&quot;embeds&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">embeds</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+            <span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Content-Type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/json&quot;</span><span class="p">}</span>
+        <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span> 
+</pre></div>
+</div>
+<p>This code is a Python script that downloads documents from the Canadian Securities Exchange (CSE) website and makes a Discord request with the document URL and summary. Here’s a brief overview of what it does:</p>
+<ol class="arabic simple">
+<li><p>It retrieves a list of documents from the CSE website using the <code class="docutils literal notranslate"><span class="pre">get_recent_docs_from_url</span></code> function.</p></li>
+<li><p>For each document, it retrieves the document URL.</p></li>
+<li><p>If the document URL is not already in a CSV file, it adds it to the CSV file.</p></li>
+<li><p>It downloads the document and saves it to a directory called <code class="docutils literal notranslate"><span class="pre">docs</span></code>.</p></li>
+<li><p>For each document URL, it makes a Discord request with the document URL.</p></li>
+<li><p>For each document URL, it makes another Discord request with the document summary.</p></li>
+</ol>
+<p>The Discord request is sent using the <code class="docutils literal notranslate"><span class="pre">requests</span></code> library. The <code class="docutils literal notranslate"><span class="pre">make_discord_request</span></code> function takes in several arguments, including the content, embeds, filename, and file data. If the filename and file data are provided, the function makes a request with the file attached. If the embeds argument is provided, the function makes a request with the embeds data. The URL for the Discord webhook is read from an environment variable <code class="docutils literal notranslate"><span class="pre">DISCORD_WEBHOOK</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> 
+<span class="n">stockList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;PKK&quot;</span><span class="p">,</span> <span class="s2">&quot;IDK&quot;</span><span class="p">,</span> <span class="s2">&quot;ADDC&quot;</span><span class="p">,</span> <span class="s2">&quot;VPH&quot;</span><span class="p">,</span> <span class="s2">&quot;VST&quot;</span><span class="p">,</span> <span class="s2">&quot;ACT&quot;</span><span class="p">]</span>
+<span class="k">def</span> <span class="nf">get_cse_tickers_data</span><span class="p">():</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://github.com/FriendlyUser/cad_tickers_list/blob/main/static/latest/cse.csv?raw=true&quot;</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">allow_redirects</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">content</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">StringIO</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)))</span>
+
+<span class="n">stock_df</span> <span class="o">=</span> <span class="n">get_cse_tickers_data</span><span class="p">()</span>
+<span class="n">stock_rows</span> <span class="o">=</span> <span class="n">stock_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">stock_df</span><span class="p">[</span><span class="s1">&#39;Symbol&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">stockList</span><span class="p">)]</span>
+<span class="n">stock_rows</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s1">&#39;stock&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">stock_rows</span><span class="p">[</span><span class="s1">&#39;Symbol&#39;</span><span class="p">]</span>
+<span class="n">stock_rows</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s1">&#39;url&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">stock_rows</span><span class="p">[</span><span class="s1">&#39;urls&#39;</span><span class="p">]</span>
+<span class="n">stockUrls</span> <span class="o">=</span> <span class="n">stock_rows</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="s1">&#39;records&#39;</span><span class="p">)</span>
+<span class="n">csv_file</span> <span class="o">=</span> <span class="s2">&quot;docs.csv&quot;</span>
+<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">csv_file</span><span class="p">):</span>
+    <span class="c1"># read from csv</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">csv_file</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1"># make new df</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;stock&quot;</span><span class="p">,</span> <span class="s2">&quot;url&quot;</span><span class="p">,</span> <span class="s2">&quot;docUrl&quot;</span><span class="p">])</span>
+ 
+</pre></div>
+</div>
+<p>This code is retrieving data for a list of stocks (<code class="docutils literal notranslate"><span class="pre">stockList</span></code>) from the Canadian Securities Exchange (CSE). It uses the <code class="docutils literal notranslate"><span class="pre">get_cse_tickers_data</span></code> function to retrieve the data from a CSV file hosted on GitHub, which contains information about CSE stocks, such as their symbol, name, and URLs. The function uses the <code class="docutils literal notranslate"><span class="pre">requests</span></code> library to make a GET request to the URL of the CSV file, and the returned content is then converted into a Pandas DataFrame using <code class="docutils literal notranslate"><span class="pre">pd.read_csv</span></code>.</p>
+<p>Next, the code filters the data for only the stocks in the <code class="docutils literal notranslate"><span class="pre">stockList</span></code> by using the <code class="docutils literal notranslate"><span class="pre">loc</span></code> method on the DataFrame and checking if the value in the <code class="docutils literal notranslate"><span class="pre">Symbol</span></code> column is in the <code class="docutils literal notranslate"><span class="pre">stockList</span></code> using the <code class="docutils literal notranslate"><span class="pre">isin</span></code> method. The filtered data is then saved in the <code class="docutils literal notranslate"><span class="pre">stock_rows</span></code> DataFrame.</p>
+<p>The code then creates two new columns in the <code class="docutils literal notranslate"><span class="pre">stock_rows</span></code> DataFrame, one named <code class="docutils literal notranslate"><span class="pre">stock</span></code> and the other named <code class="docutils literal notranslate"><span class="pre">url</span></code>, which contain the values from the <code class="docutils literal notranslate"><span class="pre">Symbol</span></code> and <code class="docutils literal notranslate"><span class="pre">urls</span></code> columns, respectively. The filtered data is then converted into a list of dictionaries (<code class="docutils literal notranslate"><span class="pre">stockUrls</span></code>) using the <code class="docutils literal notranslate"><span class="pre">to_dict</span></code> method.</p>
+<p>Finally, the code checks if there is an existing CSV file named <code class="docutils literal notranslate"><span class="pre">docs.csv</span></code> in the current directory. If there is, it reads the data into a DataFrame using `pd.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="k">for</span> <span class="n">stock</span> <span class="ow">in</span> <span class="n">stockUrls</span><span class="p">:</span>
+    <span class="n">stockName</span> <span class="o">=</span> <span class="n">stock</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;stock&quot;</span><span class="p">)</span>
+    <span class="n">stockUrl</span> <span class="o">=</span> <span class="n">stock</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;url&quot;</span><span class="p">)</span>
+    <span class="n">urls</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">urls</span> <span class="o">=</span> <span class="n">get_recent_docs_from_url</span><span class="p">(</span><span class="n">stockUrl</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">pass</span>
+    
+    <span class="k">for</span> <span class="n">docUrl</span> <span class="ow">in</span> <span class="n">urls</span><span class="p">:</span>
+        <span class="c1"># skip malformed relative urls</span>
+        <span class="k">if</span> <span class="n">docUrl</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;/&#39;</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="c1"># add each element to list</span>
+        <span class="n">exists</span> <span class="o">=</span> <span class="n">docUrl</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;docUrl&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">exists</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Adding </span><span class="si">{</span><span class="n">stockName</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">docUrl</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="n">stockName</span><span class="p">,</span> <span class="n">stockUrl</span><span class="p">,</span> <span class="n">docUrl</span><span class="p">]</span>
+            <span class="c1"># wrap in todo</span>
+            <span class="n">stock_doc_dir</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;docs/</span><span class="si">{</span><span class="n">stockName</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="n">mk_dir</span><span class="p">(</span><span class="n">stock_doc_dir</span><span class="p">)</span>
+            <span class="n">stock_doc_file_path</span> <span class="o">=</span> <span class="n">docUrl</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">pdf_file_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">stock_doc_dir</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">stock_doc_file_path</span><span class="si">}</span><span class="s2">.pdf&quot;</span>
+            <span class="n">companyName</span> <span class="o">=</span> <span class="n">stock</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Company&quot;</span><span class="p">)</span><span class="o">.</span>\
+                <span class="n">replace</span><span class="p">(</span><span class="s1">&#39;Inc.&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span>\
+                <span class="n">replace</span><span class="p">(</span><span class="s1">&#39;Pharma&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span>\
+                <span class="n">strip</span><span class="p">()</span>
+            <span class="n">dataDict</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="n">docUrl</span><span class="p">,</span>
+                <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="n">pdf_file_name</span><span class="p">,</span>
+                <span class="s2">&quot;company_name&quot;</span><span class="p">:</span> <span class="n">companyName</span>
+            <span class="p">}</span>
+            <span class="n">result_obj</span> <span class="o">=</span> <span class="n">handle_logic</span><span class="p">(</span><span class="n">dataDict</span><span class="p">)</span>
+            <span class="n">file_contents</span> <span class="o">=</span> <span class="n">result_obj</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;contents&quot;</span><span class="p">)</span>
+            <span class="n">summary</span> <span class="o">=</span> <span class="s2">&quot;N/A&quot;</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">summary</span> <span class="o">=</span> <span class="n">result_obj</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;summary&quot;</span><span class="p">)[:</span><span class="mi">1980</span><span class="p">]</span>
+            <span class="k">except</span> <span class="ne">TypeError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="k">pass</span>
+            <span class="n">embeds</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="n">stockName</span><span class="p">,</span>
+                    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="n">docUrl</span><span class="p">,</span>
+                    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="n">summary</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+            <span class="k">if</span> <span class="n">file_contents</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">make_discord_request</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;*</span><span class="si">{</span><span class="n">stockName</span><span class="si">}</span><span class="s2">*: </span><span class="se">\n</span><span class="s2"> </span><span class="si">{</span><span class="n">docUrl</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">embeds</span><span class="p">,</span> <span class="n">pdf_file_name</span><span class="p">,</span> <span class="n">file_contents</span><span class="p">)</span>
+                <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">make_discord_request</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;*</span><span class="si">{</span><span class="n">stockName</span><span class="si">}</span><span class="s2">*: </span><span class="se">\n</span><span class="s2"> </span><span class="si">{</span><span class="n">docUrl</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">embeds</span><span class="p">)</span>
+                <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+            <span class="k">pass</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;stock&#39;</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">csv_file</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> 
+</pre></div>
+</div>
+<p>This code is a script that downloads and summarizes recent documents from a list of stock symbols. The stock symbols are stored in the list <code class="docutils literal notranslate"><span class="pre">stockList</span></code>, and the data for these symbols is obtained by calling the <code class="docutils literal notranslate"><span class="pre">get_cse_tickers_data</span></code> function, which retrieves data from a CSV file stored on GitHub.</p>
+<p>The code then loops through each of the stocks in <code class="docutils literal notranslate"><span class="pre">stockList</span></code>, and for each stock, it retrieves a list of recent documents by calling the <code class="docutils literal notranslate"><span class="pre">get_recent_docs_from_url</span></code> function and passing it the URL for the stock.</p>
+<p>For each document, the code checks if the document URL already exists in the DataFrame <code class="docutils literal notranslate"><span class="pre">df</span></code>. If the URL does not exist, the code adds the document information (i.e., stock name, URL, and a summary) to <code class="docutils literal notranslate"><span class="pre">df</span></code> and makes a Discord request to post the information to a Discord channel. The information posted to the Discord channel includes the stock name, document URL, and a summary of the document’s contents. If the contents of the document are available, they are also included in the Discord request as an attachment.</p>
+<p>After all the documents have been processed, the code removes any duplicates in <code class="docutils literal notranslate"><span class="pre">df</span></code> and sorts the entries by the stock name. Finally, the updated <code class="docutils literal notranslate"><span class="pre">df</span></code> is saved to a CSV file.</p>
+</section>
+<section id="id2">
+<h2>References<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="github reference external" href="https://github.com/dli-invest/cse_file_downloader/blob/main/scrap_cse_releases.py">dli-invest/cse_file_downloader</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+            </article>
+            
+
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="chap_10.html" title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">Chapter 10 Introduction to Data Science</p>
+      </div>
+  </a>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#image-magick">
+   Image magick
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#references">
+     References
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chat-gpt-blog-generation">
+   Chat gpt blog generation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     References
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#investor-document-downloader">
+   Investor document downloader
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   References
+  </a>
+ </li>
+</ul>
+
+</nav>
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By FriendlyUser
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2022.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+Last updated on None.<br>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </div>
+        </footer>
+        
+
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  </body>
+</html>
