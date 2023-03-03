@@ -1134,7 +1134,7 @@ print(min_debt_reduction)
 # bunch of risk of falling gas prices, but with new supply reduction from russia, doubt it would be so bad.
 
 # save fig
-mpf.plot(nat_gas,type='ohlc',mav=(30, 60, 90), volume=True, style='yahoo', savefig='ng.png') 
+mpf.plot(nat_gas,type='ohlc',mav=(30, 60, 90), volume=True, style='yahoo') 
 ```
 
 This script appears to be using the yfinance library to download historical data for natural gas futures (NG=F) from Yahoo Finance, for the period between January 1, 2021 and January 1, 2023. It then uses the Pandas library to create a new column in the dataframe called "Month" which is populated with the date of the data point, and converts it to a datetime object.
