@@ -42,7 +42,7 @@ jobs:
         run: pip install git+https://github.com/ExecutableBookProject/jupyter-book.git@master
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pip install -r introtopython/requirements.txt
 
       - name: Build Book
         shell: bash -l {0}
