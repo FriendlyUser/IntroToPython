@@ -225,7 +225,7 @@ In this example, we use the `strip()` method to remove leading and trailing whit
 ```{code-cell} ipython3
 import re
 with open('email.txt', 'r') as file:
- 	for line in file:
+	for line in file:
 		print(line)
 		# Search for email addresses using a regular expression
 		match = re.search(r'\b[A-Za-z0-9.\_%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b', line)
