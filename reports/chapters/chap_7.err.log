@@ -18,15 +18,17 @@ Traceback (most recent call last):
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
 with open('example.txt', 'r') as file:
- for line in file:
- # Do something with the line
- print(line.strip())
+  for line in file:
+	# Split the line into a list of values using the comma separator
+	values = line.strip().split(',')
+	# Do something with the values
+	print(values[0])
 ------------------
 
-[0;36m  Cell [0;32mIn[16], line 4[0;36m[0m
-[0;31m    print(line.strip())[0m
+[0;36m  Cell [0;32mIn[17], line 4[0;36m[0m
+[0;31m    values = line.strip().split(',')[0m
 [0m    ^[0m
-[0;31mIndentationError[0m[0;31m:[0m expected an indented block after 'for' statement on line 2
+[0;31mTabError[0m[0;31m:[0m inconsistent use of tabs and spaces in indentation
 
-IndentationError: expected an indented block after 'for' statement on line 2 (3245546478.py, line 4)
+TabError: inconsistent use of tabs and spaces in indentation (319792111.py, line 4)
 
