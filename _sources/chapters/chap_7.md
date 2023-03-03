@@ -140,7 +140,7 @@ file = open('example.txt', 'x')
 Example:
 
 
-```{code-cell} ipython3
+```python
 file = open('example.mp3', 'rb')
 ```
 In addition to the modes described above, you can also combine them with the `+` character to create hybrid modes that allow you to read and write to a file at the same time:

@@ -17,23 +17,16 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-file = open('example.mp3', 'rb')
+with open('example.txt', 'r') as file:
+ for line in file:
+ # Do something with the line
+ print(line.strip())
 ------------------
 
-[0;31m---------------------------------------------------------------------------[0m
-[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
-Cell [0;32mIn[11], line 1[0m
-[0;32m----> 1[0m file [38;5;241m=[39m [38;5;28;43mopen[39;49m[43m([49m[38;5;124;43m'[39;49m[38;5;124;43mexample.mp3[39;49m[38;5;124;43m'[39;49m[43m,[49m[43m [49m[38;5;124;43m'[39;49m[38;5;124;43mrb[39;49m[38;5;124;43m'[39;49m[43m)[49m
+[0;36m  Cell [0;32mIn[16], line 4[0;36m[0m
+[0;31m    print(line.strip())[0m
+[0m    ^[0m
+[0;31mIndentationError[0m[0;31m:[0m expected an indented block after 'for' statement on line 2
 
-File [0;32m/opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/IPython/core/interactiveshell.py:282[0m, in [0;36m_modified_open[0;34m(file, *args, **kwargs)[0m
-[1;32m    275[0m [38;5;28;01mif[39;00m file [38;5;129;01min[39;00m {[38;5;241m0[39m, [38;5;241m1[39m, [38;5;241m2[39m}:
-[1;32m    276[0m     [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m(
-[1;32m    277[0m         [38;5;124mf[39m[38;5;124m"[39m[38;5;124mIPython won[39m[38;5;124m'[39m[38;5;124mt let you open fd=[39m[38;5;132;01m{[39;00mfile[38;5;132;01m}[39;00m[38;5;124m by default [39m[38;5;124m"[39m
-[1;32m    278[0m         [38;5;124m"[39m[38;5;124mas it is likely to crash IPython. If you know what you are doing, [39m[38;5;124m"[39m
-[1;32m    279[0m         [38;5;124m"[39m[38;5;124myou can use builtins[39m[38;5;124m'[39m[38;5;124m open.[39m[38;5;124m"[39m
-[1;32m    280[0m     )
-[0;32m--> 282[0m [38;5;28;01mreturn[39;00m [43mio_open[49m[43m([49m[43mfile[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
-
-[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: 'example.mp3'
-FileNotFoundError: [Errno 2] No such file or directory: 'example.mp3'
+IndentationError: expected an indented block after 'for' statement on line 2 (3245546478.py, line 4)
 
