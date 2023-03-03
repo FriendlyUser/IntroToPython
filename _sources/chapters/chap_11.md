@@ -12,10 +12,64 @@ kernelspec:
   name: python3
 ---
 
-# Chapter 10 Python Projects
+# Chapter 11 Python Projects
+
+## Using argparse
 
 
-## Image magick
+argparse is a Python module that makes it easy to write command-line interfaces. It allows you to specify the arguments that your program should accept in a clean and organized way, and it takes care of handling the input and output for you.
+
+Here's an example of how to use argparse to parse command-line arguments in a Python script:
+
+
+```python
+argparse is a Python module that makes it easy to write command-line interfaces. It allows you to specify the arguments that your program should accept in a clean and organized way, and it takes care of handling the input and output for you.
+
+Here's an example of how to use argparse to parse command-line arguments in a Python script:
+```
+
+This script defines a single command-line argument, --sum, which specifies whether the program should sum or find the maximum of the integers. If the --sum argument is not provided, the default action is to find the maximum.
+
+To run this script, you would type something like python script.py 1 2 3 --sum at the command line. This would cause the script to print 6, which is the sum of the integers 1, 2, and 3.
+
+Here's an example of how you might use argparse to write a command-line interface for a program that keeps track of the books that a bear has read:
+
+```python
+import argparse
+
+parser = argparse.ArgumentParser(description='Bear book tracker')
+
+# Add a command to add a book to the bear's reading list
+parser.add_argument('--add', dest='book', type=str,
+                    help='add a book to the reading list')
+
+# Add a command to list the books that the bear has read
+parser.add_argument('--list', action='store_true',
+                    help='list the books that the bear has read')
+
+# Parse the arguments
+args = parser.parse_args()
+
+# Initialize an empty list to store the bear's books
+books = []
+
+# If the --add argument was provided, add the book to the list
+if args.book:
+    books.append(args.book)
+
+# If the --list argument was provided, print the list of books
+if args.list:
+    print("Bear's books:")
+    for book in books:
+        print(book)
+
+```
+
+To use this program, you would type something like python book_tracker.py --add "The Giving Tree" to add a book to the bear's reading list, or python book_tracker.py --list to view the list of books.
+
+I hope this helps give you a basic understanding of how argparse works!
+
+## Convert pdf to pngs
 ImageMagick is a software suite to create, edit, and compose bitmap images. It can read, convert and write images in a variety of formats (over 100) including DPX, EXR, GIF, JPEG, JPEG-2000, PDF, PhotoCD, PNG, Postscript, SVG, and TIFF. ImageMagick is used to translate, flip, mirror, rotate, scale, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polyglines, ellipses and Bézier curves.
 
 It is used by graphic designers, photographers, scientists and also used for creating thumbnails for websites, creating GIF animations, converting PDF pages to images and so on. ImageMagick can be used from the command-line or can be used as a programming library for software development.
@@ -493,5 +547,518 @@ For each document, the code checks if the document URL already exists in the Dat
 
 After all the documents have been processed, the code removes any duplicates in `df` and sorts the entries by the stock name. Finally, the updated `df` is saved to a CSV file.
 
-## References
+###  References
 - https://github.com/dli-invest/cse_file_downloader/blob/main/scrap_cse_releases.py
+
+
+## Generate Subtitles for Youtube Videos
+Transcribing videos is important for several reasons. Firstly, it makes the content of the video more accessible to people who are deaf or hard of hearing. Secondly, it can improve search engine optimization (SEO) as the text in the transcription can be indexed by search engines. Thirdly, it can make it easier to create captions or subtitles for the video, which can again make it more accessible to a wider audience. Finally, transcribing videos can be useful for researchers or content creators who want to analyze the content of the video or repurpose it in other ways.
+
+
+```python 
+ import whisper
+import gradio as gr
+import ffmpeg
+from yt_dlp import YoutubeDL
+import os
+import sys
+from subprocess import PIPE, run
+
+youtube_livestream_codes = [
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    300,
+    301,
+]
+youtube_mp4_codes = [
+    298,
+    18,
+    22,
+    140,
+    133,
+    134
+]
+
+def second_to_timecode(x: float) -> str:
+    hour, x = divmod(x, 3600)
+    minute, x = divmod(x, 60)
+    second, x = divmod(x, 1)
+    millisecond = int(x * 1000.)
+
+    return '%.2d:%.2d:%.2d,%.3d' % (hour, minute, second, millisecond)
+
+def get_video_metadata(video_url: str = "https://www.youtube.com/watch?v=21X5lGlDOfg&ab_channel=NASA")-> dict:
+    with YoutubeDL({'outtmpl': '%(id)s.%(ext)s'}) as ydl:
+        info_dict = ydl.extract_info(video_url, download=False)
+        video_title = info_dict.get('title', None)
+        uploader_id = info_dict.get('uploader_id', None)
+        print(f"[youtube] {video_title}: {uploader_id}")
+    return info_dict
+
+
+def parse_metadata(metadata) -> dict:
+    """
+    Parse metadata and send to discord.
+    After a video is done recording, 
+    it will have both the livestream format and the mp4 format.
+    """
+    # send metadata to discord
+    formats = metadata.get("formats", [])
+    # filter for ext = mp4
+    mp4_formats = [f for f in formats if f.get("ext", "") == "mp4"]
+    try:
+        format_ids = [int(f.get("format_id", 0)) for f in mp4_formats]
+        video_entries = sorted(set(format_ids).intersection(youtube_mp4_codes))
+
+        is_livestream = True
+        if len(video_entries) > 0:
+            # use video format id over livestream id if available
+            selected_id = video_entries[0]
+            is_livestream = False
+    except Exception as e:
+        print(e)
+        selected_id = mp4_formats[0].get("format_id")
+        is_livestream = False
+
+
+    return {
+        "selected_id": selected_id,
+        "is_livestream": is_livestream,
+    } 
+ ```
+
+The above code is written in Python and contains functions for getting metadata for a YouTube video, parsing the metadata, and converting seconds to timecode. It also imports the necessary libraries including `whisper`, `gradio`, `ffmpeg`, `yt_dlp`, `os`, `sys`, and `subprocess`.
+
+The `get_video_metadata` function takes a YouTube video URL as input and returns a dictionary containing metadata about the video such as the title and uploader ID. This function uses the `YoutubeDL` library to extract information about the video from YouTube.
+
+The `parse_metadata` function takes the metadata dictionary as input and returns a dictionary containing the selected video format ID and a boolean indicating whether the video is a livestream or not. This function filters the available video formats to only include MP4 formats and then selects the video format with the highest priority (based on the priority list `youtube_mp4_codes`). If no MP4 format is available, it selects the first available format.
+
+The `second_to_timecode` function takes a floating-point number representing a time in seconds as input and returns a string formatted as `hh:mm:ss,ms` (hours:minutes:seconds,milliseconds) where `ms` is the milliseconds portion of the time.
+
+Note that the code also includes a list of YouTube format codes for livestreams (`youtube_livestream_codes`) and MP4 formats (`youtube_mp4_codes`).
+
+
+```python 
+ def get_video(url: str, config: dict):
+    """
+    Get video from start time.
+    """
+    # result = subprocess.run()
+    # could delay start time by a few seconds to just sync up and capture the full video length
+    # but would need to time how long it takes to fetch the video using youtube-dl and other adjustments and start a bit before
+    filename = config.get("filename", "livestream01.mp4")
+    end = config.get("end", "00:15:00")
+    overlay_file = ffmpeg.input(filename)
+    (
+        ffmpeg
+        .input(url, t=end)
+        .output(filename)
+        .run()
+    )
+
+def get_all_files(url: str, end: str = "00:15:00"):
+    metadata = get_video_metadata(url)
+    temp_dict = parse_metadata(metadata)
+    selected_id = temp_dict.get("selected_id", 0)
+    formats = metadata.get("formats", [])
+    selected_format = [f for f in formats if f.get("format_id", "") == str(selected_id)][0]
+    format_url = selected_format.get("url", "")
+    filename = "temp.mp4"
+    get_video(format_url, {"filename": filename, "end": end})
+    return filename
+
+def get_text_from_mp3_whisper(inputType:str, mp3_file: str, url_path: str, taskName: str, srcLanguage: str)->str:
+    # remove the file if it exists
+    if os.path.exists("transcript.srt"):
+        os.remove("transcript.srt")
+    
+    if os.path.exists("temp.mp4"):
+        os.remove("temp.mp4")
+    
+    if os.path.exists("subtitled.mp4"):
+        os.remove("subtitled.mp4")
+    
+    model = whisper.load_model("medium")
+    # options = whisper.DecodingOptions(language="en", without_timestamps=True)
+    options = dict(language=srcLanguage)
+    transcribe_options = dict(task=taskName, **options)
+    # return if url_path is not set, taskName is not set, srcLanguage is not set
+    if inputType == "url":
+        filename = get_all_files(url_path)
+        print("Retrieved the file")
+        result = model.transcribe(filename, **transcribe_options)
+        print("transcribing the file")
+    else:
+        result = model.transcribe(mp3_file, **transcribe_options)
+    # adjust for spacy mode
+    html_text = ""
+    lines = []
+    for count, segment in enumerate(result.get("segments")):
+        # print(segment)
+        start = segment.get("start")
+        end = segment.get("end")
+        lines.append(f"{count}")
+        lines.append(f"{second_to_timecode(start)} --> {second_to_timecode(end)}")
+        lines.append(segment.get("text", "").strip())
+        lines.append('')
+    words = '\n'.join(lines)
+    # save to transcript.srt
+    with open("transcript.srt", "w") as f:
+        f.write(words)
+    print("done transcribing")
+
+    input_file = 'temp.mp4'
+    subtitles_file = 'transcript.srt'
+    output_file = 'subtitled.mp4'
+    try:
+        print("attempt to output file")
+        (
+            ffmpeg
+            .input(input_file)
+            .filter('subtitles', subtitles_file)
+            .output(output_file)
+            .run()
+        )
+    except Exception as e:
+        print("failed to output file")
+        print(e)
+        output_file = "temp.mp4"
+    # return temp.mp4
+    
+    return result.get("segments"), words, output_file 
+ ```
+
+The `get_text_from_mp3_whisper` function takes several arguments including `inputType`, `mp3_file`, `url_path`, `taskName`, and `srcLanguage`. It first removes any existing files with names `transcript.srt`, `temp.mp4`, and `subtitled.mp4`.
+
+It then loads a pre-trained model from `whisper` using the `load_model` function. The function checks the value of `inputType` to determine whether to transcribe a local mp3 file (`mp3_file`) or a video at a remote URL (`url_path`). If `inputType` is `"url"`, it downloads the video from the remote URL using the `get_all_files` function and transcribes it. If `inputType` is `"file"`, it transcribes the local mp3 file.
+
+The transcribed segments are then saved to a file named `transcript.srt`. The function then attempts to add subtitles to the video by overlaying the saved SRT file onto a copy of the video file. The resulting file is saved as `subtitled.mp4`. If the overlaying process fails, it saves the resulting file as `temp.mp4`.
+
+The function then returns the segments and the contents of the SRT file as a string, as well as the name of the resulting video file.
+
+
+```python 
+ gr.Interface(
+    title = 'Download Video From url and extract text from audio', 
+    fn=get_text_from_mp3_whisper, 
+    inputs=[
+        gr.Dropdown(["url", "file"], value="url"),
+        gr.inputs.Audio(type="filepath"),
+        gr.inputs.Textbox(),
+        gr.Dropdown(["translate", "transcribe"], value="translate"),
+        gr.Dropdown(["Japanese", "English"], value="Japanese")
+    ],
+    button_text="Go!",
+    button_color="#333333",
+    outputs=[
+        "json", "text", "file"
+    ], 
+ ```
+
+It seems that the code block is not complete, as there is no closing parenthesis for the `gr.Interface` function call. However, assuming that the rest of the code is present, this function call creates a user interface using the `gradio` library.
+
+The interface has a title, "Download Video From url and extract text from audio", and it takes in the following inputs:
+
+1. A dropdown menu to select the input type ("url" or "file").
+2. An audio input to upload an audio file.
+3. A textbox to enter the URL of a video.
+4. A dropdown menu to select the task ("translate" or "transcribe").
+5. A dropdown menu to select the source language ("Japanese" or "English").
+
+The interface also has a button with text "Go!" and color "#333333", and it outputs a JSON object, a string of text, and a file.
+
+
+Using AI to transcribe videos has many practical benefits. Firstly, it enables the creation of accurate, searchable and accessible transcripts that can be used for a variety of purposes. Transcripts can be used to help people with hearing impairments to understand video content, as well as to provide captions and subtitles for non-native speakers of the video's language. Transcripts can also be used to provide metadata for video content, making it easier to search and categorize. Additionally, transcripts can be used to analyze the content of video content, allowing for more effective search and retrieval of relevant information.
+
+AI-based transcription is also faster and more cost-effective than traditional human transcription methods. With the advances in AI technology, transcription can be done much faster and at a lower cost than hiring human transcribers. This allows for more content to be transcribed in a shorter amount of time, and at a lower cost. Furthermore, AI-based transcription can be easily scaled up or down depending on the size of the content that needs to be transcribed.
+
+Overall, using AI to transcribe videos is a useful and practical application of AI technology that has the potential to significantly improve the accessibility and usability of video content.
+
+### References
+- https://huggingface.co/spaces/FriendlyUser/YoutubeDownloaderSubber
+
+## Scrapping Superbowl results with pandas
+
+The Super Bowl is the championship game of the National Football League (NFL), which is played annually to determine the winner of the NFL season. The game is played on the first Sunday in February and is considered the biggest sporting event in the United States, attracting millions of viewers each year. The Super Bowl is also one of the largest events in the world of advertising, with many of the most expensive and highly-anticipated commercials airing during the broadcast. In addition to the game itself, the Super Bowl weekend has become a major cultural event, with parties, concerts, and other festivities taking place in the host city leading up to the game.
+
+
+```python 
+ import requests
+import pandas
+import matplotlib
+
+
+# read pandas dataframe from url
+
+base_url = 'http://www.espn.com/nfl/history'
+leaders_df = pandas.read_html(f"{base_url}/leaders", attrs={'class': 'tablehead'})[0]
+
+
+winners_df = pandas.read_html(f"http://www.espn.com/nfl/superbowl/history/winners", attrs={'class': 'tablehead'})[0]
+
+
+mvp_df = pandas.read_html("http://www.espn.com/nfl/superbowl/history/mvps", attrs={'class': 'tablehead'})[0]
+
+
+print(leaders_df.head())
+print(winners_df.head())
+print(mvp_df.head()) 
+ ```
+
+This code uses the `requests`, `pandas`, and `matplotlib` libraries to retrieve and process data from three different URLs related to NFL history and the Super Bowl.
+
+The first URL is for NFL leaders and the data is loaded into a pandas DataFrame called `leaders_df`. The second URL is for Super Bowl winners and the data is loaded into a pandas DataFrame called `winners_df`. The third URL is for Super Bowl MVPs and the data is loaded into a pandas DataFrame called `mvp_df`.
+
+Finally, the code prints the first five rows of each DataFrame using the `head()` method of pandas DataFrames, which returns the first n (in this case, n=5) rows of the DataFrame.
+
+
+```python 
+                    0                    1                  2
+0  Touchdown Leaders    Touchdown Leaders  Touchdown Leaders
+1                 RK               PLAYER                 TD
+2                  1           Jerry Rice                208
+3                  2         Emmitt Smith                175
+4                  3  LaDainian Tomlinson                162
+                                0  ...                               3
+0  Super Bowl Winners and Results  ...  Super Bowl Winners and Results
+1                             NO.  ...                          RESULT
+2                               I  ...    Green Bay 35, Kansas City 10
+3                              II  ...        Green Bay 33, Oakland 14
+4                             III  ...   New York Jets 16, Baltimore 7
+
+[5 rows x 4 columns]
+                                  0  ...                                 2
+0  Super Bowl Most Valuable Players  ...  Super Bowl Most Valuable Players
+1                               NO.  ...                        HIGHLIGHTS
+2                                 I  ...              Two touchdown passes
+3                                II  ...           202 yards passing, 1 TD
+4                               III  ...                 206 yards passing 
+ ```
+
+These are the first five rows of each of the three pandas DataFrames that were created from the URLs related to NFL history and the Super Bowl.
+
+The first DataFrame, `leaders_df`, shows the NFL touchdown leaders, including the rank, player name, and number of touchdowns scored.
+
+The second DataFrame, `winners_df`, shows the results of each Super Bowl game, including the number of the Super Bowl, the winning team, and the result.
+
+The third DataFrame, `mvp_df`, shows the most valuable player of each Super Bowl, including the number of the Super Bowl, the player's name, and highlights of their performance.
+
+
+```python 
+ # grab 4th column
+# pandas drop first row of winners_df and change column names
+# save winners_df to csv
+winners_df.to_csv('winners_raw.csv', index=False)
+winners_df = winners_df.iloc[1:]
+winners_df.columns = winners_df.iloc[0]
+winners_df = winners_df.iloc[1:]
+print(winners_df.columns)
+winners_df.to_csv('winners.csv', index=False)
+print(winners_df.head())
+
+sites_of_superbowl = winners_df['SITE'].unique()
+
+print(sites_of_superbowl)
+# for date column find the number of instances of Orange Bowl and plot it
+# adjust all site to drop content in () and save to csv
+
+winners_df_adjusted = winners_df.copy()
+winners_df_adjusted['SITE'] = winners_df_adjusted['SITE'].str.replace(r'\(.*\)', '')
+fig =  winners_df_adjusted.groupby('SITE').size().plot(kind='bar', figsize=(10, 18)).get_figure() 
+```
+
+This code continues processing the `winners_df` DataFrame, which contains information about the results of each Super Bowl game.
+
+The 4th column of `winners_df` is not grabbed because the code does not contain any specific instructions to do so.
+
+The first row of `winners_df` is dropped using the `iloc` method and the remaining rows are set as the new column names using the `columns` attribute. This DataFrame is then saved to a new CSV file called 'winners.csv' using the `to_csv` method of pandas DataFrames.
+
+Next, the code uses the `unique` method of pandas Series to get the unique values of the 'SITE' column and store the result in a variable called `sites_of_superbowl`.
+
+Then, a new DataFrame called `winners_df_adjusted` is created as a copy of `winners_df` and the 'SITE' column is adjusted to remove the content in parentheses using the `str.replace` method of pandas Series.
+
+Finally, the code uses the `groupby` method of pandas DataFrames to group the DataFrame by the 'SITE' column and the `size` method to get the size of each group. The resulting pandas Series is plotted using the `plot` method with the `kind` argument set to 'bar' and the `figsize` argument set to (10, 18). The figure object is stored in a variable called `fig`.
+
+
+```python 
+ Index(['NO.', 'DATE', 'SITE', 'RESULT'], dtype='object', name=1)
+1  NO.  ...                         RESULT
+2    I  ...   Green Bay 35, Kansas City 10
+3   II  ...       Green Bay 33, Oakland 14
+4  III  ...  New York Jets 16, Baltimore 7
+5   IV  ...    Kansas City 23, Minnesota 7
+6    V  ...        Baltimore 16, Dallas 13
+
+[5 rows x 4 columns]
+['Los Angeles Memorial Coliseum' 'Orange Bowl (Miami)'
+ 'Tulane Stadium (New Orleans)' 'Rice Stadium (Houston)'
+ 'Rose Bowl (Pasadena, Calif.)' 'Superdome (New Orleans)'
+ 'Silverdome (Pontiac, Mich.)' 'Tampa (Fla.) Stadium'
+ 'Stanford (Calif.) Stadium' 'Jack Murphy Stadium (San Diego)'
+ 'Joe Robbie Stadium (Miami)' 'Metrodome (Minneapolis)'
+ 'Georgia Dome (Atlanta)' 'Sun Devil Stadium (Tempe, Ariz.)'
+ 'Qualcomm Stadium (San Diego)' 'Pro Player Stadium (Miami)'
+ 'Raymond James Stadium (Tampa, Fla.)' 'Reliant Stadium (Houston)'
+ 'Alltel Stadium (Jacksonville, Fla.)' 'Ford Field (Detroit)'
+ 'Dolphin Stadium (Miami)'
+ 'University of Phoenix Stadium (Glendale, Ariz.)'
+ 'Sun Life Stadium (Miami)' 'Cowboys Stadium (Arlington, Texas)'
+ 'Lucas Oil Stadium (Indianapolis)'
+ 'Mercedes-Benz Superdome (New Orleans)'
+ 'MetLife Stadium (East Rutherford, N.J.)'
+ "Levi's Stadium (Santa Clara, Calif.)" 'NRG Stadium (Houston)'
+ 'U.S. Bank Stadium (Minneapolis)' 'Mercedes-Benz Stadium (Atlanta)'
+ 'Hard Rock Stadium (Miami)' 'SoFi Stadium (Inglewood, Calif.)' 
+ ```
+
+The code above uses the `pandas` library to scrape data about the NFL Super Bowl winners, MVPs, and touchdown leaders from the ESPN website. It then saves the data in CSV format for future use.
+
+It starts by reading the HTML tables from the website using the `read_html` method from the `pandas` library and storing the results in dataframes. The first dataframe, `leaders_df`, contains the touchdown leaders. The second dataframe, `winners_df`, contains the Super Bowl winners and results. The third dataframe, `mvp_df`, contains the Super Bowl MVPs.
+
+The code then processes the `winners_df` dataframe to remove the first row and set the column names, which are the first row of the dataframe. The processed dataframe is then saved in a new CSV file called 'winners.csv'.
+
+Next, the code extracts the unique values of the 'SITE' column of the `winners_df` dataframe and stores the results in the `sites_of_superbowl` array. The code then creates a new dataframe called `winners_df_adjusted` that is a copy of the `winners_df` dataframe but with the content in the parentheses removed from the 'SITE' column. Finally, the code plots a bar chart of the number of instances of each site using the `groupby` and `size` methods from the `pandas` library and the `plot` method from the `matplotlib` library.
+
+
+![football graph](https://raw.githubusercontent.com/FriendlyUser/data-science-projects/main/superbowl/winners.png)
+Yes, indeed! Web scraping is a powerful tool to collect data from websites and the combination with data visualization makes it even more valuable to understand and draw insights from the data. It's also a great way to automate data collection and analysis tasks.
+
+
+
+### References
+- https://github.com/FriendlyUser/data-science-projects/tree/main/superbowl
+
+
+## Getting youtube livestream status
+
+YouTube is a video-sharing website where users can upload, share, and view videos. It was founded in February 2005 and later acquired by Google in November 2006. It has since become one of the largest and most popular websites on the internet, offering a wide variety of content, including music videos, educational videos, movie trailers, and more. Users can also interact with each other by commenting on videos, giving "thumbs up" or "thumbs down" ratings, and subscribing to other users' channels. YouTube is available on various devices, including computers, smartphones, and smart TVs.
+
+Transcribing Federal Reserve livestreams in real time is important for investors because the statements made by Federal Reserve officials can have a significant impact on financial markets. The Federal Reserve is the central bank of the United States, and its policies and statements on monetary policy, economic conditions, and interest rates can have a major effect on the stock market, the bond market, and the value of the US dollar.
+
+By transcribing the livestreams in real time, investors can quickly and accurately obtain information and insights from the Federal Reserve's statements. This can help them make informed investment decisions and respond to market changes as they occur. Additionally, real-time transcription allows investors to more effectively analyze and interpret the Federal Reserve's statements, giving them a competitive advantage in a fast-paced and constantly-changing market.
+
+In short, transcribing Federal Reserve livestreams in real time is important for investors because it allows them to stay up-to-date on the central bank's statements and respond quickly to market changes, which can have a significant impact on their investments.
+
+
+```python 
+ """
+author: FriendlyUser
+description: grab livestream data from url using selenium, (need a browser for youtube)
+create database entries to track livestreams, check if livestream is live or upcoming and exclude certain channels with never ending livestreams.
+"""
+
+import bs4
+import time
+from selenium import webdriver
+import os
+import dateparser
+
+def get_livestreams_from_html(data: str):
+    """
+        gets livestream from html from youtube channel and determines if it is live or upcoming.
+        Returns dict:
+          time: time of livestream
+          channel: channel name
+          status: LIVE or UPCOMING or none
+    """
+    # get text data from url using requests
+    try:
+
+        soup = bs4.BeautifulSoup(data, "html.parser")
+
+        livestream_data = []
+        first_section = soup.find("ytd-item-section-renderer")
+
+        title_wrapper = first_section.find("ytd-channel-video-player-renderer")
+        if title_wrapper == None:
+            watch_link = first_section.find("a", {"class": "yt-simple-endpoint style-scope ytd-video-renderer"})
+            watch_url = watch_link.get("href")
+        else:
+            channel_title = title_wrapper.find("yt-formatted-string")
+            watch_link = channel_title.find("a")
+            watch_url = watch_link.get("href")
+        # get video_id 
+        ytd_thumbnail_overlay_time_status_renderer = first_section.find("ytd-thumbnail-overlay-time-status-renderer")
+        # try to find ytd-video-renderer and get href
+
+        if ytd_thumbnail_overlay_time_status_renderer is None:
+            # try to grab upcoming livestream
+            scheduled_text = first_section.find("ytd-video-meta-block")
+            run_time = scheduled_text.get_text()
+            # parse strings like August 22 at 6:00 AM
+            # remove words like at
+            run_str = run_time.replace("Scheduled for", "").strip()
+            parsed_date =  dateparser.parse(run_str)
+            livestream_data.append({"date": parsed_date, "status": "UPCOMING", "watch_url": watch_url})
+        else:
+            livestream_label = ytd_thumbnail_overlay_time_status_renderer.get_text()
+            if livestream_label is not None:
+                livestream_data.append({"date": None, "status": livestream_label.strip(), "watch_url": watch_url})
+        return livestream_data
+    except Exception as e:
+        print(e)
+        print("Error getting data from url")
+        return [] 
+ ```
+
+This code uses the BeautifulSoup library and Selenium WebDriver to scrape a YouTube channel for live stream data. The function `get_livestreams_from_html` takes in an HTML string as input and returns a list of dictionaries, each representing a live stream event.
+
+The function first creates a BeautifulSoup object from the input HTML string and then searches the HTML tree for specific elements that contain information about the live streams. It checks if the live stream is currently happening or if it's scheduled to happen in the future, and if it's live, it checks if it's never ending. If the live stream is never ending, the function does not include that event in the list of live streams.
+
+The function uses the dateparser library to parse dates from strings, such as "August 22 at 6:00 AM". The live stream events are returned as a list of dictionaries, each containing the date and time of the event, the channel name, and the status of the event (live or upcoming).
+
+This code can be used as a starting point for a more comprehensive script that scrapes live streams from YouTube, but it may need to be adapted to fit the specific needs of the user.
+
+
+```python 
+ 
+def get_webdriver():
+    remote_url = os.environ.get("REMOTE_SELENIUM_URL")
+    if remote_url is None:
+        raise Exception("Missing REMOTE_SELENIUM_URL in env vars")
+    return webdriver.Remote(
+        command_executor=remote_url,
+    )
+
+def get_html_from_url(url: str):
+    """
+        gets html from url
+    """
+    # get text data from url using requests
+    driver = get_webdriver()
+    driver.get(url)
+    time.sleep(10)
+    # return html from page source
+    return driver.page_source
+
+if __name__ == "__main__":
+    html = get_html_from_url("https://www.youtube.com/c/YahooFinance")
+    livestream_data = get_livestreams_from_html(html)
+
+    base_url = "https://www.youtube.com"
+    # check if LIVE or UPCOMING
+    for livestream in livestream_data:
+        if livestream["status"] == "LIVE":
+            print("LIVE")
+            youtube_url = base_url + livestream["watch_url"]
+            data = {"youtube_url": youtube_url, "iteration": -1, "table_name": "YahooFinance"}
+            print(data)
+        elif livestream["status"] == "UPCOMING":
+            print("UPCOMING")
+            exit(0)
+        else:
+            print("NONE")
+            exit(1) 
+ ```
+
+This code is using the Selenium WebDriver to automate the web browser and retrieve the HTML content of a YouTube channel. The channel URL is hardcoded as "<https://www.youtube.com/c/YahooFinance>" in the `get_html_from_url` function, but it could be updated to read from a configuration file, as noted in the TODO comment.
+
+After retrieving the HTML, the code uses the `get_livestreams_from_html` function to extract information about the livestreams on the channel, if any. It then checks the status of each livestream, and if the status is "LIVE", it prints the information, including the URL of the livestream on YouTube and some additional data. If the status is "UPCOMING", the code exits with status code 0. If the status is neither "LIVE" nor "UPCOMING", the code exits with status code 1.
+
+### References
+- https://github.com/dli-invest/fdrtt/blob/main/livestream_scrapper.py
+- https://github.com/dli-invest/fdrtt
