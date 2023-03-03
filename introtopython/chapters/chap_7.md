@@ -1,21 +1,15 @@
 ---
-tags: ['python', 'introtopython']
-title: Chapter 7 File handling and data processing.
-description: For my introductory book on python, I am going to explain how to handle files.
-pubDate: Fri, 30 September 2024
-layout: "@/templates/BasePost.astro"
-imgSrc: /imgs/2023/1096284488.png
 jupytext:
-	formats: md:myst
-	text_representation:
-		extension: .md
-		format_name: myst
-		format_version: 0.13
-		jupytext_version: 1.11.5
+  formats: md:myst
+  text_representation: 
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.11.5
 kernelspec:
-	display_name: Python 3
-	language: python
-	name: python3
+  display_name: Python 3
+  language: python
+  name: python3
 ---
 
 # Chapter 7: File handling and data processing
