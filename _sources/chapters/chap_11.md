@@ -556,7 +556,7 @@ Transcribing videos is important for several reasons. Firstly, it makes the cont
 
 
 ```python 
- import whisper
+import whisper
 import gradio as gr
 import ffmpeg
 from yt_dlp import YoutubeDL
