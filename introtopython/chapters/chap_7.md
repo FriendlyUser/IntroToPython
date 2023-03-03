@@ -200,9 +200,9 @@ Using a context manager with the `with` statement is a safer and more concise wa
 
 ```{code-cell} ipython3
 with open('example.txt', 'r') as file:
- for line in file:
- 	# Do something with the line
- 	print(line.strip())
+	for line in file:
+		# Do something with the line
+		print(line.strip())
 ```
 In this example, we open the file in read mode using a context manager and a `for` loop to iterate over each line in the file. We then process each line by stripping its leading and trailing whitespace characters using the `strip()` method, and print the resulting string to the console.
 
@@ -211,11 +211,11 @@ In this example, we open the file in read mode using a context manager and a `fo
 
 ```{code-cell} ipython3
 with open('example.txt', 'r') as file:
-  for line in file:
-	# Split the line into a list of values using the comma separator
-	values = line.strip().split(',')
-	# Do something with the values
-	print(values[0])
+	for line in file:
+		# Split the line into a list of values using the comma separator
+		values = line.strip().split(',')
+		# Do something with the values
+		print(values[0])
 ```
 In this example, we use the `strip()` method to remove leading and trailing whitespace characters from each line, and the `split()` method to split each line into a list of values using the comma separator. We then process the resulting list of values by printing the first value to the console.
 
@@ -225,15 +225,15 @@ In this example, we use the `strip()` method to remove leading and trailing whit
 ```{code-cell} ipython3
 import re
 with open('email.txt', 'r') as file:
- for line in file:
-	print(line)
-	# Search for email addresses using a regular expression
-	match = re.search(r'\b[A-Za-z0-9.\_%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b', line)
-	# If a match is found, print the email address
- 	if match:
- 		print(match.group())
-	else:
-		print("no match")
+ 	for line in file:
+		print(line)
+		# Search for email addresses using a regular expression
+		match = re.search(r'\b[A-Za-z0-9.\_%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b', line)
+		# If a match is found, print the email address
+		if match:
+			print(match.group())
+		else:
+			print("no match")
 ```
 In this example, we use the `re.search()` function to search for email addresses in each line of the file using a regular expression pattern. If a match is found, we print the email address using the `group()` method of the match object.
 
