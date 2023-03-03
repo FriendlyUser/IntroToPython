@@ -17,18 +17,23 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-with open('example.txt', 'r') as file:
-  for line in file:
-	# Split the line into a list of values using the comma separator
-	values = line.strip().split(',')
-	# Do something with the values
-	print(values[0])
+import re
+with open('email.txt', 'r') as file:
+ 	for line in file:
+		print(line)
+		# Search for email addresses using a regular expression
+		match = re.search(r'\b[A-Za-z0-9.\_%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b', line)
+		# If a match is found, print the email address
+		if match:
+			print(match.group())
+		else:
+			print("no match")
 ------------------
 
-[0;36m  Cell [0;32mIn[17], line 4[0;36m[0m
-[0;31m    values = line.strip().split(',')[0m
+[0;36m  Cell [0;32mIn[18], line 4[0;36m[0m
+[0;31m    print(line)[0m
 [0m    ^[0m
 [0;31mTabError[0m[0;31m:[0m inconsistent use of tabs and spaces in indentation
 
-TabError: inconsistent use of tabs and spaces in indentation (319792111.py, line 4)
+TabError: inconsistent use of tabs and spaces in indentation (35572396.py, line 4)
 
