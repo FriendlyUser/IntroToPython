@@ -248,7 +248,7 @@ Sure, here's a brief overview of how to use some of the built-in modules in Pyth
 ```{code-cell} ipython3
 import csv
 
-with open('example.csv', 'r') as file:
+with open('test.csv', 'r') as file:
  reader = csv.reader(file)
  for row in reader:
  # Do something with the row data
