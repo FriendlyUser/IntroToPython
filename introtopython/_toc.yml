@@ -15,6 +15,7 @@ chapters:
 - file: chapters/chap_9
 - file: chapters/chap_10
 - file: chapters/chap_11
+- file: chapters/conclusion
 # - file: markdown
 # - file: notebooks
 # - file: markdown-notebooks
