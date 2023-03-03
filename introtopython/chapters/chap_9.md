@@ -399,12 +399,13 @@ pip install requests
 2. Import the requests module: To use requests, you need to import it at the beginning of your Python script. Here is the code to import requests:
 ```{code-cell} ipython3
 import requests
+url = "https://google.com"
 ```
 3. Sending HTTP requests: The requests library provides several methods to send HTTP requests such as GET, POST, PUT, DELETE, etc. The most commonly used methods are GET and POST.
 For example, to send a GET request, you can use the requests.get() method:
 
 ```{code-cell} ipython3
-response = requests.get(url)
+response = requests.get("https://google.com")
 ```
 
 where url is the URL of the website you want to request.

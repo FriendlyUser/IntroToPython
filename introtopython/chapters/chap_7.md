@@ -132,7 +132,7 @@ file = open('example.txt', 'a')
 Example:
 
 
-```{code-cell} ipython3
+```
 file = open('example.txt', 'x')
 ```
 * 'b': This mode opens the file in binary mode, which is used for working with non-text files such as images, audio, or video files. When you use this mode, you must specify the file as a binary file using the 'b' character.
