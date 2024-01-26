@@ -1,14 +1,13 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
-<script data-ad-client="ca-pub-2479144310234386" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<html lang="en" data-content_root="../" >
 
+<script data-ad-client="ca-pub-2479144310234386" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Chapter 2 Basic syntax and data types &#8212; Introduction To Python</title>
   
@@ -30,39 +29,43 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/chap_2';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -161,7 +164,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -397,9 +411,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="chapter-2-basic-syntax-and-data-types">
-<h1>Chapter 2 Basic syntax and data types<a class="headerlink" href="#chapter-2-basic-syntax-and-data-types" title="Permalink to this heading">#</a></h1>
+<h1>Chapter 2 Basic syntax and data types<a class="headerlink" href="#chapter-2-basic-syntax-and-data-types" title="Link to this heading">#</a></h1>
 <section id="basic-syntax-and-data-types">
-<h2>Basic syntax and data types<a class="headerlink" href="#basic-syntax-and-data-types" title="Permalink to this heading">#</a></h2>
+<h2>Basic syntax and data types<a class="headerlink" href="#basic-syntax-and-data-types" title="Link to this heading">#</a></h2>
 <p>Python is a high-level, interpreted programming language that is popular for its simple syntax, readability and ease of use. Understanding the basic syntax of Python is fundamental to writing effective code. In this chapter, we’ll discuss Python syntax and data types, including indentation, comments, statements, expressions and operators.</p>
 <p>Indentation
 Python uses indentation to group statements together. This makes the code more readable and helps to prevent syntax errors. Indentation is typically four spaces, but can be any consistent number of spaces or tabs. It is important to note that mixing tabs and spaces for indentation is not allowed in Python.</p>
@@ -458,7 +472,7 @@ Overall, type hints are a useful tool for improving the quality and maintainabil
 <p>Conclusion
 Python syntax is easy to understand and learn. Indentation, comments, statements, expressions and operators are the fundamental components of Python syntax. Understanding these concepts is important for writing effective Python code. In the next chapter, we’ll explore variables and data structures in more detail.</p>
 <section id="id1">
-<h3>Basic syntax and data types<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<h3>Basic syntax and data types<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p>Python is a high-level, interpreted programming language that provides several built-in data types. These data types are the fundamental building blocks of any Python program. In this chapter, we’ll discuss the most commonly used data types in Python, including numbers, strings, booleans, lists, tuples, dictionaries, and sets.</p>
 <p>Numbers
 In Python, numbers can be represented as integers, floating-point numbers, or complex numbers. Integers are whole numbers, while floating-point numbers have decimal points. Complex numbers have a real and imaginary component.</p>
@@ -520,7 +534,7 @@ Python provides several built-in data types that can be used to represent differ
 <p>Keywords: Python, data types, numbers, strings, booleans, lists, tuples, dictionaries, sets, text processing, conditional statements, comparisons, square brackets, parentheses, curly braces, mutable, immutable, elements, key-value pairs, unique elements, set operations, union, intersection, difference.</p>
 </section>
 <section id="variables-and-operators">
-<h3>Variables and Operators<a class="headerlink" href="#variables-and-operators" title="Permalink to this heading">#</a></h3>
+<h3>Variables and Operators<a class="headerlink" href="#variables-and-operators" title="Link to this heading">#</a></h3>
 <p>In Python, variables are used to store data that can be accessed and manipulated throughout a program. In this chapter, we’ll discuss how to create, manipulate and access data using variables, literals, constants and operators.</p>
 <p>Variables
 Variables are used to store data in memory for later use. In Python, a variable is created by assigning a value to a name using the equals sign (=). For example, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">5</span></code> creates a variable named <code class="docutils literal notranslate"><span class="pre">x</span></code> and assigns it the value 5. Variables can be used to store numbers, strings, booleans, and other data types.</p>
@@ -547,7 +561,7 @@ Variables, literals, constants and operators are essential components of Python 
 <p>Keywords: Python, variables, literals, constants, operators, arithmetic operators, comparison operators, logical operators, assignment operators, bitwise operators, expressions, accessing data, control structures, loops, conditional statements, data manipulation, data access.</p>
 </section>
 <section id="input-and-output-functions">
-<h3>Input and Output Functions<a class="headerlink" href="#input-and-output-functions" title="Permalink to this heading">#</a></h3>
+<h3>Input and Output Functions<a class="headerlink" href="#input-and-output-functions" title="Link to this heading">#</a></h3>
 <p>Input and output (I/O) functions are essential in any programming language. In Python, the two basic I/O functions are <code class="docutils literal notranslate"><span class="pre">print()</span></code> and <code class="docutils literal notranslate"><span class="pre">input()</span></code>. In this chapter, we’ll discuss how to use these functions to interact with users and display information to the screen.</p>
 <p>Printing to the Console
 The <code class="docutils literal notranslate"><span class="pre">print()</span></code> function is used to display output on the console. It can be used to print strings, numbers, and other types of data. For example, <code class="docutils literal notranslate"><span class="pre">print(&quot;Hello,</span> <span class="pre">world!&quot;)</span></code> displays the text “Hello, world!” on the console. Multiple values can be printed using commas, like this: <code class="docutils literal notranslate"><span class="pre">print(&quot;The</span> <span class="pre">answer</span> <span class="pre">is&quot;,</span> <span class="pre">42)</span></code>. This prints the string “The answer is” followed by the number 42.</p>

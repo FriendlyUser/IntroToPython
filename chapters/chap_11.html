@@ -1,14 +1,13 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
-<script data-ad-client="ca-pub-2479144310234386" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<html lang="en" data-content_root="../" >
 
+<script data-ad-client="ca-pub-2479144310234386" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Chapter 11 Python Projects &#8212; Introduction To Python</title>
   
@@ -30,39 +29,43 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/chap_11';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -161,7 +164,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -417,9 +431,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="chapter-11-python-projects">
-<h1>Chapter 11 Python Projects<a class="headerlink" href="#chapter-11-python-projects" title="Permalink to this heading">#</a></h1>
+<h1>Chapter 11 Python Projects<a class="headerlink" href="#chapter-11-python-projects" title="Link to this heading">#</a></h1>
 <section id="using-argparse">
-<h2>Using argparse<a class="headerlink" href="#using-argparse" title="Permalink to this heading">#</a></h2>
+<h2>Using argparse<a class="headerlink" href="#using-argparse" title="Link to this heading">#</a></h2>
 <p>argparse is a Python module that makes it easy to write command-line interfaces. It allows you to specify the arguments that your program should accept in a clean and organized way, and it takes care of handling the input and output for you.</p>
 <p>Here’s an example of how to use argparse to parse command-line arguments in a Python script:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">argparse</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">Python</span> <span class="n">module</span> <span class="n">that</span> <span class="n">makes</span> <span class="n">it</span> <span class="n">easy</span> <span class="n">to</span> <span class="n">write</span> <span class="n">command</span><span class="o">-</span><span class="n">line</span> <span class="n">interfaces</span><span class="o">.</span> <span class="n">It</span> <span class="n">allows</span> <span class="n">you</span> <span class="n">to</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">arguments</span> <span class="n">that</span> <span class="n">your</span> <span class="n">program</span> <span class="n">should</span> <span class="n">accept</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">clean</span> <span class="ow">and</span> <span class="n">organized</span> <span class="n">way</span><span class="p">,</span> <span class="ow">and</span> <span class="n">it</span> <span class="n">takes</span> <span class="n">care</span> <span class="n">of</span> <span class="n">handling</span> <span class="n">the</span> <span class="nb">input</span> <span class="ow">and</span> <span class="n">output</span> <span class="k">for</span> <span class="n">you</span><span class="o">.</span>
@@ -464,7 +478,7 @@ document.write(`
 <p>I hope this helps give you a basic understanding of how argparse works!</p>
 </section>
 <section id="convert-pdf-to-pngs">
-<h2>Convert pdf to pngs<a class="headerlink" href="#convert-pdf-to-pngs" title="Permalink to this heading">#</a></h2>
+<h2>Convert pdf to pngs<a class="headerlink" href="#convert-pdf-to-pngs" title="Link to this heading">#</a></h2>
 <p>ImageMagick is a software suite to create, edit, and compose bitmap images. It can read, convert and write images in a variety of formats (over 100) including DPX, EXR, GIF, JPEG, JPEG-2000, PDF, PhotoCD, PNG, Postscript, SVG, and TIFF. ImageMagick is used to translate, flip, mirror, rotate, scale, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polyglines, ellipses and Bézier curves.</p>
 <p>It is used by graphic designers, photographers, scientists and also used for creating thumbnails for websites, creating GIF animations, converting PDF pages to images and so on. ImageMagick can be used from the command-line or can be used as a programming library for software development.</p>
 <p>You can call ImageMagick from Python using the <code class="docutils literal notranslate"><span class="pre">os</span></code> module, which provides a way to interface with the underlying operating system.</p>
@@ -491,22 +505,22 @@ document.write(`
 <p>In this example, the <code class="docutils literal notranslate"><span class="pre">subprocess.run</span></code> function is used to run the <code class="docutils literal notranslate"><span class="pre">convert</span></code> command, and the parameters are passed as a list, rather than as a string. This is a more secure way of calling shell commands, as it avoids shell injection attacks.</p>
 <p>You can call ImageMagick from Python using the <code class="docutils literal notranslate"><span class="pre">os</span></code> module, which provides a way to interface with the underlying operating system.</p>
 <p>Here’s an example of how to use ImageMagick to convert an image from one format to another:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>import os
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 
-input_image = &#39;input.jpg&#39;
-output_image = &#39;output.png&#39;
+<span class="n">input_image</span> <span class="o">=</span> <span class="s1">&#39;input.jpg&#39;</span>
+<span class="n">output_image</span> <span class="o">=</span> <span class="s1">&#39;output.png&#39;</span>
 
-os.system(f&#39;convert {input_image} {output\_image}&#39;)`
+<span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;convert </span><span class="si">{</span><span class="n">input_image</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">output</span><span class="err">\</span><span class="n">_image</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span><span class="err">`</span>
 </pre></div>
 </div>
 <p>In this example, <code class="docutils literal notranslate"><span class="pre">convert</span></code> is the command-line utility provided by ImageMagick to convert images. The <code class="docutils literal notranslate"><span class="pre">input_image</span></code> variable specifies the path to the input image and <code class="docutils literal notranslate"><span class="pre">output_image</span></code> specifies the path to the output image. The <code class="docutils literal notranslate"><span class="pre">os.system</span></code> function is used to run the <code class="docutils literal notranslate"><span class="pre">convert</span></code> command, which converts the input image to the output image.</p>
 <p>Note that this method is prone to security vulnerabilities, since it passes the parameters directly to the shell. To avoid these vulnerabilities, you can use the <code class="docutils literal notranslate"><span class="pre">subprocess</span></code> module, which provides a more secure way of calling shell commands. Here’s an example of how to use the <code class="docutils literal notranslate"><span class="pre">subprocess</span></code> module to call ImageMagick:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>import subprocess
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">subprocess</span>
 
-input_image = &#39;input.jpg&#39;
-output_image = &#39;output.png&#39;
+<span class="n">input_image</span> <span class="o">=</span> <span class="s1">&#39;input.jpg&#39;</span>
+<span class="n">output_image</span> <span class="o">=</span> <span class="s1">&#39;output.png&#39;</span>
 
-subprocess.run([&#39;convert&#39;, input_image, output_image])`
+<span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;convert&#39;</span><span class="p">,</span> <span class="n">input_image</span><span class="p">,</span> <span class="n">output_image</span><span class="p">])</span><span class="err">`</span>
 </pre></div>
 </div>
 <p>In this example, the <code class="docutils literal notranslate"><span class="pre">subprocess.run</span></code> function is used to run the <code class="docutils literal notranslate"><span class="pre">convert</span></code> command, and the parameters are passed as a list, rather than as a string. This is a more secure way of calling shell commands, as it avoids shell injection attacks.</p>
@@ -550,14 +564,14 @@ subprocess.run([&#39;convert&#39;, input_image, output_image])`
 </ol>
 <p>These are just a few examples of the many uses of ImageMagick. It is a highly versatile software suite that can be used in many different ways to work with images.</p>
 <section id="references">
-<h3>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h3>
+<h3>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="github reference external" href="https://github.com/FriendlyUser/ELEC370/blob/master/Assignments/A1/html/pdfToPNGMagick.py">FriendlyUser/ELEC370</a></p></li>
 </ul>
 </section>
 </section>
 <section id="chat-gpt-blog-generation">
-<h2>Chat gpt blog generation<a class="headerlink" href="#chat-gpt-blog-generation" title="Permalink to this heading">#</a></h2>
+<h2>Chat gpt blog generation<a class="headerlink" href="#chat-gpt-blog-generation" title="Link to this heading">#</a></h2>
 <p>ChatGPT is a large language model that has been trained using a technique called unsupervised learning, in which the model learns to generate text by being fed a large dataset of text. It is designed to generate human-like responses to prompts, and can be used for a variety of natural language processing tasks, such as language translation, text summarization, and question answering.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">re</span>
@@ -735,14 +749,14 @@ It uses the ChatGPT API to generate text in response to prompts specified in the
 </ol>
 <p>AI has the potential to change blog writing in the future by making the process more efficient and personalized. For example, AI-powered writing assistants can help writers generate content faster by suggesting topics, outlining structure, and providing research and data to support their ideas. Additionally, AI-powered content generation can personalize blogs by analyzing audience data and tailoring the content to their interests and preferences. It can also generate images, infographics and videos to supplement the written content. However, it’s important to note that AI-generated content should be carefully evaluated for accuracy and bias, and should be used in conjunction with human editing and oversight to ensure high-quality and ethical results.</p>
 <section id="id1">
-<h3>References<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<h3>References<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="github reference external" href="https://github.com/FriendlyUser/chatgpt-blog-generator">FriendlyUser/chatgpt-blog-generator</a></p></li>
 </ul>
 </section>
 </section>
 <section id="investor-document-downloader">
-<h2>Investor document downloader<a class="headerlink" href="#investor-document-downloader" title="Permalink to this heading">#</a></h2>
+<h2>Investor document downloader<a class="headerlink" href="#investor-document-downloader" title="Link to this heading">#</a></h2>
 <p>CSE exchange refers to the Canadian Securities Exchange, which is a stock exchange located in Canada. The CSE is a fully electronic exchange that provides a marketplace for the trading of securities listed on its platform. It offers a range of listing options, including equity, debt, and structured products, and operates with a focus on serving emerging and growth companies. The exchange aims to provide an efficient, transparent, and accessible marketplace for issuers and investors, and is regulated by the Ontario Securities Commission.</p>
 <p>Downloading reports from the CSE exchange can provide valuable information for investors, traders, and other market participants. The reports contain data on market activity, financial performance, and other key metrics for the companies listed on the exchange. By accessing these reports, you can gain insight into the financial health and performance of the companies, which can help inform your investment decisions.</p>
 <p>For example, the CSE provides annual and quarterly financial statements, press releases, and other disclosures for companies listed on the exchange. By downloading and reviewing these reports, you can get a better understanding of a company’s financial performance, including revenue, expenses, profits, and growth trends. This information can help you make more informed decisions about whether to buy, sell, or hold a company’s stock.</p>
@@ -896,14 +910,14 @@ It uses the ChatGPT API to generate text in response to prompts specified in the
 <p>For each document, the code checks if the document URL already exists in the DataFrame <code class="docutils literal notranslate"><span class="pre">df</span></code>. If the URL does not exist, the code adds the document information (i.e., stock name, URL, and a summary) to <code class="docutils literal notranslate"><span class="pre">df</span></code> and makes a Discord request to post the information to a Discord channel. The information posted to the Discord channel includes the stock name, document URL, and a summary of the document’s contents. If the contents of the document are available, they are also included in the Discord request as an attachment.</p>
 <p>After all the documents have been processed, the code removes any duplicates in <code class="docutils literal notranslate"><span class="pre">df</span></code> and sorts the entries by the stock name. Finally, the updated <code class="docutils literal notranslate"><span class="pre">df</span></code> is saved to a CSV file.</p>
 <section id="id2">
-<h3>References<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<h3>References<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="github reference external" href="https://github.com/dli-invest/cse_file_downloader/blob/main/scrap_cse_releases.py">dli-invest/cse_file_downloader</a></p></li>
 </ul>
 </section>
 </section>
 <section id="generate-subtitles-for-youtube-videos">
-<h2>Generate Subtitles for Youtube Videos<a class="headerlink" href="#generate-subtitles-for-youtube-videos" title="Permalink to this heading">#</a></h2>
+<h2>Generate Subtitles for Youtube Videos<a class="headerlink" href="#generate-subtitles-for-youtube-videos" title="Link to this heading">#</a></h2>
 <p>Transcribing videos is important for several reasons. Firstly, it makes the content of the video more accessible to people who are deaf or hard of hearing. Secondly, it can improve search engine optimization (SEO) as the text in the transcription can be indexed by search engines. Thirdly, it can make it easier to create captions or subtitles for the video, which can again make it more accessible to a wider audience. Finally, transcribing videos can be useful for researchers or content creators who want to analyze the content of the video or repurpose it in other ways.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">whisper</span>
 <span class="kn">import</span> <span class="nn">gradio</span> <span class="k">as</span> <span class="nn">gr</span>
@@ -1109,14 +1123,14 @@ It uses the ChatGPT API to generate text in response to prompts specified in the
 <p>AI-based transcription is also faster and more cost-effective than traditional human transcription methods. With the advances in AI technology, transcription can be done much faster and at a lower cost than hiring human transcribers. This allows for more content to be transcribed in a shorter amount of time, and at a lower cost. Furthermore, AI-based transcription can be easily scaled up or down depending on the size of the content that needs to be transcribed.</p>
 <p>Overall, using AI to transcribe videos is a useful and practical application of AI technology that has the potential to significantly improve the accessibility and usability of video content.</p>
 <section id="id3">
-<h3>References<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<h3>References<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://huggingface.co/spaces/FriendlyUser/YoutubeDownloaderSubber">https://huggingface.co/spaces/FriendlyUser/YoutubeDownloaderSubber</a></p></li>
 </ul>
 </section>
 </section>
 <section id="scrapping-superbowl-results-with-pandas">
-<h2>Scrapping Superbowl results with pandas<a class="headerlink" href="#scrapping-superbowl-results-with-pandas" title="Permalink to this heading">#</a></h2>
+<h2>Scrapping Superbowl results with pandas<a class="headerlink" href="#scrapping-superbowl-results-with-pandas" title="Link to this heading">#</a></h2>
 <p>The Super Bowl is the championship game of the National Football League (NFL), which is played annually to determine the winner of the NFL season. The game is played on the first Sunday in February and is considered the biggest sporting event in the United States, attracting millions of viewers each year. The Super Bowl is also one of the largest events in the world of advertising, with many of the most expensive and highly-anticipated commercials airing during the broadcast. In addition to the game itself, the Super Bowl weekend has become a major cultural event, with parties, concerts, and other festivities taking place in the host city leading up to the game.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="kn">import</span> <span class="nn">requests</span>
 <span class="kn">import</span> <span class="nn">pandas</span>
@@ -1234,14 +1248,14 @@ It uses the ChatGPT API to generate text in response to prompts specified in the
 <p><img alt="football graph" src="https://raw.githubusercontent.com/FriendlyUser/data-science-projects/main/superbowl/winners.png" />
 Yes, indeed! Web scraping is a powerful tool to collect data from websites and the combination with data visualization makes it even more valuable to understand and draw insights from the data. It’s also a great way to automate data collection and analysis tasks.</p>
 <section id="id4">
-<h3>References<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<h3>References<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="github reference external" href="https://github.com/FriendlyUser/data-science-projects/tree/main/superbowl">FriendlyUser/data-science-projects</a></p></li>
 </ul>
 </section>
 </section>
 <section id="getting-youtube-livestream-status">
-<h2>Getting youtube livestream status<a class="headerlink" href="#getting-youtube-livestream-status" title="Permalink to this heading">#</a></h2>
+<h2>Getting youtube livestream status<a class="headerlink" href="#getting-youtube-livestream-status" title="Link to this heading">#</a></h2>
 <p>YouTube is a video-sharing website where users can upload, share, and view videos. It was founded in February 2005 and later acquired by Google in November 2006. It has since become one of the largest and most popular websites on the internet, offering a wide variety of content, including music videos, educational videos, movie trailers, and more. Users can also interact with each other by commenting on videos, giving “thumbs up” or “thumbs down” ratings, and subscribing to other users’ channels. YouTube is available on various devices, including computers, smartphones, and smart TVs.</p>
 <p>Transcribing Federal Reserve livestreams in real time is important for investors because the statements made by Federal Reserve officials can have a significant impact on financial markets. The Federal Reserve is the central bank of the United States, and its policies and statements on monetary policy, economic conditions, and interest rates can have a major effect on the stock market, the bond market, and the value of the US dollar.</p>
 <p>By transcribing the livestreams in real time, investors can quickly and accurately obtain information and insights from the Federal Reserve’s statements. This can help them make informed investment decisions and respond to market changes as they occur. Additionally, real-time transcription allows investors to more effectively analyze and interpret the Federal Reserve’s statements, giving them a competitive advantage in a fast-paced and constantly-changing market.</p>
@@ -1353,7 +1367,7 @@ Yes, indeed! Web scraping is a powerful tool to collect data from websites and t
 <p>This code is using the Selenium WebDriver to automate the web browser and retrieve the HTML content of a YouTube channel. The channel URL is hardcoded as “<a class="reference external" href="https://www.youtube.com/c/YahooFinance">https://www.youtube.com/c/YahooFinance</a>” in the <code class="docutils literal notranslate"><span class="pre">get_html_from_url</span></code> function, but it could be updated to read from a configuration file, as noted in the TODO comment.</p>
 <p>After retrieving the HTML, the code uses the <code class="docutils literal notranslate"><span class="pre">get_livestreams_from_html</span></code> function to extract information about the livestreams on the channel, if any. It then checks the status of each livestream, and if the status is “LIVE”, it prints the information, including the URL of the livestream on YouTube and some additional data. If the status is “UPCOMING”, the code exits with status code 0. If the status is neither “LIVE” nor “UPCOMING”, the code exits with status code 1.</p>
 <section id="id5">
-<h3>References<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<h3>References<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="github reference external" href="https://github.com/dli-invest/fdrtt/blob/main/livestream_scrapper.py">dli-invest/fdrtt</a></p></li>
 <li><p><a class="github reference external" href="https://github.com/dli-invest/fdrtt">dli-invest/fdrtt</a></p></li>
@@ -1361,7 +1375,7 @@ Yes, indeed! Web scraping is a powerful tool to collect data from websites and t
 </section>
 </section>
 <section id="natural-gas-analysis">
-<h2>Natural gas Analysis<a class="headerlink" href="#natural-gas-analysis" title="Permalink to this heading">#</a></h2>
+<h2>Natural gas Analysis<a class="headerlink" href="#natural-gas-analysis" title="Link to this heading">#</a></h2>
 <p>Gas prices fluctuate due to a variety of factors, including changes in the cost of crude oil, which is the primary raw material used to produce gasoline, as well as changes in supply and demand for gasoline, taxes, and other costs associated with refining, storing, and transporting gasoline. Additionally, geopolitical events, such as conflicts or natural disasters, can also affect gas prices by disrupting the global oil market.</p>
 <p>Cyclical stocks are stocks that tend to be sensitive to the economic cycle, meaning their prices tend to rise and fall with the overall health of the economy. These stocks are often associated with industries that are heavily influenced by consumer spending, such as retail, consumer durables, and homebuilding.</p>
 <p>Cyclical stocks tend to perform well during economic expansions and periods of low unemployment, as consumers have more disposable income to spend on non-essential goods and services. However, during economic downturns and recessions, when consumer spending decreases, the profits and stock prices of companies in cyclical industries tend to decline.</p>

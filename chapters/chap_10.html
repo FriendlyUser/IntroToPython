@@ -1,14 +1,13 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
-<script data-ad-client="ca-pub-2479144310234386" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<html lang="en" data-content_root="../" >
 
+<script data-ad-client="ca-pub-2479144310234386" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Chapter 10 Introduction to Data Science &#8212; Introduction To Python</title>
   
@@ -30,39 +29,43 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/chap_10';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -161,7 +164,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -394,7 +408,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="chapter-10-introduction-to-data-science">
-<h1>Chapter 10 Introduction to Data Science<a class="headerlink" href="#chapter-10-introduction-to-data-science" title="Permalink to this heading">#</a></h1>
+<h1>Chapter 10 Introduction to Data Science<a class="headerlink" href="#chapter-10-introduction-to-data-science" title="Link to this heading">#</a></h1>
 <p>Data Science has become a fundamental component of any business or organization. It is the process of extracting insights and knowledge from data. The main goal of Data Science is to use statistical and computational methods to extract valuable insights from data. The insights obtained from the data can be used to make informed decisions in different fields.</p>
 <p>In today’s world, data science has become an integral part of almost every organization. From healthcare to finance, marketing to sports, data science is playing a significant role in every field. The insights and knowledge derived from data can help businesses improve their products, increase revenue, and optimize their operations.</p>
 <p>In this blog post, we will discuss some real-world examples of how data science is being used and why it is important.</p>
@@ -420,7 +434,7 @@ document.write(`
 <p>The main difference between Data Science and Data Analytics is the scope of their objectives. Data Science aims to solve complex problems using a broad range of techniques and methods, while Data Analytics focuses on providing insights and answers to specific questions. Data Science involves working with larger, more complex datasets and requires a broad range of skills and knowledge, including statistical modeling, machine learning, and programming. Data Analytics involves working with smaller, more focused datasets and requires a strong understanding of data visualization, data mining, and statistical analysis.</p>
 <p>In conclusion, while Data Science and Data Analytics are related fields, they have distinct differences in their objectives, methods, and scope. Both fields are essential for businesses and organizations that want to make informed decisions based on data-driven insights. Data Science can help organizations identify patterns, trends, and insights that may not be visible to the human eye, while Data Analytics can help organizations answer specific questions and provide insights into particular problems.</p>
 <section id="plots-in-matplotlib">
-<h2>Plots in matplotlib<a class="headerlink" href="#plots-in-matplotlib" title="Permalink to this heading">#</a></h2>
+<h2>Plots in matplotlib<a class="headerlink" href="#plots-in-matplotlib" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -478,7 +492,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2228/1122203378.py:1: DeprecationWarning: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2215/1122203378.py:1: DeprecationWarning: 
 Pyarrow will become a required dependency of pandas in the next major release of pandas (pandas 3.0),
 (to allow more performant data types, such as the Arrow string type, and better interoperability with other libraries)
 but was not found to be installed on your system.
@@ -543,7 +557,7 @@ please provide us feedback at https://github.com/pandas-dev/pandas/issues/54466
 <p>Note that the specific API endpoint used in this example returns a list of posts, each with a <code class="docutils literal notranslate"><span class="pre">userId</span></code>, <code class="docutils literal notranslate"><span class="pre">id</span></code>, <code class="docutils literal notranslate"><span class="pre">title</span></code>, and <code class="docutils literal notranslate"><span class="pre">body</span></code> field. Depending on the API you’re using, you may need to adjust the code to match the format of the data returned by the API.</p>
 </section>
 <section id="web-scrapping-with-bs4-and-pandas">
-<h2>Web Scrapping with bs4 and pandas<a class="headerlink" href="#web-scrapping-with-bs4-and-pandas" title="Permalink to this heading">#</a></h2>
+<h2>Web Scrapping with bs4 and pandas<a class="headerlink" href="#web-scrapping-with-bs4-and-pandas" title="Link to this heading">#</a></h2>
 <p>Pandas is an open-source Python library used for data manipulation and analysis. It is a powerful tool for handling structured data, such as spreadsheets and SQL tables. One of the most useful features of pandas is its ability to read and write data from various file formats, including CSV, Excel, and SQL databases.</p>
 <p>Pandas can also be used for web scraping by reading data from HTML tables on web pages. The library provides a method called <code class="docutils literal notranslate"><span class="pre">read_html()</span></code> that can parse HTML tables and return a list of data frames. Data frames are two-dimensional tables with labeled rows and columns, similar to spreadsheets.</p>
 <p>Here’s an example code snippet that uses pandas to scrape a table from a web page:</p>
@@ -712,7 +726,7 @@ Web pages might have missing data in their tables, which can cause problems in o
 <p>Overall, pandas provides a wide range of features for cleaning and manipulating data, which makes it a popular choice for data scientists and analysts. By using these advanced features, we can transform raw data extracted from a website into a format that’s suitable for our data analysis.</p>
 </section>
 <section id="jupyter-notebooks">
-<h2>Jupyter Notebooks<a class="headerlink" href="#jupyter-notebooks" title="Permalink to this heading">#</a></h2>
+<h2>Jupyter Notebooks<a class="headerlink" href="#jupyter-notebooks" title="Link to this heading">#</a></h2>
 <p>Jupyter notebooks are interactive computing environments that allow you to create and share documents that contain live code, equations, visualizations, and narrative text. They are widely used in data science, scientific computing, and education, among other fields.</p>
 <p>At its core, a Jupyter notebook consists of a JSON file that contains a set of cells. Each cell can contain code, markdown, or raw text. Code cells allow you to write and execute code interactively, while markdown cells allow you to write formatted text using the Markdown syntax. Raw text cells allow you to write plain text that will be included in the notebook as-is.</p>
 <p>When you create a new Jupyter notebook, you are presented with an interface that allows you to create, edit, and run cells. The interface is typically divided into two main areas: the notebook toolbar and the notebook cells.</p>
